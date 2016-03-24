@@ -1,0 +1,92 @@
+<template name="HumanResourcesDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> HumanResourcesDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="HumanResourcesDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'human_resources.documents.appraisal'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'human_resources.documents.appraisal'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Appraisal
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Performance appraisal.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.attendance'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.attendance'}}">
+				<span class="item-title-modules">
+					Attendance
+				</span>
+				<div class="module-description">Attendance record.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.employee'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.employee'}}">
+				<span class="item-title-modules">
+					Employee
+				</span>
+				<div class="module-description">Employee records.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.expense_claim'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.expense_claim'}}">
+				<span class="item-title-modules">
+					Expense Claim
+				</span>
+				<div class="module-description">Claims for company expense.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.job_applicant'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.job_applicant'}}">
+				<span class="item-title-modules">
+					Job Applicant
+				</span>
+				<div class="module-description">Applicant for a Job.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.job_opening'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.job_opening'}}">
+				<span class="item-title-modules">
+					Job Opening
+				</span>
+				<div class="module-description">Opening for a Job.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.leave_application'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.leave_application'}}">
+				<span class="item-title-modules">
+					Leave Application
+				</span>
+				<div class="module-description">Applications for leave.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.offer_letter'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.offer_letter'}}">
+				<span class="item-title-modules">
+					Offer Letter
+				</span>
+				<div class="module-description">Offer candidate a Job.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.documents.salary_slip'}} module-list">
+			<a href="{{pathFor 'human_resources.documents.salary_slip'}}">
+				<span class="item-title-modules">
+					Salary Slip
+				</span>
+				<div class="module-description">Monthly salary statement.</div>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

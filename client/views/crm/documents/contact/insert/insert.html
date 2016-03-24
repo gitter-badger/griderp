@@ -1,0 +1,303 @@
+<template name="ContactInsert">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">New Contact 1</div>
+								<span class="indicator-orange indicator-text">Not Saved</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>&nbsp;
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content just-top">
+						{{> ContactInsertInsertForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="ContactInsertInsertForm">
+	<div id="contact-insert-insert-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-name">
+				<label for="name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="name" value="" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-status">
+				<label for="status">
+					Status
+				</label>
+				<div class="input-div">
+					<input type="text" name="status" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>-->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+						    <div class="form-dashboard" style="display: none;">
+						        <div class="row" style="padding: 15px 30px;"></div>
+						    </div>
+						    <div class="form-page">
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width has-error" data-fieldtype="Data" data-fieldname="first_name">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">First Name</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="first_name" placeholder="" data-doctype="Contact"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="last_name">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Last Name</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="last_name" placeholder="" data-doctype="Contact"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="email_id">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Email Id</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="email_id" placeholder="" data-doctype="Contact"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="status">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Status</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="status" placeholder="" data-doctype="Contact"><option value="Passive">Passive</option><option value="Open">Open</option><option value="Replied">Replied</option></select></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;">Passive</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="phone">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Phone</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="phone" placeholder="" data-doctype="Contact"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section shaded-section">
+						            <div class="col-sm-12">
+						                <h3 class="form-section-heading">Reference</h3></div>
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="user">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">User Id</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="user" placeholder="" data-doctype="Contact" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-72" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="customer">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Customer</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="customer" placeholder="" data-doctype="Contact" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-73" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="customer_name">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="supplier">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Supplier</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="supplier" placeholder="" data-doctype="Contact" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-74" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="supplier_name">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="sales_partner">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Sales Partner</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="sales_partner" placeholder="" data-doctype="Contact" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-75" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="form-group griderp-control input-max-width hide-control" data-fieldtype="Check" data-fieldname="is_primary_contact">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="is_primary_contact" placeholder="" data-doctype="Contact"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Is Primary Contact</span>    </label>
+						                                <p class="help-box small text-muted"></p>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section">
+						            <div class="col-sm-12">
+						                <h3 class="form-section-heading">More Information</h3></div>
+						            <div class="section-body">
+						                <div class="form-column col-sm-12">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="mobile_no">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Mobile No</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="mobile_no" placeholder="" data-doctype="Contact"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="department">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Department</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="department" placeholder="" data-doctype="Contact"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs">Enter department to which this Contact belongs</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="designation">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Designation</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="designation" placeholder="" data-doctype="Contact"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs">Enter designation of this Contact</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="unsubscribed">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="unsubscribed" placeholder="" data-doctype="Contact"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Unsubscribed</span>    </label>
+						                                <p class="help-box small text-muted"></p>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="just-top">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

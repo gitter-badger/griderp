@@ -1,0 +1,25 @@
+<template name="TutorialsProjects">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TutorialsProjectsModuleMenu}}
+	</div>
+</template>
+
+<template name="TutorialsProjectsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tutorials.projects.managing_projects'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tutorials.projects.managing_projects'}}">
+				<span class="item-title-modules">
+					Managing Projects
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

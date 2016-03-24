@@ -1,0 +1,28 @@
+<template name="SupportSetup">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SupportSetupModuleMenu}}
+	</div>
+</template>
+
+<template name="SupportSetupModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.email.email_account'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.email.email_account'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Email Account
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Setup incoming server for support email id. (e.g. support@example.com)</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

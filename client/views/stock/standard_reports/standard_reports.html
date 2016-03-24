@@ -1,0 +1,102 @@
+<template name="StockStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> StockStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="StockStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'stock.standard_reports.batch_wise_balance_history'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'stock.standard_reports.batch_wise_balance_history'}}">
+				<span class="item-title-modules">
+					Batch-wise Balance History
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.delivery_note_trends'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.delivery_note_trends'}}">
+				<span class="item-title-modules">
+					Delivery Note Trends
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.item_prices'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.item_prices'}}">
+				<span class="item-title-modules">
+					Item Prices
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.item_shortage_report'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.item_shortage_report'}}">
+				<span class="item-title-modules">
+					Item Shortage Report
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.item_wise_recommended_reorder_level'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.item_wise_recommended_reorder_level'}}">
+				<span class="item-title-modules">
+					Item-wise Recommended Reorder Level
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.ordered_items_to_be_delivered'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.ordered_items_to_be_delivered'}}">
+				<span class="item-title-modules">
+					Ordered Items to be Delivered
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.purchase_order_items_to_be_received'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.purchase_order_items_to_be_received'}}">
+				<span class="item-title-modules">
+					Purchase Order Items to be Received
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.purchase_receipt_trends'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.purchase_receipt_trends'}}">
+				<span class="item-title-modules">
+					Purchase Receipt Trends
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.requested_items_to_be_transferred'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.requested_items_to_be_transferred'}}">
+				<span class="item-title-modules">
+					Requested Items to be Transferred
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.serial_no_service_contract_expiry'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.serial_no_service_contract_expiry'}}">
+				<span class="item-title-modules">
+					Serial No. Service Contract Expiry
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.serial_no_status'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.serial_no_status'}}">
+				<span class="item-title-modules">
+					Serial No. Status
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.standard_reports.serial_no_warranty_expiry'}} module-list">
+			<a href="{{pathFor 'stock.standard_reports.serial_no_warranty_expiry'}}">
+				<span class="item-title-modules">
+					Serial No. Warranty Expiry
+				</span>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

@@ -1,0 +1,41 @@
+<template name="FileManager">
+
+	{{> PageHeading title="File Manager" type="fileManager"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> FileManagerSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div>
+						{{> yield region='FileManagerSubcontent'}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="FileManagerSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#">Quick Report</a></li>
+			<li class="list-unstyled"><a href="#">Assigned To Me</a></li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">TAGS</span> 
+					<a class="td-icon" href="#">&nbsp;
+						<i class="fa fa-pencil"></i>
+					</a>
+			</li>
+			<li class="list-unstyled">No records tagged.</li>
+		</ul>
+	</div>
+</template>
+

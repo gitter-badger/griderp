@@ -1,0 +1,60 @@
+<template name="SetupEmail">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupEmailModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupEmailModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.email.email_account'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.email.email_account'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Email Account
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Add / Manage Email Accounts.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.email_alert'}} module-list">
+			<a href="{{pathFor 'setup.email.email_alert'}}">
+				<span class="item-title-modules">
+					Email Alert
+				</span>
+				<div class="module-description">Setup Email Alert based on various criteria.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.email_digest'}} module-list">
+			<a href="{{pathFor 'setup.email.email_digest'}}">
+				<span class="item-title-modules">
+					Email Digest
+				</span>
+				<div class="module-description">Create and manage daily, weekly and monthly email digests.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.sms_settings'}} module-list">
+			<a href="{{pathFor 'setup.email.sms_settings'}}">
+				<span class="item-title-modules">
+					SMS Settings
+				</span>
+				<div class="module-description">Setup SMS gateway settings.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.standard_reply'}} module-list">
+			<a href="{{pathFor 'setup.email.standard_reply'}}">
+				<span class="item-title-modules">
+					Standard Reply
+				</span>
+				<div class="module-description">Standard replies to common queries.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

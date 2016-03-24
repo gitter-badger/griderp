@@ -1,0 +1,28 @@
+<template name="ProjectsTools">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ProjectsToolsModuleMenu}}
+	</div>
+</template>
+
+<template name="ProjectsToolsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'projects.tools.gantt_chart'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'projects.tools.gantt_chart'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Gantt Chart
+				</span>
+				<span class="module-badge">2</span>
+				<div class="module-description">Gantt chart of all tasks.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

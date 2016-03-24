@@ -1,0 +1,4 @@
+[
+	{ "name": "Credit Note", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "description": null, "print_heading": "Credit Note" },
+	{ "name": "Debit Note", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "description": null, "print_heading": "Debit Note" }
+]

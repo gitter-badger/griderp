@@ -1,0 +1,576 @@
+<template name="BomEdit">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">{{bom_details.name}}</div>
+								<span class="indicator-green indicator-text">Default</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">New BOM</a></li>
+								</ul>
+						</div>
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{bom_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> BomEditSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> BomEditEditForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="BomEditSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="BomEditEditForm">
+	<div id="bom-edit-edit-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-name">
+				<label for="name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="name" value="{{bom_details.name}}" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-docstatus">
+				<label for="docstatus">
+					Status
+				</label>
+				<div class="input-div">
+					<input type="text" name="docstatus" value="{{bom_details.docstatus}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-item">
+				<label for="item">
+					Item
+				</label>
+				<div class="input-div">
+					<input type="text" name="item" value="{{bom_details.item}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>-->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar"><button class="btn btn-default btn-xs" style="margin-left: 10px;">Update Cost</button><button class="btn btn-default btn-xs" style="margin-left: 10px;">Browse BOM</button></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+						    <div class="form-dashboard" style="display: none;">
+						        <div class="row" style="padding: 15px 30px;"></div>
+						    </div>
+						    <div class="form-page">
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="item">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Item</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style=""><a class="grey" href="#Form/Item/Base%20Plate" data-doctype="Item">Base Plate</a></div>
+						                                    <p class="help-box small text-muted hidden-xs">Item to be manufactured or repacked</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="item_name">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Item Name</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style="">Base Plate</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="rm_cost_as_per">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Rate Of Materials Based On</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style="">Valuation Rate</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="buying_price_list">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="is_active">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="is_active" placeholder="" data-doctype="BOM"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Is Active</span>    </label>
+						                                <p class="help-box small text-muted"></p>
+						                            </div>
+						                        </div>
+						                        <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="is_default">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="is_default" placeholder="" data-doctype="BOM"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Is Default</span>    </label>
+						                                <p class="help-box small text-muted"></p>
+						                            </div>
+						                        </div>
+						                        <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="with_operations">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area" style="display: none;"></span>     <span class="disp-area" style="margin-left: 0px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span>     <span class="label-area small">With Operations</span>    </label>
+						                                <p class="help-box small text-muted">Manage cost of operations</p>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section hide-control">
+						            <div class="col-sm-12">
+						                <h3 class="form-section-heading">Operations</h3></div>
+						            <div class="col-sm-12 small text-muted">Specify the operations, operating cost and give a unique Operation no to your operations.</div>
+						            <div class="section-body">
+						                <div class="form-column col-sm-12">
+						                    <form>
+						                        <div class="griderp-control hide-control" data-fieldtype="Table" data-fieldname="operations">
+						                            <div data-fieldname="operations">
+						                                <div class="form-grid">
+						                                    <div class="grid-heading-row">
+						                                        <div class="grid-row">
+						                                            <div class="data-row row sortable-handle">
+						                                                <div class="row-index">&nbsp;</div>
+						                                                <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="operation">Operation</div>
+						                                                <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="workstation">Workstation</div>
+						                                                <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="description">Operation Description</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="operating_cost">Operating Cost</div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                    <div class="grid-body">
+						                                        <div class="rows"></div>
+						                                        <div class="grid-empty text-center">No Data</div>
+						                                        <div class="small form-clickable-section grid-footer" style="display: none;">
+						                                            <div class="row">
+						                                                <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px;"> Add multiple rows</a> </div>
+						                                                <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section shaded-section">
+						            <div class="col-sm-12">
+						                <h3 class="form-section-heading">Materials</h3></div>
+						            <div class="section-body">
+						                <div class="form-column col-sm-12">
+						                    <form>
+						                        <div class="griderp-control" data-fieldtype="Table" data-fieldname="items">
+						                            <div data-fieldname="items">
+						                                <div class="form-grid">
+						                                    <div class="grid-heading-row">
+						                                        <div class="grid-row">
+						                                            <div class="data-row row sortable-handle">
+						                                                <div class="row-index">&nbsp;</div>
+						                                                <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="item_code">Item Code</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="item_name">Item Name</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="qty">Qty</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="rate">Rate</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="amount">Amount</div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                    <div class="grid-body">
+						                                        <div class="rows">
+						                                            <div class="grid-row" data-idx="1">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">1</div>
+						                                                    <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="item_code"><a class="grey" href="#Form/Item/Base%20Plate%20Un%20Painted" data-doctype="Item">Base Plate Un Painted</a></div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="item_name">Base Plate Un Painted</div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="qty">
+						                                                        <div style="text-align: right">1</div>
+						                                                    </div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="rate">
+						                                                        <div style="text-align: right">$ 16.00</div>
+						                                                    </div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="amount">
+						                                                        <div style="text-align: right">$ 16.00</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                        </div>
+						                                        <div class="grid-empty text-center hide">No Data</div>
+						                                        <div class="small form-clickable-section grid-footer" style="display: none;">
+						                                            <div class="row">
+						                                                <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default" style="margin-left: 10px;"> Add multiple rows</a> </div>
+						                                                <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Float" data-fieldname="quantity">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Quantity</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style="">1</div>
+						                                    <p class="help-box small text-muted hidden-xs">Quantity of item obtained after manufacturing / repacking from given quantities of raw materials</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section">
+						            <div class="col-sm-12">
+						                <h3 class="form-section-heading">Costing</h3></div>
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Currency" data-fieldname="operating_cost">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Operating Cost</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style="">$ 0.00</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Currency" data-fieldname="raw_material_cost">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Raw Material Cost</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style="">$ 16.00</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Currency" data-fieldname="total_cost">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Total Cost</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style="">$ 16.00</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section shaded-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="project_name">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="company">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Company</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style=""><a class="grey" href="#Form/Company/Wind%20Power%20LLC" data-doctype="Company">Wind Power LLC</a></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="amended_from">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="uom">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Item UOM</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input" style=""><a class="grey" href="#Form/UOM/Nos" data-doctype="UOM">Nos</a></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control" data-fieldtype="Small Text" data-fieldname="description">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Item Desription</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input" style="display: none;"></div>
+						                                    <div class="control-value like-disabled-input for-description" style="">3/4 in. x 2 ft. x 4 ft. Pine Plywood</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Attach" data-fieldname="image">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control hide-control" data-fieldtype="Image" data-fieldname="image_view" style="margin: 0px;">
+						                            <div style="margin-bottom: 10px;">
+						                                <div class="missing-image"><i class="octicon octicon-circle-slash"></i></div>
+						                            </div>
+						                            <div class="clearfix"></div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section shaded-section">
+						            <div class="col-sm-12">
+						                <h3 class="form-section-heading">Materials Required (Exploded)</h3></div>
+						            <div class="section-body">
+						                <div class="form-column col-sm-12">
+						                    <form>
+						                        <div class="griderp-control" data-fieldtype="Table" data-fieldname="exploded_items">
+						                            <div data-fieldname="exploded_items">
+						                                <div class="form-grid">
+						                                    <div class="grid-heading-row">
+						                                        <div class="grid-row">
+						                                            <div class="data-row row sortable-handle">
+						                                                <div class="row-index">&nbsp;</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="item_code">Item Code</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="item_name">Item Name</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="description">Description</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="qty">Qty</div>
+						                                                <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="rate">Rate</div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                    <div class="grid-body">
+						                                        <div class="rows">
+						                                            <div class="grid-row" data-idx="1">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">1</div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="item_code"><a class="grey" href="#Form/Item/Base%20Plate%20Un%20Painted" data-doctype="Item">Base Plate Un Painted</a></div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="item_name">Base Plate Un Painted</div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="description">3/4 in. x 2 ft. x 4 ft. Pine Plywood</div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="qty">
+						                                                        <div style="text-align: right">1</div>
+						                                                    </div>
+						                                                    <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="rate">
+						                                                        <div style="text-align: right">$ 16.00</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                        </div>
+						                                        <div class="grid-empty text-center hide">No Data</div>
+						                                        <div class="small form-clickable-section grid-footer" style="display: none;">
+						                                            <div class="row">
+						                                                <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px;"> Add multiple rows</a> </div>
+						                                                <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<!-- Timeline -->
+						        <div class="timeline-items">
+						            <div class="media timeline-item" data-name="d0d248b2d2"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+						                <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+						                    <div>
+						                        <div class="pull-right"> <span class="small text-muted">  </span> </div>
+						                        <h5> <i class="octicon octicon-lock icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Submitted</span> <span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2015-12-31 11:28:51.288786" title="12-31-2015 11:28:51">a month ago</span></span> </h5> </div>
+						                </div>
+						            </div>
+						            <div class="media timeline-item" data-name="" style="margin-top: 0px;"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+						                <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+						                    <div>
+						                        <div class="pull-right"> <span class="small text-muted">  </span> </div>
+						                        <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created</span> <span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2015-12-31 11:28:35.471101" title="12-31-2015 11:28:35">a month ago</span></span> </h5> </div>
+						                </div>
+						            </div>
+						        </div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

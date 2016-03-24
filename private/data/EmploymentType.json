@@ -1,0 +1,10 @@
+[
+	{ "name": "Apprentice", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Apprentice" },
+	{ "name": "Commission", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Commission" },
+	{ "name": "Contract", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Contract" },
+	{ "name": "Full-time", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Full-time" },
+	{ "name": "Intern", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Intern" },
+	{ "name": "Part-time", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Part-time" },
+	{ "name": "Piecework", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Piecework" },
+	{ "name": "Probation", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "employee_type_name": "Probation" }
+]

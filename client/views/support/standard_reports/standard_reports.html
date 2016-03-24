@@ -1,0 +1,32 @@
+<template name="SupportStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SupportStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="SupportStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'support.standard_reports.maintenance_schedules'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'support.standard_reports.maintenance_schedules'}}">
+				<span class="item-title-modules">
+					Maintenance Schedules
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'support.standard_reports.support_analytics'}} module-list">
+			<a href="{{pathFor 'support.standard_reports.support_analytics'}}">
+				<span class="item-title-modules">
+					Support Analytics
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

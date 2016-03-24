@@ -1,0 +1,580 @@
+<template name="PosProfileEdit">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">{{pos_profile_details.user}}</div>
+								<!--<span class="indicator-blue indicator-text">{{pos_profile_details.voucher_type}}</span>-->
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">New POS Profile</a></li>
+								</ul>
+						</div>
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{pos_profile_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> PosProfileEditSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> PosProfileEditEditForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="PosProfileEditSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="PosProfileEditEditForm">
+	<div id="pos-profile-edit-edit-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-user">
+				<label for="user">
+					Applicable for User
+				</label>
+				<div class="input-div">
+					<input type="text" name="user" value="{{pos_profile_details.user}}" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-naming-series">
+				<label for="naming_series">
+					Series
+				</label>
+				<div class="input-div">
+					<input type="text" name="naming_series" value="{{pos_profile_details.naming_series}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-company">
+				<label for="company">
+					Company
+				</label>
+				<div class="input-div">
+					<input type="text" name="company" value="{{pos_profile_details.company}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-name">
+				<label for="name">
+					POS Profile Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="name" value="{{pos_profile_details.name}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>-->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+							<div class="form-dashboard" style="display: none;">
+								<div class="row" style="padding: 15px 30px;"></div>
+							</div>
+							<div class="form-page">
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="user">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Applicable for User</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="user" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-122" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/User/Administrator" data-doctype="User">Administrator</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="naming_series">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Series</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="naming_series" placeholder="" data-doctype="POS Profile">
+								                                    <option value="SINV-">SINV-</option>
+								                                    <option value="SINV-RET-">SINV-RET-</option>
+								                                </select>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">SINV-</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="warehouse">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Warehouse</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="warehouse" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-123" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Warehouse/Stores%20-%20GWZ" data-doctype="Warehouse">Stores - GWZ</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="update_stock">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="update_stock" placeholder="" data-doctype="POS Profile"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Update Stock</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="customer">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Customer</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="customer" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-124" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Customer/SigmaStar" data-doctype="Customer">SigmaStar</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="company">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Company</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="company" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-125" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Company/Gridworkz" data-doctype="Company">Gridworkz</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="currency">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Currency</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="currency" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-126" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Currency/CAD" data-doctype="Currency">CAD</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="mode_of_payment">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Mode of Payment</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="mode_of_payment" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-127" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Mode%20of%20Payment/Bank%20Draft" data-doctype="Mode%20of%20Payment">Bank Draft</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="print_format">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Print Format</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="print_format" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-128" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Print%20Format/Cheque%20Printing%20Format" data-doctype="Print%20Format">Cheque Printing Format</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="letter_head">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Letter Head</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="letter_head" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-129" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="select_print_heading">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Print Heading</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="select_print_heading" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-130" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="tc_name">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Terms and Conditions</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="tc_name" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-131" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="territory">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Territory</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="territory" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-132" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Territory/All%20Territories" data-doctype="Territory">All Territories</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="selling_price_list">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Price List</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="selling_price_list" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-133" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Price%20List/Standard%20Selling" data-doctype="Price%20List">Standard Selling</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="write_off_account">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Write Off Account</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="write_off_account" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-134" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Account/Commission%20on%20Sales%20-%20GWZ" data-doctype="Account">Commission on Sales - GWZ</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="write_off_cost_center">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Write Off Cost Center</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="write_off_cost_center" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-135" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Cost%20Center/Main%20-%20GWZ" data-doctype="Cost%20Center">Main - GWZ</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="taxes_and_charges">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Taxes and Charges</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="taxes_and_charges" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-136" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="cash_bank_account">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Cash/Bank Account</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="cash_bank_account" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-137" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Account/Bank%20Overdraft%20Account%20-%20GWZ" data-doctype="Account">Bank Overdraft Account - GWZ</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="income_account">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Income Account</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="income_account" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-138" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Account/Service%20-%20GWZ" data-doctype="Account">Service - GWZ</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="expense_account">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Expense Account</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="expense_account" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-139" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Account/Commission%20on%20Sales%20-%20GWZ" data-doctype="Account">Commission on Sales - GWZ</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="cost_center">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Cost Center</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="cost_center" placeholder="" data-doctype="POS Profile" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-140" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Cost%20Center/Main%20-%20GWZ" data-doctype="Cost%20Center">Main - GWZ</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="timeline-items">
+								    <div class="media timeline-item" data-name=""> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+								            <div>
+								                <div class="pull-right"> <span class="small text-muted">  </span> </div>
+								                <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created </span><span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2013-03-19 12:02:15" title="03-19-2013 12:02:15">3 years ago</span></span> </h5> </div>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

@@ -1,0 +1,4 @@
+[
+	{ "name": "Colour", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "attribute_name": "Colour", "numeric_values": 0, "to_range": 0.000000, "increment": 0.000000, "from_range": 0.000000 },
+	{ "name": "Size", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "attribute_name": "Size", "numeric_values": 0, "to_range": 0.000000, "increment": 0.000000, "from_range": 0.000000 }
+]

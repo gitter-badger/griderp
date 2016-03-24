@@ -1,0 +1,3 @@
+[
+	{ "name": "United States", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "is_default": 1, "country": "United States", "template": "{{ address_line1 }}<br>{% if address_line2 %}{{ address_line2 }}<br>{% endif -%}\n{{ city }}<br>\n{% if state %}{{ state }}<br>{% endif -%}\n{% if pincode %}{{ pincode }}<br>{% endif -%}\n{{ country }}<br>\n{% if phone %}Phone: {{ phone }}<br>{% endif -%}\n{% if fax %}Fax: {{ fax }}<br>{% endif -%}\n{% if email_id %}Email: {{ email_id }}<br>{% endif -%}\n" }
+]

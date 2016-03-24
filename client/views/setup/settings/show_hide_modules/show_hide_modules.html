@@ -1,0 +1,44 @@
+<template name="SetupSettingsShowHideModules">
+
+	{{> PageHeading title="Show / Hide Modules" type="showHideModules"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> ShowHideModulesForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="ShowHideModulesForm">
+	<div class="layout-main-section" style="padding: 15px;">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row hide"></div>
+		<div id="modules-list">
+		    <!--<div class="list-group"></div>-->
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Accounts"> &nbsp;Accounts</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="All Applications"> &nbsp;All Applications</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Buying"> &nbsp;Buying</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="CRM"> &nbsp;CRM</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Core"> &nbsp;Core</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Desk"> &nbsp;Desk</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="File Manager"> &nbsp;File Manager</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="HR"> &nbsp;HR</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Learn"> &nbsp;Learn</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Manufacturing"> &nbsp;Manufacturing</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="POS"> &nbsp;POS</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Projects"> &nbsp;Projects</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Selling"> &nbsp;Selling</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Stock"> &nbsp;Stock</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Support"> &nbsp;Support</label></span></div>
+		    <div class="list-group-item"> <span class="cbox" style="margin-right: 10px;"><label class="checkbox-label"><input type="checkbox" data-module="Website"> &nbsp;Website</label></span></div>
+		</div>
+	</div>
+</template>
+

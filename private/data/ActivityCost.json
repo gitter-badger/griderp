@@ -1,0 +1,3 @@
+[
+	{ "name": "AC-00001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "title": "None for Communication", "billing_rate": 50.000000, "costing_rate": 10.000000, "employee_name": null, "employee": "EMP/0001", "activity_type": "Communication" }
+]

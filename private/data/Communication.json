@@ -1,0 +1,3 @@
+[
+	{ "name": "COMM-00001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "cc": null, "email_account": null, "subject": "Welcome aboard", "reference_doctype": "null", "unread_notification_sent": 0, "content": "Welcome to the GridERP project.", "communication_medium": "Email", "naming_series": "COMM-", "status": "Open", "recipients": "shells@gridworkz.com", "reference_name": null, "user": "Administrator", "delivery_status": "", "in_reply_to": null, "_user_tags": null, "sender": null, "sent_or_received": "Sent", "sender_full_name": null, "phone_no": null, "communication_date": "2015-12-31 00:00:00.000000" }
+]

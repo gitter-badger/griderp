@@ -1,0 +1,5 @@
+[
+	{ "docstatus": 0, "parent": "Website Settings", "parentfield": "top_bar_items", "parenttype": "Website Settings", "idx": 3, "url": "/products", "parent_label": null, "right": 0, "target": null, "label": "Products" },
+	{ "docstatus": 0, "parent": "Website Settings", "parentfield": "top_bar_items", "parenttype": "Website Settings", "idx": 1, "url": "/contact", "parent_label": null, "right": 0, "target": null, "label": "Contact" },
+	{ "docstatus": 0, "parent": "Website Settings", "parentfield": "top_bar_items", "parenttype": "Website Settings", "idx": 2, "url": "/blog", "parent_label": null, "right": 0, "target": null, "label": "Blog" }
+]

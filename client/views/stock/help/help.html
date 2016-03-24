@@ -1,0 +1,39 @@
+<template name="StockHelp">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> StockHelpModuleMenu}}
+	</div>
+</template>
+
+<template name="StockHelpModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'stock.help.item_variants'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'stock.help.item_variants'}}">
+				<span class="item-title-modules">
+					Item Variants
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.help.items_and_pricing'}} module-list">
+			<a href="{{pathFor 'stock.help.items_and_pricing'}}">
+				<span class="item-title-modules">
+					Items and Pricing
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.help.opening_stock_balance'}} module-list">
+			<a href="{{pathFor 'stock.help.opening_stock_balance'}}">
+				<span class="item-title-modules">
+					Opening Stock Balance
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

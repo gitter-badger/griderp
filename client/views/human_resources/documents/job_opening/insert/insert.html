@@ -1,0 +1,174 @@
+<template name="JobOpeningInsert">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">New Job Opening 1</div>
+								<span class="indicator-orange indicator-text">Not Saved</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>&nbsp;
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content just-top">
+						{{> JobOpeningInsertInsertForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="JobOpeningInsertInsertForm">
+	<div id="job-opening-insert-insert-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-name">
+				<label for="name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="name" value="" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-job-title">
+				<label for="job_title">
+					Job Title
+				</label>
+				<div class="input-div">
+					<input type="text" name="job_title" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-status">
+				<label for="status">
+					Status
+				</label>
+				<div class="input-div">
+					<input type="text" name="status" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>-->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+						    <div class="form-dashboard" style="display: none;">
+						        <div class="row" style="padding: 15px 30px;"></div>
+						    </div>
+						    <div class="form-page">
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-12">
+						                    <form>
+						                        <div class="griderp-control input-max-width has-error" data-fieldtype="Data" data-fieldname="job_title">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Job Title</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="job_title" placeholder="" data-doctype="Job Opening"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="status">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Status</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="status" placeholder="" data-doctype="Job Opening"><option value="Open">Open</option><option value="Closed">Closed</option></select></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;">Open</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control" data-fieldtype="Text Editor" data-fieldname="description">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Description</label>
+						                                <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div>
+								                                    <div>
+																		<!-- Summernote Editor -->
+																		<div class="summernote" style="display: none;">
+																			<h3>Hello Customers! </h3> dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+																			<br>
+																			<br>
+
+																		</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+						                                    <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs">Job profile, qualifications required etc.</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="just-top">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

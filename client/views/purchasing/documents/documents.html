@@ -1,0 +1,76 @@
+<template name="PurchasingDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> PurchasingDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="PurchasingDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'purchasing.documents.address'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'purchasing.documents.address'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Address
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">All addresses.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.documents.contact'}} module-list">
+			<a href="{{pathFor 'crm.documents.contact'}}">
+				<span class="item-title-modules">
+					Contact
+				</span>
+				<div class="module-description">All contacts.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.item'}} module-list">
+			<a href="{{pathFor 'stock.documents.item'}}">
+				<span class="item-title-modules">
+					Item
+				</span>
+				<div class="module-description">All products or services.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.documents.material_request'}} module-list">
+			<a href="{{pathFor 'purchasing.documents.material_request'}}">
+				<span class="item-title-modules">
+					Material Request
+				</span>
+				<div class="module-description">Request for purchase.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.documents.purchase_order'}} module-list">
+			<a href="{{pathFor 'purchasing.documents.purchase_order'}}">
+				<span class="item-title-modules">
+					Purchase Order
+				</span>
+				<div class="module-description">Purchase orders given to suppliers.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.documents.supplier'}} module-list">
+			<a href="{{pathFor 'accounts.documents.supplier'}}">
+				<span class="item-title-modules">
+					Supplier
+				</span>
+				<div class="module-description">Supplier database.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.documents.supplier_quotation'}} module-list">
+			<a href="{{pathFor 'purchasing.documents.supplier_quotation'}}">
+				<span class="item-title-modules">
+					Supplier Quotation
+				</span>
+				<div class="module-description">Quotations received from suppliers.</div>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

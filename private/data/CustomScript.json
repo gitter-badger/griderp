@@ -1,0 +1,3 @@
+[
+	{ "name": "About Us Settings-Client", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "dt": "About Us Settings", "script_type": "Client", "script": "// make a field read-only after saving" }
+]

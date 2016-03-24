@@ -1,0 +1,183 @@
+<template name="SetupPrintingAddressTemplate">
+
+	{{> PageHeading title="Address Template" type="list"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> AddressTemplateSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 50px;">
+						{{> AddressTemplateView}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="AddressTemplateSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#">Quick Report</a></li>
+			<li class="list-unstyled"><a href="#">Assigned To Me</a></li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">TAGS</span> 
+					<a class="td-icon" href="#">&nbsp;
+						<i class="fa fa-pencil"></i>
+					</a>
+			</li>
+			<li class="list-unstyled">No records tagged.</li>
+		</ul>
+	</div>
+</template>
+
+<template name="AddressTemplateView">
+	<div id="address-template-view">
+		<h3 id="component-title">
+			Address Template View
+		</h3>
+		<form id="dataview-controls" class="form-inline">
+			<div id="dataview-controls-insert" class="form-group pull-left {{insertButtonClass}}">
+				<button type="submit" id="dataview-address-template-insert-delete-button" class="{{toggleAddDeleteButton}}">
+					{{setAddDeleteButtonText}}
+				</button>
+			</div>
+			<div id="dataview-controls-search" style="float: right;">
+				{{#if isNotEmpty}}
+				<div id="dataview-controls-search-group" class="input-group">
+					<label class="sr-only" for="search">
+						Search
+					</label>
+					<span class="input-group-btn">
+						<input type="text" class="input form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+						<button type="button" id="dataview-search-button" class="btn btn-primary">
+							<span class="fa fa-search">
+							</span>
+						</button>
+					</span>
+				</div>
+				{{/if}}
+			</div>
+			<div id="dataview-controls-export" class="form-group" style="margin-left: 8px;">
+				{{#if isNotEmpty}}			
+		{{#if isFound}}
+				<div>
+				</div>
+				{{else}}
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" id="dataview-export-default">
+						Export
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret">
+						</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#" id="dataview-export-csv">
+								Export data to CSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-tsv">
+								Export data to TSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-json">
+								Export data to JSON
+							</a>
+						</li>
+					</ul>
+				</div>
+				{{/if}}			
+		{{/if}}
+			</div>
+		</form>
+		{{#if isNotEmpty}}	
+			{{#if isNotFound}}
+		<div class="alert alert-warning">
+			"{{searchString}}" not found.
+		</div>
+		{{else}}
+		<div id="dataview-data">
+			{{#if viewAsTable}} {{> AddressTemplateViewTable}} {{> AddressTemplateViewTableFooter}} {{/if}}
+		</div>
+		{{/if}}	
+		{{else}}
+		<br />
+		<div class="alert alert-info">
+			No Address Templates :(
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="AddressTemplateViewTable">
+	<table id="dataview-table" class="table table-striped table-hover">
+		<thead id="dataview-table-header">
+			<tr id="dataview-table-header-row">
+				<th class="{{insertButtonClass}} table-checkbox">
+					<input type="checkbox" class="list-select-all">
+				</th>
+				<th class="th-sortable" data-sort="name">
+					Name
+				</th>
+				<th class="th-sortable" data-sort="country">
+					Country
+				</th>
+				<th class="th-sortable" data-sort="is_default">
+					Is Default
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+		</thead>
+		<tbody id="dataview-table-items">
+			{{#each tableItems}} {{> AddressTemplateViewTableItems}} {{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="AddressTemplateViewTableItems">
+	<tr id="dataview-table-items-row">
+		<td class="{{insertButtonClass}} table-checkbox">
+			<input type="checkbox" class="check-complete list-delete" checked={{checkComplete}}>
+		</td>
+		<td>
+			<a href="{{pathFor 'setup.printing.address_template.edit'}}"><span id="field">{{name}}</span></a>
+		</td>
+		<td>
+			<span>{{country}}</span>
+		</td>
+		<td>
+			<span>{{is_default}}</span>
+		</td>
+		<td class="td-icon text-center" style="width:75px;">
+			<span>3 d
+			</span>&nbsp;&nbsp;
+			<span class="fa fa-comments" title="Comments">&nbsp;0
+			</span>
+		</td>
+	</tr>
+</template>
+
+<template name="AddressTemplateViewTableFooter">
+	<div id="dataview-footer">
+		<hr /> 
+		<div id="dataview-address-template-paginate-buttons" class="btn-group pull-right">
+			<button class="btn btn-sm btn-primary" type="button">20</button>
+			<button class="btn btn-sm btn-default" type="button">100</button>
+			<button class="btn btn-sm btn-default" type="button">500</button>
+		</div>
+	</div>
+</template>

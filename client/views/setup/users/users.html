@@ -1,0 +1,36 @@
+<template name="SetupUsers">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupUsersModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupUsersModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.users.role'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.users.role'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Role
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">User Roles</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.users.user'}} module-list">
+			<a href="{{pathFor 'setup.users.user'}}">
+				<span class="item-title-modules">
+					User
+				</span>
+				<div class="module-description">System and Website Users</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

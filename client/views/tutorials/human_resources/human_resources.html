@@ -1,0 +1,46 @@
+<template name="TutorialsHumanResources">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TutorialsHumanResourcesModuleMenu}}
+	</div>
+</template>
+
+<template name="TutorialsHumanResourcesModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tutorials.human_resources.expense_claims'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tutorials.human_resources.expense_claims'}}">
+				<span class="item-title-modules">
+					Expense Claims
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.human_resources.leave_management'}} module-list">
+			<a href="{{pathFor 'tutorials.human_resources.leave_management'}}">
+				<span class="item-title-modules">
+					Leave Management
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.human_resources.processing_payroll'}} module-list">
+			<a href="{{pathFor 'tutorials.human_resources.processing_payroll'}}">
+				<span class="item-title-modules">
+					Processing Payroll
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.human_resources.setting_up_employees'}} module-list">
+			<a href="{{pathFor 'tutorials.human_resources.setting_up_employees'}}">
+				<span class="item-title-modules">
+					Setting Up Employees
+				</span>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

@@ -1,0 +1,25 @@
+<template name="PurchasingMainReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> PurchasingMainReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="PurchasingMainReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'purchasing.main_reports.purchase_analytics'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'purchasing.main_reports.purchase_analytics'}}">
+				<span class="item-title-modules">
+					Purchase Analytics
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,68 @@
+<template name="ProjectsDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ProjectsDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="ProjectsDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'projects.documents.activity_cost'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'projects.documents.activity_cost'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Activity Cost
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Cost of various activities.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'projects.documents.activity_type'}} module-list">
+			<a href="{{pathFor 'projects.documents.activity_type'}}">
+				<span class="item-title-modules">
+					Activity Type
+				</span>
+				<div class="module-description">Types of activities for Time Sheets.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'projects.documents.project'}} module-list">
+			<a href="{{pathFor 'projects.documents.project'}}">
+				<span class="item-title-modules">
+					Project
+				</span>
+				<div class="module-description">Project master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'projects.documents.task'}} module-list">
+			<a href="{{pathFor 'projects.documents.task'}}">
+				<span class="item-title-modules">
+					Task
+				</span>
+				<div class="module-description">Project activity / task.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'projects.documents.time_log'}} module-list">
+			<a href="{{pathFor 'projects.documents.time_log'}}">
+				<span class="item-title-modules">
+					Time Log
+				</span>
+				<div class="module-description">Time Log for tasks.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'projects.documents.time_log_batch'}} module-list">
+			<a href="{{pathFor 'projects.documents.time_log_batch'}}">
+				<span class="item-title-modules">
+					Time Log Batch
+				</span>
+				<div class="module-description">Batch Time Logs for billing.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

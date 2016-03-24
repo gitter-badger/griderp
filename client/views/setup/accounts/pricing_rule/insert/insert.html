@@ -1,0 +1,506 @@
+<template name="PricingRuleInsert">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">New Pricing Rule 1</div>
+								<span class="indicator-orange indicator-text">Not Saved</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>&nbsp;
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content just-top">
+						{{> PricingRuleInsertInsertForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="PricingRuleInsertInsertForm">
+	<div id="pricing-rule-insert-insert-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-title">
+				<label for="title">
+					Title
+				</label>
+				<div class="input-div">
+					<input type="text" name="title" value="" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-apply-on">
+				<label for="apply_on">
+					Apply On
+				</label>
+				<div class="input-div">
+					<input type="text" name="apply_on" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-item-code">
+				<label for="item_code">
+					Item Code
+				</label>
+				<div class="input-div">
+					<input type="text" name="item_code" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-name">
+				<label for="name">
+					Pricing Rule Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="name" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>-->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+						    <div class="form-dashboard" style="display: none;">
+						        <div class="row" style="padding: 15px 30px;"></div>
+						    </div>
+						    <div class="form-page">
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width has-error" data-fieldtype="Data" data-fieldname="title">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Title</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="title" placeholder="" data-doctype="Pricing Rule"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="apply_on">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Apply On</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="apply_on" placeholder="" data-doctype="Pricing Rule"><option></option><option value="Item Code">Item Code</option><option value="Item Group">Item Group</option><option value="Brand">Brand</option></select></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;">Item Code</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="item_code">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Item Code</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="item_code" placeholder="" data-doctype="Pricing Rule" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-558" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="brand">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="item_group">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="priority">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Priority</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="priority" placeholder="" data-doctype="Pricing Rule"><option></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs">Higher the number, higher the priority</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="disable">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="disable" placeholder="" data-doctype="Pricing Rule"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Disable</span>    </label>
+						                                <p class="help-box small text-muted"></p>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section shaded-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="selling">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="selling" placeholder="" data-doctype="Pricing Rule"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Selling</span>    </label>
+						                                <p class="help-box small text-muted"></p>
+						                            </div>
+						                        </div>
+						                        <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="buying">
+						                            <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="buying" placeholder="" data-doctype="Pricing Rule"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Buying</span>    </label>
+						                                <p class="help-box small text-muted"></p>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Select" data-fieldname="applicable_for">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="customer">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="customer_group">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="territory">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="sales_partner">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="campaign">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="supplier">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Link" data-fieldname="supplier_type">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Float" data-fieldname="min_qty">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Min Qty</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Float" data-fieldname="min_qty" placeholder="" data-doctype="Pricing Rule"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Float" data-fieldname="max_qty">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Max Qty</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Float" data-fieldname="max_qty" placeholder="" data-doctype="Pricing Rule"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section shaded-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="valid_from">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Valid From</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="valid_from" placeholder="" data-doctype="Pricing Rule" id="dp1458323455807"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;">03-18-2016</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="valid_upto">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Valid Upto</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="valid_upto" placeholder="" data-doctype="Pricing Rule" id="dp1458323455808"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="company">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Company</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="company" placeholder="" data-doctype="Pricing Rule" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-559" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Company/Gridworkz" data-doctype="Company">Gridworkz</a></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="price_or_discount">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Price or Discount</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="price_or_discount" placeholder="" data-doctype="Pricing Rule"><option></option><option value="Price">Price</option><option value="Discount Percentage">Discount Percentage</option></select></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;">Discount Percentage</div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						                <div class="form-column col-sm-6">
+						                    <form>
+						                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Float" data-fieldname="price">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;"></label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Float" data-fieldname="discount_percentage">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Discount on Price List Rate (%)</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Float" data-fieldname="discount_percentage" placeholder="" data-doctype="Pricing Rule"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="for_price_list">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">For Price List</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="for_price_list" placeholder="" data-doctype="Pricing Rule" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-560" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						        <div class="row form-section visible-section shaded-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-12">
+						                    <form>
+						                        <div class="griderp-control" data-fieldtype="HTML" data-fieldname="pricing_rule_help">
+						                            <table class="table table-bordered" style="background-color: #f9f9f9;">
+						                                <tbody>
+						                                    <tr>
+						                                        <td>
+						                                            <h3><i class="fa fa-hand-o-right"></i> 
+			Notes
+			:</h3>
+						                                            <ul>
+						                                                <li>
+						                                                    Pricing Rule is made to overwrite Price List / define discount percentage, based on some criteria.
+						                                                </li>
+						                                                <li>
+						                                                    If selected Pricing Rule is made for 'Price', it will overwrite Price List. Pricing Rule price is the final price, so no further discount should be applied. Hence, in transactions like Sales Order, Purchase Order etc, it will be fetched in 'Rate' field, rather than 'Price List Rate' field.
+						                                                </li>
+						                                                <li>
+						                                                    Discount Percentage can be applied either against a Price List or for all Price List.
+						                                                </li>
+						                                                <li>
+						                                                    To not apply Pricing Rule in a particular transaction, all applicable Pricing Rules should be disabled.
+						                                                </li>
+						                                            </ul>
+						                                        </td>
+						                                    </tr>
+						                                    <tr>
+						                                        <td>
+						                                            <h3><i class="fa fa-question-circle"></i> 
+			How Pricing Rule is applied?
+			</h3>
+						                                            <ol>
+						                                                <li>
+						                                                    Pricing Rule is first selected based on 'Apply On' field, which can be Item, Item Group or Brand.
+						                                                </li>
+						                                                <li>
+						                                                    Then Pricing Rules are filtered out based on Customer, Customer Group, Territory, Supplier, Supplier Type, Campaign, Sales Partner etc.
+						                                                </li>
+						                                                <li>
+						                                                    Pricing Rules are further filtered based on quantity.
+						                                                </li>
+						                                                <li>
+						                                                    If two or more Pricing Rules are found based on the above conditions, Priority is applied. Priority is a number between 0 to 20 while default value is zero (blank). Higher number means it will take precedence if there are multiple Pricing Rules with same conditions.
+						                                                </li>
+						                                                <li>
+						                                                    Even if there are multiple Pricing Rules with highest priority, then following internal priorities are applied:
+						                                                    <ul>
+						                                                        <li>
+						                                                            Item Code &gt; Item Group &gt; Brand
+						                                                        </li>
+						                                                        <li>
+						                                                            Customer &gt; Customer Group &gt; Territory
+						                                                        </li>
+						                                                        <li>
+						                                                            Supplier &gt; Supplier Type
+						                                                        </li>
+						                                                    </ul>
+						                                                </li>
+						                                                <li>
+						                                                    If multiple Pricing Rules continue to prevail, users are asked to set Priority manually to resolve conflict.
+						                                                </li>
+						                                            </ol>
+						                                        </td>
+						                                    </tr>
+						                                </tbody>
+						                            </table>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="just-top">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

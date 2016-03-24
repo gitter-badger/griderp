@@ -1,0 +1,3 @@
+[
+	{ "name": "AR-0001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "approving_user": "Administrator", "transaction": "Sales Order", "system_user": "dave@gridworkz.com", "to_emp": "EMP/0001", "company": "Gridworkz", "master_name": "", "value": 100.000000, "to_designation": null, "based_on": "Grand Total", "system_role": "Accounts Manager", "customer_or_item": "", "approving_role": "Accounts User" }
+]

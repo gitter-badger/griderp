@@ -1,0 +1,30 @@
+<template name="UserSettingsChangePass">
+
+	<div class="ibox-content">
+
+		<form id="change_pass_form" role="form">
+			<h2 id="component-title">
+				Change password
+			</h2><br />
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}				
+				
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<input id="old_password" type="password" class="form-control" placeholder="Your old password" required autofocus><br />
+			<input id="new_password" type="password" class="form-control" placeholder="New password" required><br />
+			<input id="confirm_pass" type="password" class="form-control" placeholder="Repeat new password" required><br />
+			<button class="btn btn-primary" type="submit" data-loading-text="Please wait...">
+				OK
+			</button>
+		</form>
+`	</div>
+
+</template>
+

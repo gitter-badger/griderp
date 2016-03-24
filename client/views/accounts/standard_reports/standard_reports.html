@@ -1,0 +1,128 @@
+<template name="AccountsStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> AccountsStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="AccountsStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'accounts.standard_reports.accounts_payable_summary'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'accounts.standard_reports.accounts_payable_summary'}}">
+				<span class="item-title-modules">
+					Accounts Payable Summary
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.accounts_receivable_summary'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.accounts_receivable_summary'}}">
+				<span class="item-title-modules">
+					Accounts Receivable Summary
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.bank_clearance_summary'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.bank_clearance_summary'}}">
+				<span class="item-title-modules">
+					Bank Clearance Summary
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.bank_reconciliation_statement'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.bank_reconciliation_statement'}}">
+				<span class="item-title-modules">
+					Bank Reconciliation Statement
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.budget_variance_report'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.budget_variance_report'}}">
+				<span class="item-title-modules">
+					Budget Variance Report
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.customer_credit_balance'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.customer_credit_balance'}}">
+				<span class="item-title-modules">
+					Customer Credit Balance
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.delivered_items_to_be_billed'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.delivered_items_to_be_billed'}}">
+				<span class="item-title-modules">
+					Delivered Items to be Billed
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.item_wise_purchase_register'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.item_wise_purchase_register'}}">
+				<span class="item-title-modules">
+					Item-wise Purchase Register
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.item_wise_sales_register'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.item_wise_sales_register'}}">
+				<span class="item-title-modules">
+					Item-wise Sales Register
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.ordered_items_to_be_billed'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.ordered_items_to_be_billed'}}">
+				<span class="item-title-modules">
+					Ordered Items to be Billed
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.payment_period_based_on_invoice_date'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.payment_period_based_on_invoice_date'}}">
+				<span class="item-title-modules">
+					Payment Period Based on Invoice Date
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.purchase_invoice_trends'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.purchase_invoice_trends'}}">
+				<span class="item-title-modules">
+					Purchase Invoice Trends
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.purchase_order_items_to_be_billed'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.purchase_order_items_to_be_billed'}}">
+				<span class="item-title-modules">
+					Purchase Order Items to be Billed
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.received_items_to_be_billed'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.received_items_to_be_billed'}}">
+				<span class="item-title-modules">
+					Received Items to be Billed
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.sales_invoice_trends'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.sales_invoice_trends'}}">
+				<span class="item-title-modules">
+					Sales Invoice Trends
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.standard_reports.sales_partners_commission'}} module-list">
+			<a href="{{pathFor 'accounts.standard_reports.sales_partners_commission'}}">
+				<span class="item-title-modules">
+					Sales Partners Commission
+				</span>
+			</a>
+		</li>		
+	</ul>
+</template>

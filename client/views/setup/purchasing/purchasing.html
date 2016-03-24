@@ -1,0 +1,86 @@
+<template name="SetupPurchasing">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupPurchasingModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupPurchasingModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.purchasing.item_group_tree'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.purchasing.item_group_tree'}}">
+				<span class="item-title-modules">
+					Item Group Tree
+				</span>
+				<div class="module-description">Tree of Item Groups.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.item_price'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.item_price'}}">
+				<span class="item-title-modules">
+					Item Price
+				</span>
+				<div class="module-description">Multiple Item prices.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.price_list'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.price_list'}}">
+				<span class="item-title-modules">
+					Price List
+				</span>
+				<div class="module-description">Price List master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.pricing_rule'}} module-list">
+			<a href="{{pathFor 'setup.accounts.pricing_rule'}}">
+				<span class="item-title-modules">
+					Pricing Rule
+				</span>
+				<div class="module-description">Rules for applying pricing and discount.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.purchase_taxes_and_charges_template'}} module-list">
+			<a href="{{pathFor 'setup.accounts.purchase_taxes_and_charges_template'}}">
+				<span class="item-title-modules">
+					Purchase Taxes and Charges Template
+				</span>
+				<div class="module-description">Tax template for buying transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.purchasing_settings'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.purchasing_settings'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Purchasing Settings
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Default settings for buying transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.supplier_type'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.supplier_type'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Supplier Type
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Supplier Type master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.terms_and_conditions'}} module-list">
+			<a href="{{pathFor 'setup.printing.terms_and_conditions'}}">
+				<span class="item-title-modules">
+					Terms and Conditions Template
+				</span>
+				<div class="module-description">Template of terms or contract.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

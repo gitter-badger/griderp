@@ -1,0 +1,60 @@
+<template name="StockMainReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> StockMainReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="StockMainReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'stock.main_reports.item_wise_price_list_rate'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'stock.main_reports.item_wise_price_list_rate'}}">
+				<span class="item-title-modules">
+					Item-wise Price List Rate
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.main_reports.stock_ageing'}} module-list">
+			<a href="{{pathFor 'stock.main_reports.stock_ageing'}}">
+				<span class="item-title-modules">
+					Stock Ageing
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.main_reports.stock_analytics'}} module-list">
+			<a href="{{pathFor 'stock.main_reports.stock_analytics'}}">
+				<span class="item-title-modules">
+					Stock Analytics
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.main_reports.stock_balance'}} module-list">
+			<a href="{{pathFor 'stock.main_reports.stock_balance'}}">
+				<span class="item-title-modules">
+					Stock Balance
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.main_reports.stock_ledger'}} module-list">
+			<a href="{{pathFor 'stock.main_reports.stock_ledger'}}">
+				<span class="item-title-modules">
+					Stock Ledger
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.main_reports.stock_projected_qty'}} module-list">
+			<a href="{{pathFor 'stock.main_reports.stock_projected_qty'}}">
+				<span class="item-title-modules">
+					Stock Projected Quantity
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

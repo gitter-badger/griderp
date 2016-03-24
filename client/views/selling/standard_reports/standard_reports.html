@@ -1,0 +1,116 @@
+<template name="SellingStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SellingStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="SellingStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'selling.standard_reports.available_stock_for_packing_items'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'selling.standard_reports.available_stock_for_packing_items'}}">
+				<span class="item-title-modules">
+					Available Stock for Packing Items
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.bom_search'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.bom_search'}}">
+				<span class="item-title-modules">
+					BOM Search
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.customer_addresses_and_contacts'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.customer_addresses_and_contacts'}}">
+				<span class="item-title-modules">
+					Customer Addresses and Contacts
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.customer_credit_balance'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.customer_credit_balance'}}">
+				<span class="item-title-modules">
+					Customer Credit Balance
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.customers_not_buying_for_long_time'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.customers_not_buying_for_long_time'}}">
+				<span class="item-title-modules">
+					Customers not Buying for Long Time
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.item_wise_sales_history'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.item_wise_sales_history'}}">
+				<span class="item-title-modules">
+					Item-wise Sales History
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.lead_details'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.lead_details'}}">
+				<span class="item-title-modules">
+					Lead Details
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.ordered_items_to_be_delivered'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.ordered_items_to_be_delivered'}}">
+				<span class="item-title-modules">
+					Ordered Items to be Delivered
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.pending_so_items_for_purchase_request'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.pending_so_items_for_purchase_request'}}">
+				<span class="item-title-modules">
+					Pending Sales Order Items for Purchase Request
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.quotation_trends'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.quotation_trends'}}">
+				<span class="item-title-modules">
+					Quotation Trends
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.sales_order_trends'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.sales_order_trends'}}">
+				<span class="item-title-modules">
+					Sales Order Trends
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.sales_person_target_variance_item_group_wise'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.sales_person_target_variance_item_group_wise'}}">
+				<span class="item-title-modules">
+					Sales Person Target Variance Item Group-wise
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.sales_person_wise_transaction_summary'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.sales_person_wise_transaction_summary'}}">
+				<span class="item-title-modules">
+					Sales Person-wise Transaction Summary
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.standard_reports.territory_target_variance_item_group_wise'}} module-list">
+			<a href="{{pathFor 'selling.standard_reports.territory_target_variance_item_group_wise'}}">
+				<span class="item-title-modules">
+					Territory Target Variance Item Group-wise
+				</span>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

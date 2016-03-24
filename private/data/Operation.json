@@ -1,0 +1,8 @@
+[
+	{ "name": "Assembly Operation", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workstation": "Assembly Station 1", "description": "Assemble Unit as per Standard Operating Procedures" },
+	{ "name": "Packing", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workstation": "Packing and Testing Station", "description": "Final Packing and add Instructions" },
+	{ "name": "Prepare Frame", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workstation": "Drilling Machine 1", "description": "Prepare frame for assembly" },
+	{ "name": "Setup Fixtures", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workstation": "Assembly Station 1", "description": "Setup Fixtures for Assembly" },
+	{ "name": "Testing", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workstation": "Packing and Testing Station", "description": "Final Testing Checklist" },
+	{ "name": "Wiring", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workstation": "Assembly Station 1", "description": "Connect wires" }
+]

@@ -1,0 +1,3 @@
+[
+	{ "name": "Campaign Number One", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "campaign_name": "Campaign Number One", "description": "This is our first campaign", "naming-series": "Campaign-.####" }
+]

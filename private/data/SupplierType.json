@@ -1,0 +1,9 @@
+[
+	{ "name": "Distributor", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "credit_days": null, "supplier_type": "Distributor" },
+	{ "name": "Electrical", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "credit_days": null, "supplier_type": "Electrical" },
+	{ "name": "Hardware", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "credit_days": null, "supplier_type": "Hardware" },
+	{ "name": "Local", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "credit_days": null, "supplier_type": "Local" },
+	{ "name": "Pharmaceutical", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "credit_days": null, "supplier_type": "Pharmaceutical" },
+	{ "name": "Raw Material", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "credit_days": null, "supplier_type": "Raw Material" },
+	{ "name": "Services", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "credit_days": null, "supplier_type": "Services" }
+]

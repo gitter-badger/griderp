@@ -1,0 +1,92 @@
+<template name="StockDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> StockDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="StockDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'stock.documents.batch'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'stock.documents.batch'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Batch
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Batch (lot) of an Item.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.delivery_note'}} module-list">
+			<a href="{{pathFor 'stock.documents.delivery_note'}}">
+				<span class="item-title-modules">
+					Delivery Note
+				</span>
+				<div class="module-description">Shipments to customers.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.installation_note'}} module-list">
+			<a href="{{pathFor 'stock.documents.installation_note'}}">
+				<span class="item-title-modules">
+					Installation Note
+				</span>
+				<div class="module-description">Installation record for a Serial No.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.item'}} module-list">
+			<a href="{{pathFor 'stock.documents.item'}}">
+				<span class="item-title-modules">
+					Item
+				</span>
+				<div class="module-description">All Products or Services.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.documents.material_request'}} module-list">
+			<a href="{{pathFor 'purchasing.documents.material_request'}}">
+				<span class="item-title-modules">
+					Material Request
+				</span>
+				<div class="module-description">Requests for items.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.purchase_receipt'}} module-list">
+			<a href="{{pathFor 'stock.documents.purchase_receipt'}}">
+				<span class="item-title-modules">
+					Purchase Receipt
+				</span>
+				<div class="module-description">Goods received from Suppliers.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.serial_no'}} module-list">
+			<a href="{{pathFor 'stock.documents.serial_no'}}">
+				<span class="item-title-modules">
+					Serial Number
+				</span>
+				<div class="module-description">Single unit of an Item.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.stock_entry'}} module-list">
+			<a href="{{pathFor 'stock.documents.stock_entry'}}">
+				<span class="item-title-modules">
+					Stock Entry
+				</span>
+				<div class="module-description">Record item movement.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.stock.warehouse'}} module-list">
+			<a href="{{pathFor 'setup.stock.warehouse'}}">
+				<span class="item-title-modules">
+					Warehouse
+				</span>
+				<div class="module-description">Where items are stored.</div>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

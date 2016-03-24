@@ -1,0 +1,156 @@
+<template name="SellingSetup">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SellingSetupModuleMenu}}
+	</div>
+</template>
+
+<template name="SellingSetupModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'crm.setup.campaign'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'crm.setup.campaign'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Campaign
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Sales campaigns.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.setup.customer_group'}} module-list">
+			<a href="{{pathFor 'crm.setup.customer_group'}}">
+				<span class="item-title-modules">
+					Customer Group
+				</span>
+				<div class="module-description">Manage Customer Group Tree.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.email_account'}} module-list">
+			<a href="{{pathFor 'setup.email.email_account'}}">
+				<span class="item-title-modules">
+					Email Account
+				</span>
+				<div class="module-description">Setup incoming server for sales email id. (e.g. sales@example.com)</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.industry_type'}} module-list">
+			<a href="{{pathFor 'setup.selling.industry_type'}}">
+				<span class="item-title-modules">
+					Industry Type
+				</span>
+				<div class="module-description">Track Leads by Industry Type.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.item_group_tree'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.item_group_tree'}}">
+				<span class="item-title-modules">
+					Item Group Tree
+				</span>
+				<div class="module-description">Tree of Item Groups.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.item_price'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.item_price'}}">
+				<span class="item-title-modules">
+					Item Price
+				</span>
+				<div class="module-description">Multiple Item prices.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.price_list'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.price_list'}}">
+				<span class="item-title-modules">
+					Price List
+				</span>
+				<div class="module-description">Price List master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.pricing_rule'}} module-list">
+			<a href="{{pathFor 'setup.accounts.pricing_rule'}}">
+				<span class="item-title-modules">
+					Pricing Rule
+				</span>
+				<div class="module-description">Rules for applying pricing and discount.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.product_bundle'}} module-list">
+			<a href="{{pathFor 'setup.selling.product_bundle'}}">
+				<span class="item-title-modules">
+					Product Bundle
+				</span>
+				<div class="module-description">Bundle items at time of sale.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.sales_partner'}} module-list">
+			<a href="{{pathFor 'setup.selling.sales_partner'}}">
+				<span class="item-title-modules">
+					Sales Partner
+				</span>
+				<div class="module-description">Manage Sales Partners.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.sales_person'}} module-list">
+			<a href="{{pathFor 'setup.selling.sales_person'}}">
+				<span class="item-title-modules">
+					Sales Person
+				</span>
+				<div class="module-description">Manage Sales Person Tree.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.sales_taxes_and_charges_template'}} module-list">
+			<a href="{{pathFor 'setup.accounts.sales_taxes_and_charges_template'}}">
+				<span class="item-title-modules">
+					Sales Taxes and Charges Template
+				</span>
+				<div class="module-description">Tax template for selling transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.selling_settings'}} module-list">
+			<a href="{{pathFor 'setup.selling.selling_settings'}}">
+				<span class="item-title-modules">
+					Selling Settings
+				</span>
+				<div class="module-description">Default settings for selling transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.shipping_rule'}} module-list">
+			<a href="{{pathFor 'setup.accounts.shipping_rule'}}">
+				<span class="item-title-modules">
+					Shipping Rule
+				</span>
+				<div class="module-description">Rules for adding shipping costs.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.sms_settings'}} module-list">
+			<a href="{{pathFor 'setup.email.sms_settings'}}">
+				<span class="item-title-modules">
+					SMS Settings
+				</span>
+				<div class="module-description">Setup SMS gateway settings.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.terms_and_conditions'}} module-list">
+			<a href="{{pathFor 'setup.printing.terms_and_conditions'}}">
+				<span class="item-title-modules">
+					Terms and Conditions Template
+				</span>
+				<div class="module-description">Template of terms or contract.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.territory'}} module-list">
+			<a href="{{pathFor 'setup.selling.territory'}}">
+				<span class="item-title-modules">
+					Territory
+				</span>
+				<div class="module-description">Manage Territory Tree.</div>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

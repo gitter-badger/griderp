@@ -1,0 +1,3 @@
+[
+	{ "name": "fe3091b1d1", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "cash_bank_account": "Bank Overdraft Account - GWZ", "naming_series": "SINV-", "mode_of_payment": "Bank Draft", "currency": "CAD", "letter_head": "", "cost_center": "Main - GWZ", "taxes_and_charges": null, "income_account": "Service - GWZ", "update_stock": 1, "selling_price_list": "Standard Selling", "tc_name": "", "warehouse": "Stores - GWZ", "territory": "All Territories", "write_off_account": "Commission on Sales - GWZ", "write_off_cost_center": "Main - GWZ", "company": "Gridworkz", "user": "Administrator", "expense_account": "Commission on Sales - GWZ", "customer": "SigmaStar", "print_format": "Cheque Printing Format", "select_print_heading": null }
+]

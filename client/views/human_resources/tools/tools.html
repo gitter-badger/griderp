@@ -1,0 +1,44 @@
+<template name="HumanResourcesTools">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> HumanResourcesToolsModuleMenu}}
+	</div>
+</template>
+
+<template name="HumanResourcesToolsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'human_resources.tools.leave_allocation_tool'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'human_resources.tools.leave_allocation_tool'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Leave Allocation Tool
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Allocate leaves for the year.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.tools.process_payroll'}} module-list">
+			<a href="{{pathFor 'human_resources.tools.process_payroll'}}">
+				<span class="item-title-modules">
+					Process Payroll
+				</span>
+				<div class="module-description">Generate Salary Slips.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.tools.upload_attendance'}} module-list">
+			<a href="{{pathFor 'human_resources.tools.upload_attendance'}}">
+				<span class="item-title-modules">
+					Upload Attendance
+				</span>
+				<div class="module-description">Upload attendance from a .csv file.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

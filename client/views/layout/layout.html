@@ -1,0 +1,137 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		GridERP
+	</title>
+</head>
+<template name="layout">
+	{{#if currentUser}}
+		{{> PrivateLayout}}
+	{{else}}
+		{{> PublicLayout}}
+	{{/if}}
+</template>
+
+<template name="PublicLayout">
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-fixed-top navbar-default" role="navigation" style="border-bottom: 1px solid #eee;">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<b><span style="color: #1ab394;"><i class="fa fa-sitemap"></i></span><span style="color: #2f4050;"> GridERP</span></b>
+					</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					{{> PublicLayoutRightMenu}}
+				</div>
+			</div>
+		</div>
+		<div class="navbar-spacer">
+		</div>
+		{{> yield}}
+	</div>
+</template>
+
+<template name="PublicLayoutLeftMenu">
+	<ul class="nav navbar-nav">
+		<li>
+			<a href="{{pathFor 'home_public'}}">
+				<span class="item-title">
+					Home
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+<template name="PublicLayoutRightMenu">
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<a href="{{pathFor 'register'}}">
+				<span class="item-title">
+					Register
+				</span>
+			</a>
+		</li>
+		<li>
+			<a href="{{pathFor 'login'}}">
+				<span class="item-title">
+					Login
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+<template name="PrivateLayout">
+
+    <!-- Wrapper-->
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        {{> navigation }}
+
+        <!-- Page wrapper -->
+        <div id="page-wrapper" class="gray-bg">
+
+            <!-- Top navigation -->
+            {{> TopNavbar }}
+
+			<!-- Main view navigation -->
+			<!--{{> MainViewNavbar }}-->
+
+            <!-- Main view  -->
+            {{> yield }}
+
+            <!-- Footer -->
+            {{> footer }} 
+
+        </div>
+        <!-- End page wrapper-->
+
+    </div>
+    <!-- End wrapper-->
+
+</template>
+
+<template name="PrivateLayoutRightMenu">
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<a href="{{pathFor 'admin'}}">
+				<span class="fa fa-wrench">
+				</span>
+				<span class="item-title">
+					&nbsp;Admin
+				</span>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<span class="fa fa-cog">
+				</span>
+				<span class="item-title">
+					&nbsp;{{userEmail}}
+				</span>
+				<b class="caret">
+				</b>
+			</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a href="{{pathFor 'user_settings'}}">
+						<span class="item-title">
+							Settings
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="{{pathFor 'logout'}}">
+						<span class="item-title">
+							Logout
+						</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</template>
+

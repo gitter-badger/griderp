@@ -1,0 +1,25 @@
+<template name="CrmMainReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> CrmMainReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="CrmMainReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'crm.main_reports.sales_funnel'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'crm.main_reports.sales_funnel'}}">
+				<span class="item-title-modules">
+					Sales Funnel
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,39 @@
+<template name="SellingMainReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SellingMainReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="SellingMainReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'selling.main_reports.customer_acquisition_and_loyalty'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'selling.main_reports.customer_acquisition_and_loyalty'}}">
+				<span class="item-title-modules">
+					Customer Acquisition and Loyalty
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.main_reports.sales_analytics'}} module-list">
+			<a href="{{pathFor 'selling.main_reports.sales_analytics'}}">
+				<span class="item-title-modules">
+					Sales Analytics
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.main_reports.sales_funnel'}} module-list">
+			<a href="{{pathFor 'selling.main_reports.sales_funnel'}}">
+				<span class="item-title-modules">
+					Sales Funnel
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,291 @@
+<template name="MonthlyDistributionInsert">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">New Monthly Distribution 1</div>
+								<span class="indicator-orange indicator-text">Not Saved</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>&nbsp;
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content just-top">
+						{{> MonthlyDistributionInsertInsertForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="MonthlyDistributionInsertInsertForm">
+	<div id="monthly-distribution-insert-insert-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-name">
+				<label for="name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="name" value="" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-distribution-id">
+				<label for="distribution_id">
+					Distribution Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="distribution_id" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-fiscal-year">
+				<label for="fiscal_year">
+					Fiscal Year
+				</label>
+				<div class="input-div">
+					<input type="text" name="fiscal_year" value="" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>-->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+						    <div class="form-dashboard" style="display: none;">
+						        <div class="row" style="padding: 15px 30px;"></div>
+						    </div>
+						    <div class="form-page">
+						        <div class="row form-section visible-section">
+						            <div class="section-body">
+						                <div class="form-column col-sm-12">
+						                    <form>
+						                        <div class="griderp-control input-max-width has-error" data-fieldtype="Data" data-fieldname="distribution_id">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Distribution Name</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="distribution_id" placeholder="" data-doctype="Monthly Distribution"></div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                    <p class="help-box small text-muted hidden-xs">Name of the Monthly Distribution</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="fiscal_year">
+						                            <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Fiscal Year</label>
+						                                <div class="control-input-wrapper">
+						                                    <div class="control-input">
+						                                        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="fiscal_year" placeholder="" data-doctype="Monthly Distribution" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+						                                            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-487" tabindex="0" style="display: none;"></ul>
+						                                        </div>
+						                                    </div>
+						                                    <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Fiscal%20Year/2015-2016" data-doctype="Fiscal%20Year">2015-2016</a></div>
+						                                    <p class="help-box small text-muted hidden-xs"></p>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="griderp-control" data-fieldtype="Table" data-fieldname="percentages">
+						                            <div data-fieldname="percentages">
+						                                <div class="form-grid">
+						                                    <div class="grid-heading-row">
+						                                        <div class="grid-row">
+						                                            <div class="data-row row sortable-handle">
+						                                                <div class="row-index">&nbsp;</div>
+						                                                <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">Month</div>
+						                                                <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">Percentage Allocation</div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                    <div class="grid-body">
+						                                        <div class="rows">
+						                                            <div class="grid-row" data-idx="1">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">1</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">January</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="2">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">2</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">February</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="3">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">3</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">March</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="4">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">4</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">April</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="5">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">5</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">May</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="6">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">6</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">June</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="7">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">7</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">July</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="8">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">8</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">August</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="9">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">9</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">September</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="10">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">10</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">October</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="11">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">11</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">November</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                            <div class="grid-row" data-idx="12">
+						                                                <div class="data-row row sortable-handle">
+						                                                    <div class="row-index">12</div>
+						                                                    <div class="col col-xs-7 grid-overflow-ellipsis grid-static-col" data-fieldname="month">December</div>
+						                                                    <div class="col col-xs-4 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="percentage_allocation">
+						                                                        <div style="text-align: right">8.333</div>
+						                                                    </div>
+						                                                </div>
+						                                            </div>
+						                                        </div>
+						                                        <div class="grid-empty text-center hide">No Data</div>
+						                                        <div class="small form-clickable-section grid-footer">
+						                                            <div class="row">
+						                                                <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline-block; margin-top: 3px;"> Add multiple rows</a> </div>
+						                                                <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+						                                            </div>
+						                                        </div>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="just-top">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

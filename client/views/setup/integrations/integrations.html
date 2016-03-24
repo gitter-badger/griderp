@@ -1,0 +1,35 @@
+<template name="SetupIntegrations">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupIntegrationsModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupIntegrationsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.integrations.dropbox_backup'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.integrations.dropbox_backup'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Dropbox Backup
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Manage cloud backups on Dropbox.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.integrations.social_login_keys'}} module-list">
+			<a href="{{pathFor 'setup.integrations.social_login_keys'}}">
+				<span class="item-title-modules">
+					Social Login Keys
+				</span>
+				<div class="module-description">Enter keys to enable login via Facebook, Google, GitHub.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+

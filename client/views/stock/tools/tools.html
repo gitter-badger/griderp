@@ -1,0 +1,52 @@
+<template name="StockTools">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> StockToolsModuleMenu}}
+	</div>
+</template>
+
+<template name="StockToolsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'stock.tools.landed_cost_voucher'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'stock.tools.landed_cost_voucher'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Landed Cost Voucher
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Update additional costs to calculate landed cost of items.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.tools.packing_slip'}} module-list">
+			<a href="{{pathFor 'stock.tools.packing_slip'}}">
+				<span class="item-title-modules">
+					Packing Slip
+				</span>
+				<div class="module-description">Split Delivery Note into packages.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.tools.quality_inspection'}} module-list">
+			<a href="{{pathFor 'stock.tools.quality_inspection'}}">
+				<span class="item-title-modules">
+					Quality Inspection
+				</span>
+				<div class="module-description">Incoming quality inspection.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.tools.stock_reconciliation'}} module-list">
+			<a href="{{pathFor 'stock.tools.stock_reconciliation'}}">
+				<span class="item-title-modules">
+					Stock Reconciliation
+				</span>
+				<div class="module-description">Upload stock balance via csv.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,4 @@
+[
+	{ "name": "Standard Buying", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "selling": 0, "enabled": 1, "currency": "USD", "price_list_name": "Standard Buying", "buying": 1 },
+	{ "name": "Standard Selling", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "selling": 1, "enabled": 1, "currency": "USD", "price_list_name": "Standard Selling", "buying": 0 }
+]

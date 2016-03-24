@@ -1,0 +1,60 @@
+<template name="ToolsTools">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ToolsToolsModuleMenu}}
+	</div>
+</template>
+
+<template name="ToolsToolsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tools.tools.todo'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tools.tools.todo'}}">
+				<div class="module-description module-timestamp">20 days ago</div>
+				<span class="item-title-modules">
+					ToDo
+				</span>
+				<span class="module-badge">2</span>
+				<div class="module-description">Documents assigned to you and by you.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tools.tools.calendar'}} module-list">
+			<a href="{{pathFor 'tools.tools.calendar'}}">
+				<span class="item-title-modules">
+					Calendar
+				</span>
+				<div class="module-description">Events and other calendars.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tools.tools.messages'}} module-list">
+			<a href="{{pathFor 'tools.tools.messages'}}">
+				<span class="item-title-modules">
+					Messages
+				</span>
+				<div class="module-description">Chat messages and other notifications.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tools.tools.note'}} module-list">
+			<a href="{{pathFor 'tools.tools.note'}}">
+				<span class="item-title-modules">
+					Notes
+				</span>
+				<div class="module-description">Private and public notes.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tools.tools.activity'}} module-list">
+			<a href="{{pathFor 'tools.tools.activity'}}">
+				<span class="item-title-modules">
+					Activity
+				</span>
+				<div class="module-description">Activity log of all users.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

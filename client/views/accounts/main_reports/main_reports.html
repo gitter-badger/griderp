@@ -1,0 +1,93 @@
+<template name="AccountsMainReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> AccountsMainReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="AccountsMainReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'accounts.main_reports.accounts_payable'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'accounts.main_reports.accounts_payable'}}">
+				<span class="item-title-modules">
+					Accounts Payable
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.accounts_receivable'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.accounts_receivable'}}">
+				<span class="item-title-modules">
+					Accounts Receivable
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.balance_sheet'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.balance_sheet'}}">
+				<span class="item-title-modules">
+					Balance Sheet
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.financial_analytics'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.financial_analytics'}}">
+				<span class="item-title-modules">
+					Financial Analytics
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.general_ledger'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.general_ledger'}}">
+				<span class="item-title-modules">
+					General Ledger
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.gross_profit'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.gross_profit'}}">
+				<span class="item-title-modules">
+					Gross Profit
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.profit_and_loss_statement'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.profit_and_loss_statement'}}">
+				<span class="item-title-modules">
+					Profit and Loss Statement
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.purchase_register'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.purchase_register'}}">
+				<span class="item-title-modules">
+					Purchase Register
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.sales_register'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.sales_register'}}">
+				<span class="item-title-modules">
+					Sales Register
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.trial_balance'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.trial_balance'}}">
+				<span class="item-title-modules">
+					Trial Balance
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.main_reports.trial_balance_for_party'}} module-list">
+			<a href="{{pathFor 'accounts.main_reports.trial_balance_for_party'}}">
+				<span class="item-title-modules">
+					Trial Balance for Party
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>

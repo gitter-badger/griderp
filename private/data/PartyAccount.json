@@ -1,0 +1,7 @@
+[
+	{ "docstatus": 0, "parent": "Nelson Brothers", "parentfield": "accounts", "parenttype": "Customer", "idx": 1, "account": "Debtors EUR - WP", "company": "Warp Power LLC" },
+	{ "docstatus": 0, "parent": "Modern Electricals", "parentfield": "accounts", "parenttype": "Supplier", "idx": 1, "account": "Creditors EUR - WP", "company": "Warp Power LLC" },
+	{ "docstatus": 0, "parent": "Endicott Shoes", "parentfield": "accounts", "parenttype": "Customer", "idx": 1, "account": "Debtors EUR - WP", "company": "Warp Power LLC" },
+	{ "docstatus": 0, "parent": "Eagle Hardware", "parentfield": "accounts", "parenttype": "Supplier", "idx": 1, "account": "Creditors EUR - WP", "company": "Warp Power LLC" },
+	{ "docstatus": 0, "parent": "Hind Enterprises", "parentfield": "accounts", "parenttype": "Customer", "idx": 1, "account": "Debtors EUR - WP", "company": "Warp Power LLC" }
+]

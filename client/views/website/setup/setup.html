@@ -1,0 +1,76 @@
+<template name="WebsiteSetup">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> WebsiteSetupModuleMenu}}
+	</div>
+</template>
+
+<template name="WebsiteSetupModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.website.about_us_settings'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.website.about_us_settings'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					About Us Settings
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Settings for About Us Page.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.website.blog_category'}} module-list">
+			<a href="{{pathFor 'setup.website.blog_category'}}">
+				<span class="item-title-modules">
+					Blog Category
+				</span>
+				<div class="module-description">Categorize blog posts.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.website.blog_settings'}} module-list">
+			<a href="{{pathFor 'setup.website.blog_settings'}}">
+				<span class="item-title-modules">
+					Blog Settings
+				</span>
+				<div class="module-description">Write titles and introductions to your blog.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.website.contact_us_settings'}} module-list">
+			<a href="{{pathFor 'setup.website.contact_us_settings'}}">
+				<span class="item-title-modules">
+					Contact Us Settings
+				</span>
+				<div class="module-description">Settings for Contact Us Page.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.website.website_script'}} module-list">
+			<a href="{{pathFor 'setup.website.website_script'}}">
+				<span class="item-title-modules">
+					Website Script
+				</span>
+				<div class="module-description">Javascript to append to the head section of the page.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.website.website_settings'}} module-list">
+			<a href="{{pathFor 'setup.website.website_settings'}}">
+				<span class="item-title-modules">
+					Website Settings
+				</span>
+				<div class="module-description">Setup of top navigation bar, footer and logo.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.website.website_theme'}} module-list">
+			<a href="{{pathFor 'setup.website.website_theme'}}">
+				<span class="item-title-modules">
+					Website Theme
+				</span>
+				<div class="module-description">List of themes for Website.</div>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

@@ -1,0 +1,47 @@
+DeliveryNote.allow({
+	insert: function (userId, doc) {
+		return DeliveryNote.userCanInsert(userId, doc);
+	},
+
+	update: function (userId, doc, fields, modifier) {
+		return DeliveryNote.userCanUpdate(userId, doc);
+	},
+
+	remove: function (userId, doc) {
+		return DeliveryNote.userCanRemove(userId, doc);
+	}
+});
+
+DeliveryNote.before.insert(function(userId, doc) {
+	doc.createdAt = new Date();
+	doc.createdBy = userId;
+	doc.modifiedAt = doc.createdAt;
+	doc.modifiedBy = doc.createdBy;
+
+	
+	if(!doc.ownerId) doc.ownerId = userId;
+});
+
+DeliveryNote.before.update(function(userId, doc, fieldNames, modifier, options) {
+	modifier.$set = modifier.$set || {};
+	modifier.$set.modifiedAt = new Date();
+	modifier.$set.modifiedBy = userId;
+
+	
+});
+
+DeliveryNote.before.remove(function(userId, doc) {
+	
+});
+
+DeliveryNote.after.insert(function(userId, doc) {
+	
+});
+
+DeliveryNote.after.update(function(userId, doc, fieldNames, modifier, options) {
+	
+});
+
+DeliveryNote.after.remove(function(userId, doc) {
+	
+});

@@ -1,0 +1,173 @@
+<template name="SystemUserEdit">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">{{system_user_details.profile.name}}</div>
+								<!--<span class="indicator-red indicator-text">Open</span>-->
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<!--<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">New ToDo</a></li>
+								</ul>
+						</div>-->
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{todo_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> SystemUserEditSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> SystemUserEditEditForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="SystemUserEditSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="SystemUserEditEditForm">
+	<div id="system-user-edit-edit-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-profile-name">
+				<label for="profile.name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.name" value="{{system_user_details.profile.name}}" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-email">
+				<label for="profile.email">
+					E-mail
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.email" value="{{system_user_details.profile.email}}" class="form-control" required="required" data-type="email">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-roles">
+				<label for="roles">
+					Role
+				</label>
+				<div class="input-div">
+					<div class="cbox">
+						<label class="checkbox-label">
+							<input type="checkbox" value="system_user_details.roles.user" name="roles" data-type="array" {{itemIsChecked system_user_details.roles "user"}}>
+							 &nbsp;User
+						</label>
+					</div>
+					<div class="cbox">
+						<label class="checkbox-label">
+							<input type="checkbox" value="system_user_details.roles.admin" name="roles" data-type="array" {{itemIsChecked system_user_details.roles "admin"}}>
+							 &nbsp;Admin
+						</label>
+					</div>
+					<div class="cbox">
+						<label class="checkbox-label">
+							<input type="checkbox" value="system_user_details.roles.blocked" name="roles" data-type="array" {{itemIsChecked system_user_details.roles "blocked"}}>
+							 &nbsp;Blocked
+						</label>
+					</div>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

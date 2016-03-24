@@ -1,0 +1,37 @@
+<template name="CoreSettingsStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> CoreSettingsStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="CoreSettingsStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'core_settings.standard_reports.document_share_report'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'core_settings.standard_reports.document_share_report'}}">
+				<span class="item-title-modules">
+					Document Share Report
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'core_settings.standard_reports.permitted_documents_for_user'}} module-list">
+			<a href="{{pathFor 'core_settings.standard_reports.permitted_documents_for_user'}}">
+				<span class="item-title-modules">
+					Permitted Documents for User
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'core_settings.standard_reports.todo'}} module-list">
+			<a href="{{pathFor 'core_settings.standard_reports.todo'}}">
+				<span class="item-title-modules">
+					ToDo
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>

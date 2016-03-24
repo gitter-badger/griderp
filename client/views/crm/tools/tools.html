@@ -1,0 +1,36 @@
+<template name="CrmTools">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> CrmToolsModuleMenu}}
+	</div>
+</template>
+
+<template name="CrmToolsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'crm.tools.sms_center'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'crm.tools.sms_center'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					SMS Center
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Send mass SMS to your contacts.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.tools.sms_log'}} module-list">
+			<a href="{{pathFor 'crm.tools.sms_log'}}">
+				<span class="item-title-modules">
+					SMS Log
+				</span>
+				<div class="module-description">Logs for maintaining SMS delivery status.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,31 @@
+<template name="Tools">
+
+	{{> PageHeading title="Tools"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div id="menu" class="col-sm-3 col-md-2">
+				<h2>
+				</h2>
+				{{> ToolsSideMenu}}
+			</div>
+			<div id="subcontent" class="col-sm-9 col-md-10" style="padding-bottom:25px;">
+				{{> yield region='ToolsSubcontent'}}
+			</div>
+		</div>		
+ 	</div>
+</template>
+
+<template name="ToolsSideMenu">
+	<ul class="nav nav-pills nav-stacked" id="side-menu">
+		<li class="{{menuItemClass 'tools.tools'}} module-sidebar-item">
+			<a href="{{pathFor 'tools.tools'}}">
+				<span>
+					Tools
+				</span>
+				<span class="glyphicon glyphicon-chevron-right pull-right" style="display: none;"></span>
+			</a>
+		</li>
+	</ul>
+</template>
+

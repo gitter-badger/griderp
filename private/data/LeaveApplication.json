@@ -1,0 +1,3 @@
+[
+	{ "name": "LAP/00001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_approver": "", "letter_head": "GridERP Letterhead", "to_date": "2016-01-08", "half_day": 0, "leave_balance": 5.000000, "amended_from": null, "from_date": "2016-01-06", "employee": "EMP/0002", "status": "Approved", "description": "Trip", "company": "Gridworkz", "total_leave_days": 3.000000, "employee_name": null, "follow_via_email": 1, "leave_approver_name": "Administrator", "leave_type": "Casual Leave", "posting_date": "2015-12-31" }
+]

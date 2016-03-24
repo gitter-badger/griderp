@@ -1,0 +1,6 @@
+[
+	{ "docstatus": 0, "parent": "EMP/0003/SST/00001", "parentfield": "earnings", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "modified_value": 5000.000000, "e_type": "Basic" },
+	{ "docstatus": 0, "parent": "EMP/0002/SST/00001", "parentfield": "earnings", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "modified_value": 7000.000000, "e_type": "Basic" },
+	{ "docstatus": 0, "parent": "EMP/0001/SST/00001", "parentfield": "earnings", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "modified_value": 4560.000000, "e_type": "Basic" },
+	{ "docstatus": 0, "parent": "EMP/0004/SST/00001", "parentfield": "earnings", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "modified_value": 5000.000000, "e_type": "Basic" }
+]

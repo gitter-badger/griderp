@@ -1,0 +1,144 @@
+<template name="HumanResourcesToolsUploadAttendance">
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">Upload Attendance</div>
+								<span class="indicator-orange indicator-text">Not Saved</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<!--<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">New Shipping Rule</a></li>
+								</ul>
+						</div>-->
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{shipping_rule_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> UploadAttendanceForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="UploadAttendanceForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row hide"></div>
+		<div>
+		    <div>
+		        <div class="form-layout">
+		            <div class="form-dashboard" style="display: none;">
+		                <div class="row" style="padding: 15px 30px;"></div>
+		            </div>
+		            <div class="form-page">
+		                <div class="row form-section visible-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Download Template</h3></div>
+		                    <div class="col-sm-12 small text-muted">Download the Template, fill in appropriate data and attach the modified file. All dates and employee combinations for the selected period will appear in the template, with existing attendance records.</div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="att_fr_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Attendance From Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="att_fr_date" placeholder="" data-doctype="Upload Attendance" id="dp1455297290508"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;">02-12-2016</div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="att_to_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Attendance To Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="att_to_date" placeholder="" data-doctype="Upload Attendance" id="dp1455297290509"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;">02-12-2016</div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="get_template">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="get_template" placeholder="" data-doctype="Upload Attendance" value="">Get Template</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row form-section visible-section shaded-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Import Attendance</h3></div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control" data-fieldtype="HTML" data-fieldname="upload_html">
+		                                    <div class="file-upload">
+		                                        <div class="input-upload pull-left"> <input class="input-upload-file hidden" type="file" name="filedata"> <button class="btn btn-default btn-sm btn-browse" style="margin-top: 2px;">Browse</button> </div>
+		                                        <div class="uploaded-filename hidden" style="width: calc(100% - 67px);"></div>
+		                                        <div class="web-link-wrapper pull-left" style="width: calc(100% - 67px);"> <span class="text-muted file-upload-or">or</span>
+		                                            <div class="input-link" style="width: calc(100% - 30px);">
+		                                                <div class="input-group">
+		                                                    <div class="input-group-addon"> <span class="hidden-xs">Web Link</span> <i class="icon-link visible-xs"></i> </div> <input class="form-control" type="text" name="file_url" placeholder="e.g. http://example.com/somefile.csv"> </div>
+		                                            </div>
+		                                        </div> <div class="clearfix"></div><button class="btn btn-default btn-sm" style="margin-top: 5px;">Attach</button></div>
+		                                </div>
+		                                <div class="griderp-control" data-fieldtype="HTML" data-fieldname="import_log"></div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</template>
+

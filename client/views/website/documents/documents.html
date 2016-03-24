@@ -1,0 +1,60 @@
+<template name="WebsiteDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> WebsiteDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="WebsiteDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'website.documents.blog_post'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'website.documents.blog_post'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Blog Post
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Single Post (article).</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'website.documents.blogger'}} module-list">
+			<a href="{{pathFor 'website.documents.blogger'}}">
+				<span class="item-title-modules">
+					Blogger
+				</span>
+				<div class="module-description">User ID of a blog writer.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'website.documents.web_form'}} module-list">
+			<a href="{{pathFor 'website.documents.web_form'}}">
+				<span class="item-title-modules">
+					Web Form
+				</span>
+				<div class="module-description">User editable form on Website.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'website.documents.web_page'}} module-list">
+			<a href="{{pathFor 'website.documents.web_page'}}">
+				<span class="item-title-modules">
+					Web Page
+				</span>
+				<div class="module-description">Content web page.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'website.documents.website_slideshow'}} module-list">
+			<a href="{{pathFor 'website.documents.website_slideshow'}}">
+				<span class="item-title-modules">
+					Website Slideshow
+				</span>
+				<div class="module-description">Embed image slide shows in website pages.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,7 @@
+[
+	{ "name": "Calls", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "default_account": null, "description": null, "expense_type": "Calls" },
+	{ "name": "Food", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "default_account": null, "description": null, "expense_type": "Food" },
+	{ "name": "Medical", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "default_account": null, "description": null, "expense_type": "Medical" },
+	{ "name": "Others", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "default_account": null, "description": null, "expense_type": "Others" },
+	{ "name": "Travel", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "default_account": null, "description": null, "expense_type": "Travel" }
+]

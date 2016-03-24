@@ -1,0 +1,225 @@
+<template name="SetupPrintingPrintFormatBuilder">
+
+	{{> PageHeading title="Print Format Builder"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> PrintFormatBuilderForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="PrintFormatBuilderForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row hide"></div>
+		<div class="border print-format-builder-main" style="">
+		    <div class="padding">
+		        <p class="alert alert-info text-muted">Select an existing format to edit or start a new format.</p>
+		    </div>
+		    <div class="padding" style="max-width: 300px;">
+		        <div class="print-format-selector">
+		            <div class="griderp-control input-max-width" data-fieldtype="Link" style="z-index: 1;">
+		                <div class="form-group" style="margin: 0px">
+		                    <label class="control-label" style="padding-right: 0px;">Select Print Format to Edit</label>
+		                    <div class="control-input-wrapper">
+		                        <div class="control-input">
+		                            <div class="link-field ui-front" style="position: relative;">
+		                                <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" placeholder="" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-23" tabindex="0" style="display: none; width: 270px; top: 30px; left: 0px;">
+		                                    <li class="ui-menu-item" id="ui-id-25" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Drop Shipping</strong></p>
+		                                        </a>
+		                                    </li>
+		                                </ul>
+		                            </div>
+		                        </div>
+		                        <div class="control-value like-disabled-input" style="display: none;"></div>
+		                        <p class="help-box small text-muted hidden-xs"></p>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <p>
+		            <button class="btn btn-sm btn-default btn-edit-print-format"> Edit</button>
+		        </p>
+		    </div>
+		    <div class="padding" style="max-width: 300px;">
+		        <div class="doctype-selector">
+		            <div class="griderp-control input-max-width" data-fieldtype="Link" style="z-index: 1;">
+		                <div class="form-group" style="margin: 0px">
+		                    <label class="control-label" style="padding-right: 0px;">Select a DocType to make a new format</label>
+		                    <div class="control-input-wrapper">
+		                        <div class="control-input">
+		                            <div class="link-field ui-front" style="position: relative;">
+		                                <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" placeholder="" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-24" tabindex="0" style="display: none; width: 270px; top: 30px; left: 0px;">
+		                                    <li class="ui-menu-item" id="ui-id-26" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Account</strong>
+		                                                <br><span class="small">Accounts</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-27" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Activity Cost</strong>
+		                                                <br><span class="small">Projects</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-28" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Activity Type</strong>
+		                                                <br><span class="small">Projects</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-29" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Address</strong>
+		                                                <br><span class="small">Utilities</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-30" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Address Template</strong>
+		                                                <br><span class="small">Utilities</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-31" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Appraisal</strong>
+		                                                <br><span class="small">HR</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-32" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Appraisal Template</strong>
+		                                                <br><span class="small">HR</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-33" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Async Task</strong>
+		                                                <br><span class="small">Core</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-34" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Attendance</strong>
+		                                                <br><span class="small">HR</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-35" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Authorization Rule</strong>
+		                                                <br><span class="small">Setup</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-36" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Batch</strong>
+		                                                <br><span class="small">Stock</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-37" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Bin</strong>
+		                                                <br><span class="small">Stock</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-38" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Blog Category</strong>
+		                                                <br><span class="small">Website</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-39" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Blog Post</strong>
+		                                                <br><span class="small">Website</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-40" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Blogger</strong>
+		                                                <br><span class="small">Website</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-41" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>BOM</strong>
+		                                                <br><span class="small">Manufacturing</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-42" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Branch</strong>
+		                                                <br><span class="small">HR</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-43" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Brand</strong>
+		                                                <br><span class="small">Setup</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-44" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>Bulk Email</strong>
+		                                                <br><span class="small">Email</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-45" tabindex="-1">
+		                                        <a>
+		                                            <p><strong>C-Form</strong>
+		                                                <br><span class="small">Accounts</span></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-46" tabindex="-1">
+		                                        <a>
+		                                            <p><strong><span class="text-primary link-option"><i class="icon-plus" style="margin-right: 5px;"></i> Create a new DocType</span></strong></p>
+		                                        </a>
+		                                    </li>
+		                                    <li class="ui-menu-item" id="ui-id-47" tabindex="-1">
+		                                        <a>
+		                                            <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+		                                        </a>
+		                                    </li>
+		                                </ul>
+		                            </div>
+		                        </div>
+		                        <div class="control-value like-disabled-input" style="display: none;"></div>
+		                        <p class="help-box small text-muted hidden-xs"></p>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="name-selector">
+		            <div class="griderp-control input-max-width" data-fieldtype="Data">
+		                <div class="form-group" style="margin: 0px">
+		                    <label class="control-label" style="padding-right: 0px;">Name of the new Print Format</label>
+		                    <div class="control-input-wrapper">
+		                        <div class="control-input">
+		                            <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" placeholder="">
+		                        </div>
+		                        <div class="control-value like-disabled-input" style="display: none;"></div>
+		                        <p class="help-box small text-muted hidden-xs"></p>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <p>
+		            <button class="btn btn-sm btn-default btn-new-print-format"> Create a New Format</button>
+		        </p>
+		    </div>
+		</div>
+	</div>
+</template>
+

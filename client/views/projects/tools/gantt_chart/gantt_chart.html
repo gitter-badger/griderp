@@ -1,0 +1,36 @@
+<template name="ProjectsToolsGanttChart">
+
+	{{> PageHeading title="Gantt Chart - Task"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> GanttChartForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="GanttChartForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row">
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Date" data-fieldname="start" title="" data-original-title="From"><input type="text" class="input-with-feedback form-control hasDatepicker input-sm" data-fieldtype="Date" data-fieldname="start" placeholder="From" id="dp1455488025969" style="z-index: 3;"></div>
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Date" data-fieldname="end" title="" data-original-title="To"><input type="text" class="input-with-feedback form-control hasDatepicker input-sm" data-fieldtype="Date" data-fieldname="end" placeholder="To" id="dp1455488025970" style="z-index: 3;"></div>
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Link" data-fieldname="project" title="" data-original-title="Project">
+		        <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input input-sm" data-fieldtype="Link" data-fieldname="project" placeholder="Project" autocomplete="off">
+		            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-3" tabindex="0" style="display: none;"></ul>
+		        </div>
+		    </div>
+		</div>
+		<div style="position:relative; z-index:1;">
+			<div id="gantt" style="width: 100%; height: 300px; padding: 15px;"></div>
+		</div>
+	</div>
+</template>
+

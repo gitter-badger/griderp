@@ -1,0 +1,3 @@
+[
+	{ "name": "welcom", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "parent_website_route": "blog/general", "published_on": "2015-10-26", "title": "Welcome", "blogger": "test", "email_sent": 0, "content": "<p class=\"lead\">We have just starting using GridERP, the Open Source ERP built for the web and loving it.</p>\n\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>", "page_name": "welcome", "published": 1, "blog_category": "general", "blog_intro": "My First Blog" }
+]

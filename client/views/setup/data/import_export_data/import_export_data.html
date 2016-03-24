@@ -1,0 +1,209 @@
+<template name="SetupDataImportExportData">
+
+	{{> PageHeading title="Data Import Tool"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> ImportExportDataForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="ImportExportDataForm">
+	<form role="form">
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="workflow-button-area btn-group pull-right hide"></div>
+				<div class="clearfix"></div>
+				<div class="row layout-main">
+				    <div class="col-md-12 layout-main-section-wrapper">
+				        <div class="layout-main-section">
+				            <div class="form-inner-toolbar">
+				                <button class="btn btn-default btn-xs" style="margin-left: 10px;">Help</button>
+				            </div>
+				            <div class="page-form row hide"></div>
+				            <div class="data-import-tool">
+				                <div class="data-import-selector">
+				                    <h3>Export Template</h3>
+				                    <p class="text-muted">To import or update records, you must first download the template for importing.</p>
+				                    <h6>Select Type of Document to Download</h6>
+				                    <div>
+				                        <select class="form-control doctype" style="width: 200px" placeholder="Select Type">
+				                            <!--<option value=""></option>-->
+				                            <option value="Account">Account</option>
+				                            <option value="Activity Cost">Activity Cost</option>
+				                            <option value="Activity Type">Activity Type</option>
+				                            <option value="Address">Address</option>
+				                            <option value="Appraisal Template">Appraisal Template</option>
+				                            <option value="Attendance">Attendance</option>
+				                            <option value="Authorization Rule">Authorization Rule</option>
+				                            <option value="BOM">BOM</option>
+				                            <option value="Batch">Batch</option>
+				                            <option value="Blog Category">Blog Category</option>
+				                            <option value="Blog Post">Blog Post</option>
+				                            <option value="Blogger">Blogger</option>
+				                            <option value="Branch">Branch</option>
+				                            <option value="Brand">Brand</option>
+				                            <option value="C-Form">C-Form</option>
+				                            <option value="Campaign">Campaign</option>
+				                            <option value="Comment">Comment</option>
+				                            <option value="Communication">Communication</option>
+				                            <option value="Company">Company</option>
+				                            <option value="Contact">Contact</option>
+				                            <option value="Cost Center">Cost Center</option>
+				                            <option value="Country">Country</option>
+				                            <option value="Currency Exchange">Currency Exchange</option>
+				                            <option value="Custom Field">Custom Field</option>
+				                            <option value="Custom Script">Custom Script</option>
+				                            <option value="Customer">Customer</option>
+				                            <option value="Customer Group">Customer Group</option>
+				                            <option value="Deduction Type">Deduction Type</option>
+				                            <option value="Delivery Note">Delivery Note</option>
+				                            <option value="Department">Department</option>
+				                            <option value="Designation">Designation</option>
+				                            <option value="DocShare">DocShare</option>
+				                            <option value="Earning Type">Earning Type</option>
+				                            <option value="Employee">Employee</option>
+				                            <option value="Employment Type">Employment Type</option>
+				                            <option value="Expense Claim Type">Expense Claim Type</option>
+				                            <option value="File">File</option>
+				                            <option value="Fiscal Year">Fiscal Year</option>
+				                            <option value="Holiday List">Holiday List</option>
+				                            <option value="Industry Type">Industry Type</option>
+				                            <option value="Item">Item</option>
+				                            <option value="Item Attribute">Item Attribute</option>
+				                            <option value="Item Attribute Value">Item Attribute Value</option>
+				                            <option value="Item Group">Item Group</option>
+				                            <option value="Item Price">Item Price</option>
+				                            <option value="Item Variant">Item Variant</option>
+				                            <option value="Item Variant Attribute">Item Variant Attribute</option>
+				                            <option value="Journal Entry">Journal Entry</option>
+				                            <option value="Lead">Lead</option>
+				                            <option value="Leave Allocation">Leave Allocation</option>
+				                            <option value="Leave Block List">Leave Block List</option>
+				                            <option value="Leave Type">Leave Type</option>
+				                            <option value="Material Request">Material Request</option>
+				                            <option value="Mode of Payment">Mode of Payment</option>
+				                            <option value="Newsletter List">Newsletter List</option>
+				                            <option value="Newsletter List Subscriber">Newsletter List Subscriber</option>
+				                            <option value="Offer Letter">Offer Letter</option>
+				                            <option value="Offer Term">Offer Term</option>
+				                            <option value="Operation">Operation</option>
+				                            <option value="Opportunity">Opportunity</option>
+				                            <option value="Price List">Price List</option>
+				                            <option value="Pricing Rule">Pricing Rule</option>
+				                            <option value="Print Heading">Print Heading</option>
+				                            <option value="Product Bundle">Product Bundle</option>
+				                            <option value="Production Order">Production Order</option>
+				                            <option value="Project">Project</option>
+				                            <option value="Purchase Invoice">Purchase Invoice</option>
+				                            <option value="Purchase Order">Purchase Order</option>
+				                            <option value="Purchase Taxes and Charges Template">Purchase Taxes and Charges Template</option>
+				                            <option value="Quotation">Quotation</option>
+				                            <option value="Quotation Lost Reason">Quotation Lost Reason</option>
+				                            <option value="Salary Structure">Salary Structure</option>
+				                            <option value="Sales Invoice">Sales Invoice</option>
+				                            <option value="Sales Order">Sales Order</option>
+				                            <option value="Sales Partner">Sales Partner</option>
+				                            <option value="Sales Person">Sales Person</option>
+				                            <option value="Sales Taxes and Charges Template">Sales Taxes and Charges Template</option>
+				                            <option value="Serial No">Serial No</option>
+				                            <option value="Standard Reply">Standard Reply</option>
+				                            <option value="Stock Entry">Stock Entry</option>
+				                            <option value="Supplier">Supplier</option>
+				                            <option value="Supplier Quotation">Supplier Quotation</option>
+				                            <option value="Supplier Type">Supplier Type</option>
+				                            <option value="Task">Task</option>
+				                            <option value="Tax Rule">Tax Rule</option>
+				                            <option value="Terms and Conditions">Terms and Conditions</option>
+				                            <option value="Territory">Territory</option>
+				                            <option value="Time Log">Time Log</option>
+				                            <option value="UOM">UOM</option>
+				                            <option value="User">User</option>
+				                            <option value="Warehouse">Warehouse</option>
+				                            <option value="Warranty Claim">Warranty Claim</option>
+				                            <option value="Website Theme">Website Theme</option>
+				                            <option value="Workflow Document State">Workflow Document State</option>
+				                            <option value="Workflow State">Workflow State</option>
+				                            <option value="Workstation">Workstation</option>
+				                        </select>
+				                        <br> </div>
+				                </div>
+				                <div class="export-import-section hide">
+				                    <div class="row" style="max-width: 700px;">
+				                        <div class="col-sm-4">
+				                            <p><a class="btn btn-default btn-sm btn-download-template"> Download Blank Template</a></p>
+				                        </div>
+				                        <div class="col-sm-8">
+				                            <h6 class="text-muted">Recommended for inserting new records.</h6> </div>
+				                    </div>
+				                    <div class="row" style="max-width: 700px;">
+				                        <div class="col-sm-4">
+				                            <p><a class="btn btn-default btn-sm btn-download-data"> Download with Data</a></p>
+				                        </div>
+				                        <div class="col-sm-8">
+				                            <h6 class="text-muted">Recommended bulk editing records via import, or understanding the import format.</h6> </div>
+				                    </div>
+				                </div>
+				                <div>
+				                    <hr>
+				                    <h3>Import</h3>
+				                    <p class="text-muted">Update the template and save in CSV (Comma Separate Values) format before attaching.</p>
+				                    <div class="row">
+				                        <div class="col-md-6">
+				                            <div class="upload-area">
+				                                <div class="file-upload">
+				                                    <div class="input-upload pull-left" style="padding-top: 2px;">
+				                                        <input class="input-upload-file hidden" type="file" name="filedata">
+				                                        <button class="btn btn-default btn-sm btn-browse">Browse</button>
+				                                    </div>
+				                                    <div class="uploaded-filename hidden" style="width: calc(100% - 67px);"></div>
+				                                    <div class="web-link-wrapper pull-left" style="width: calc(100% - 67px);"> <span class="text-muted file-upload-or">or</span>
+				                                        <div class="input-link" style="width: calc(100% - 30px);">
+				                                            <div class="input-group">
+				                                                <div class="input-group-addon"> <span class="hidden-xs">Web Link</span> <i class="fa fa-link visible-xs"></i> </div>
+				                                                <input class="form-control" type="text" name="file_url" placeholder="e.g. http://example.com/somefile.png"> </div>
+				                                        </div>
+				                                    </div>
+				                                </div>
+				                            </div>
+											<div class="clearfix"></div>
+				                            <div class="cbox">
+				                                <label class="checkbox-label">
+				                                    <input type="checkbox" name="always_insert"> &nbsp;Do not update, but insert new records. </label>
+				                            </div>
+				                            <div class="cbox">
+				                                <label class="checkbox-label">
+				                                    <input type="checkbox" name="submit_after_import"> &nbsp;Submit after importing. </label>
+				                            </div>
+				                            <div class="cbox">
+				                                <label class="checkbox-label">
+				                                    <input type="checkbox" name="ignore_encoding_errors"> &nbsp;Ignore encoding errors. </label>
+				                            </div>
+				                            <p>
+				                                <button class="btn btn-sm btn-primary btn-import">Import</button>
+				                            </p>
+				                        </div>
+				                        <div class="import-log hide col-md-6">
+				                            <h3>Import Log</h3>
+				                            <div class="import-log-messages"></div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="layout-footer hide"></div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</form>
+</template>
+

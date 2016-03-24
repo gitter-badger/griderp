@@ -1,0 +1,44 @@
+<template name="SetupData">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupDataModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupDataModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'file'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'file'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					File Manager
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Manage uploads / downloads.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.data.import_export_data'}} module-list">
+			<a href="{{pathFor 'setup.data.import_export_data'}}">
+				<span class="item-title-modules">
+					Import / Export Data
+				</span>
+				<div class="module-description">Import / Export Data from .csv files.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.data.rename_tool'}} module-list">
+			<a href="{{pathFor 'setup.data.rename_tool'}}">
+				<span class="item-title-modules">
+					Rename Tool
+				</span>
+				<div class="module-description">Rename many items by uploading a .csv file.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

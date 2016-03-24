@@ -1,0 +1,46 @@
+<template name="TutorialsPurchasing">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TutorialsPurchasingModuleMenu}}
+	</div>
+</template>
+
+<template name="TutorialsPurchasingModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tutorials.purchasing.customer_and_supplier'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tutorials.purchasing.customer_and_supplier'}}">
+				<span class="item-title-modules">
+					Customer and Supplier
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.purchasing.managing_subcontracting'}} module-list">
+			<a href="{{pathFor 'tutorials.purchasing.managing_subcontracting'}}">
+				<span class="item-title-modules">
+					Managing Subcontracting
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.purchasing.material_request_to_purchase_order'}} module-list">
+			<a href="{{pathFor 'tutorials.purchasing.material_request_to_purchase_order'}}">
+				<span class="item-title-modules">
+					Material Request to Purchase Order
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.purchasing.purchase_order_to_payment'}} module-list">
+			<a href="{{pathFor 'tutorials.purchasing.purchase_order_to_payment'}}">
+				<span class="item-title-modules">
+					Purchase Order to Payment
+				</span>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

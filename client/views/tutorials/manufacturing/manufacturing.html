@@ -1,0 +1,39 @@
+<template name="TutorialsManufacturing">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TutorialsManufacturingModuleMenu}}
+	</div>
+</template>
+
+<template name="TutorialsManufacturingModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tutorials.manufacturing.bill_of_materials'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tutorials.manufacturing.bill_of_materials'}}">
+				<span class="item-title-modules">
+					Bill of Materials
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.manufacturing.production_order'}} module-list">
+			<a href="{{pathFor 'tutorials.manufacturing.production_order'}}">
+				<span class="item-title-modules">
+					Production Order
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.manufacturing.production_planning_tool'}} module-list">
+			<a href="{{pathFor 'tutorials.manufacturing.production_planning_tool'}}">
+				<span class="item-title-modules">
+					Production Planning Tool
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,44 @@
+<template name="SetupWorkflow">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupWorkflowModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupWorkflowModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.workflow.workflow'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.workflow.workflow'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Workflow
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Define workflows for forms.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.workflow.workflow_action'}} module-list">
+			<a href="{{pathFor 'setup.workflow.workflow_action'}}">
+				<span class="item-title-modules">
+					Workflow Action
+				</span>
+				<div class="module-description">Actions for workflow (e.g. Approve, Cancel).</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.workflow.workflow_state'}} module-list">
+			<a href="{{pathFor 'setup.workflow.workflow_state'}}">
+				<span class="item-title-modules">
+					Workflow State
+				</span>
+				<div class="module-description">States for workflow (e.g. Draft, Approved, Cancelled).</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

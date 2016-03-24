@@ -1,0 +1,154 @@
+<template name="HumanResourcesToolsLeaveAllocationTool">
+
+	{{> PageHeading title="Leave Control Panel"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> LeaveAllocationToolForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="LeaveAllocationToolForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row hide"></div>
+		<div>
+		    <div>
+		        <div class="form-layout">
+		            <div class="form-dashboard" style="display: none;">
+		                <div class="row" style="padding: 15px 30px;"></div>
+		            </div>
+		            <div class="form-page">
+		                <div class="row form-section visible-section">
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-6">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="employee_type">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Employee Type</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="employee_type" placeholder="" data-doctype="Leave Control Panel" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-94" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Leave blank if considered for all employee types</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="branch">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Branch</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="branch" placeholder="" data-doctype="Leave Control Panel" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-95" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Leave blank if considered for all branches</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="department">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Department</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="department" placeholder="" data-doctype="Leave Control Panel" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-96" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Leave blank if considered for all departments</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="designation">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Designation</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="designation" placeholder="" data-doctype="Leave Control Panel" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-97" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Leave blank if considered for all designations</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                        <div class="form-column col-sm-6">
+		                            <form>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Date" data-fieldname="from_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">From Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="from_date" placeholder="" data-doctype="Leave Control Panel" id="dp1455297290506"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Date" data-fieldname="to_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">To Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="to_date" placeholder="" data-doctype="Leave Control Panel" id="dp1455297290507"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Link" data-fieldname="leave_type">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Leave Type</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="leave_type" placeholder="" data-doctype="Leave Control Panel" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-98" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="carry_forward">
+		                                    <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="carry_forward" placeholder="" data-doctype="Leave Control Panel"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Carry Forward</span>    </label>
+		                                        <p class="help-box small text-muted">Please select Carry Forward if you also want to include previous fiscal year's balance leaves to this fiscal year</p>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Float" data-fieldname="no_of_days">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">New Leaves Allocated (In Days)</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Float" data-fieldname="no_of_days" placeholder="" data-doctype="Leave Control Panel"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="allocate">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="allocate" placeholder="" data-doctype="Leave Control Panel" value="">Allocate</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</template>
+

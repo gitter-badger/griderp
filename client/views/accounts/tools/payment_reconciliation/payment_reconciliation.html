@@ -1,0 +1,449 @@
+<template name="AccountsToolsPaymentReconciliation">
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">Payment Reconciliation</div>
+								<!--<span class="indicator-orange indicator-text">Not Saved</span>-->
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<!--<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">New Blog Category</a></li>
+								</ul>
+						</div>-->
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{blog_category_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> PaymentReconciliationForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="PaymentReconciliationForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row hide"></div>
+		<div>
+		    <div>
+		        <div class="form-layout">
+		            <div class="form-dashboard" style="display: none;">
+		                <div class="row" style="padding: 15px 30px;"></div>
+		            </div>
+		            <div class="form-page">
+		                <div class="row form-section visible-section">
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-6">
+		                            <form>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Link" data-fieldname="company" style="z-index: 1;">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Company</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="company" placeholder="" data-doctype="Payment Reconciliation" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-4" tabindex="0" style="display: none; width: 524px; top: 30px; left: 0px;">
+		                                                        <li class="ui-menu-item" id="ui-id-42" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Wind Power LLC</strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-43" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                    </ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Company/Wind%20Power%20LLC" data-doctype="Company">Wind Power LLC</a></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Link" data-fieldname="party_type" style="z-index: 1;">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Party Type</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="party_type" placeholder="" data-doctype="Payment Reconciliation" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-5" tabindex="0" style="display: none; width: 524px; top: 30px; left: 0px;">
+		                                                        <li class="ui-menu-item" id="ui-id-44" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Customer</strong><br><span class="small">Selling</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-45" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Supplier</strong><br><span class="small">Buying</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-46" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                    </ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/DocType/Customer" data-doctype="DocType">Customer</a></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Dynamic Link" data-fieldname="party" style="z-index: 1;">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Party</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Dynamic Link" data-fieldname="party" placeholder="" data-doctype="Payment Reconciliation" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-6" tabindex="0" style="display: none; width: 524px; top: 30px; left: 0px;">
+		                                                        <li class="ui-menu-item" id="ui-id-47" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Adaptas</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-48" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Asian Fusion</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-49" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Asian Junction</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-50" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Big D Supermarkets</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-51" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Buttrey Food &amp; Drug</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-52" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Chi-Chis</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-53" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Choices</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-54" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Consumers and Consumers Express</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-55" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Crafts Canada</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-56" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Endicott Shoes</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-57" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Fayva</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-58" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Hind Enterprises</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-59" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Intelacard</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-60" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Landskip Yard Care</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-61" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Life Plan Counselling</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-62" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Mr Fables</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-63" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Nelson Brothers</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-64" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Netobill</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-65" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Red Food</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-66" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Two Pesos</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-67" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                    </ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Customer/Asian%20Fusion" data-doctype="Customer">Asian Fusion</a></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width has-error" data-fieldtype="Link" data-fieldname="receivable_payable_account">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Receivable / Payable Account</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="receivable_payable_account" placeholder="" data-doctype="Payment Reconciliation" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-7" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Account/Debtors%20-%20WP" data-doctype="Account">Debtors - WP</a></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="bank_cash_account" style="z-index: 1;">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Bank / Cash Account</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="bank_cash_account" placeholder="" data-doctype="Payment Reconciliation" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-8" tabindex="0" style="display: none; width: 524px; top: 30px; left: 0px;">
+		                                                        <li class="ui-menu-item" id="ui-id-68" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Cash - WP</strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-69" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Citibank - WP</strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-70" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong>Paypal - WP</strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-71" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong><span class="text-primary link-option"><i class="icon-plus" style="margin-right: 5px;"></i> Create a new Account</span></strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                        <li class="ui-menu-item" id="ui-id-72" tabindex="-1">
+		                                                            <a>
+		                                                                <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+		                                                            </a>
+		                                                        </li>
+		                                                    </ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Account/Cash%20-%20WP" data-doctype="Account">Cash - WP</a></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                        <div class="form-column col-sm-6">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="from_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">From Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="from_date" placeholder="" data-doctype="Payment Reconciliation" id="dp1454689034578"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="to_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">To Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="to_date" placeholder="" data-doctype="Payment Reconciliation" id="dp1454689034579"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Currency" data-fieldname="minimum_amount">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Minimum Amount</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Currency" data-fieldname="minimum_amount" placeholder="" data-doctype="Payment Reconciliation"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Currency" data-fieldname="maximum_amount">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Maximum Amount</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Currency" data-fieldname="maximum_amount" placeholder="" data-doctype="Payment Reconciliation"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="get_unreconciled_entries">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="get_unreconciled_entries" placeholder="" data-doctype="Payment Reconciliation" value="">Get Unreconciled Entries</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row form-section visible-section shaded-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Unreconciled Payment Details</h3></div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control" data-fieldtype="Table" data-fieldname="payments">
+		                                    <div data-fieldname="payments">
+		                                        <div class="form-grid">
+		                                            <div class="grid-heading-row">
+		                                                <div class="grid-row">
+		                                                    <div class="data-row row sortable-handle">
+		                                                        <div class="row-index">&nbsp;</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="journal_entry">Journal Entry</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="posting_date">Posting Date</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="amount">Amount</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="invoice_number">Invoice Number</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="allocated_amount">Allocated amount</div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                            <div class="grid-body">
+		                                                <div class="rows"></div>
+		                                                <div class="grid-empty text-center">No Data</div>
+		                                                <div class="small form-clickable-section grid-footer">
+		                                                    <div class="row">
+		                                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+		                                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="reconcile">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="reconcile" placeholder="" data-doctype="Payment Reconciliation" value="">Reconcile</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row form-section empty-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Invoice/Journal Entry Details</h3></div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control hide-control" data-fieldtype="Table" data-fieldname="invoices">
+		                                    <div data-fieldname="invoices">
+		                                        <div class="form-grid">
+		                                            <div class="grid-heading-row">
+		                                                <div class="grid-row">
+		                                                    <div class="data-row row sortable-handle">
+		                                                        <div class="row-index">&nbsp;</div>
+		                                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="invoice_type">Invoice Type</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="invoice_number">Invoice Number</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="invoice_date">Invoice Date</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="amount">Amount</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="outstanding_amount">Outstanding Amount</div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                            <div class="grid-body">
+		                                                <div class="rows"></div>
+		                                                <div class="grid-empty text-center">No Data</div>
+		                                                <div class="small form-clickable-section grid-footer" style="display: none;">
+		                                                    <div class="row">
+		                                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px;"> Add multiple rows</a> </div>
+		                                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</template>
+

@@ -1,0 +1,68 @@
+<template name="SellingDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SellingDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="SellingDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'purchasing.documents.address'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'purchasing.documents.address'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Address
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">All Addresses.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.documents.contact'}} module-list">
+			<a href="{{pathFor 'crm.documents.contact'}}">
+				<span class="item-title-modules">
+					Contact
+				</span>
+				<div class="module-description">All Contacts.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.documents.customer'}} module-list">
+			<a href="{{pathFor 'accounts.documents.customer'}}">
+				<span class="item-title-modules">
+					Customer
+				</span>
+				<div class="module-description">Customer database.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.item'}} module-list">
+			<a href="{{pathFor 'stock.documents.item'}}">
+				<span class="item-title-modules">
+					Item
+				</span>
+				<div class="module-description">All Products or Services.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.documents.quotation'}} module-list">
+			<a href="{{pathFor 'selling.documents.quotation'}}">
+				<span class="item-title-modules">
+					Quotation
+				</span>
+				<div class="module-description">Quotes to Leads or Customers.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'selling.documents.sales_order'}} module-list">
+			<a href="{{pathFor 'selling.documents.sales_order'}}">
+				<span class="item-title-modules">
+					Sales Order
+				</span>
+				<div class="module-description">Confirmed orders from Customers.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

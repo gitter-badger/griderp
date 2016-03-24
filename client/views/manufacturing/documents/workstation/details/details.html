@@ -1,0 +1,137 @@
+<template name="WorkstationDetails">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">{{workstation_details.name}}</div>
+								<!--<span class="indicator-blue indicator-text">{{workstation_details.voucher_type}}</span>-->
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Rename</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">New Workstation</a></li>
+								</ul>
+						</div>
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{workstation_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> WorkstationDetailsSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> WorkstationDetailsDetailsForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="WorkstationDetailsSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="WorkstationDetailsDetailsForm">
+	<div id="workstation-details-details-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-name">
+				<label for="name">
+					Name
+				</label>
+				<div class="input-div">
+					<p class="form-control-static">
+						{{workstation_details.name}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-workstation-name">
+				<label for="workstation_name">
+					Workstation Name
+				</label>
+				<div class="input-div">
+					<p class="form-control-static">
+						{{workstation_details.workstation_name}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<a href="#" id="form-close-button" class="btn btn-primary">
+						OK
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

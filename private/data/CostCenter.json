@@ -1,0 +1,4 @@
+[
+	{ "name": "Main - WP", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "rgt": 3, "cost_center_name": "Main", "distribution_id": null, "company": "Warp Power LLC", "is_group": 0, "old_parent": "Warp Power LLC - WP", "lft": 2, "parent_cost_center": "Warp Power LLC - WP" },
+	{ "name": "Warp Power LLC - WP", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "rgt": 4, "cost_center_name": "Warp Power LLC", "distribution_id": null, "company": "Warp Power LLC", "is_group": 1, "old_parent": "", "lft": 1, "parent_cost_center": null }
+]

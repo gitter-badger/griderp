@@ -1,0 +1,77 @@
+<template name="SetupPrinting">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupPrintingModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupPrintingModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.printing.address_template'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.printing.address_template'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Address Template
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Country wise default Address Templates.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.letter_head'}} module-list">
+			<a href="{{pathFor 'setup.printing.letter_head'}}">
+				<span class="item-title-modules">
+					Letter Head
+				</span>
+				<div class="module-description">Letter Heads for print templates.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.print_format'}} module-list">
+			<a href="{{pathFor 'setup.printing.print_format'}}">
+				<span class="item-title-modules">
+					Print Format
+				</span>
+				<div class="module-description">Customized HTML Templates for printing transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.print_format_builder'}} module-list">
+			<a href="{{pathFor 'setup.printing.print_format_builder'}}">
+				<span class="item-title-modules">
+					Print Format Builder
+				</span>
+				<div class="module-description">Drag and Drop tool to build and customize Print Formats.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.print_heading'}} module-list">
+			<a href="{{pathFor 'setup.printing.print_heading'}}">
+				<span class="item-title-modules">
+					Print Heading
+				</span>
+				<div class="module-description">Titles for print templates e.g. Proforma Invoice.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.print_settings'}} module-list">
+			<a href="{{pathFor 'setup.printing.print_settings'}}">
+				<span class="item-title-modules">
+					Print Settings
+				</span>
+				<div class="module-description">Set default format, page size, print style etc.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.terms_and_conditions'}} module-list">
+			<a href="{{pathFor 'setup.printing.terms_and_conditions'}}">
+				<span class="item-title-modules">
+					Terms and Conditions
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Standard contract terms for Sales or Purchase.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

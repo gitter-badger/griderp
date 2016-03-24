@@ -1,0 +1,67 @@
+<template name="SetupAccountsChartOfCostCenters">
+
+	{{> PageHeading title="Chart of Cost Centers" type="tree"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content just-top just-bottom">
+						{{> ChartOfCostCentersForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="ChartOfCostCentersForm">
+	<div class="page-wrapper">
+		<div class="page-content">
+		    <div class="workflow-button-area btn-group pull-right hide"></div>
+		    <div class="clearfix"></div>
+		    <div class="row layout-main">
+		        <div class="col-md-12 layout-main-section-wrapper">
+		            <div class="layout-main-section">
+		                <div class="form-inner-toolbar hide"></div>
+		                <div class="page-form row">
+		                    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Select" title="" data-original-title="Company">
+		                        <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" placeholder="Company">
+		                            <option value="Gridworkz">Gridworkz</option>
+		                        </select>
+		                    </div>
+		                </div>
+		                <div style="margin-bottom: 15px; min-height: 200px;">
+		                    <div class="tree"><span class="tree-link"><i class="icon-fixed-width icon-folder-open text-muted"></i> <a class="tree-label grey h6">Cost Centers</a></span>
+		                        <ul class="tree-children" style="">
+		                            <li class="tree-node"><span class="tree-link selected"><i class="icon-fixed-width icon-folder-open text-muted"></i> <a class="tree-label grey h6">Gridworkz - GWZ</a></span><span class="tree-node-toolbar btn-group" style="display: none;"><button class="btn btn-default btn-xs btn-expand hidden-xs">Collapse</button><button class="btn btn-default btn-xs">Open</button><button class="btn btn-default btn-xs hidden-xs">Add Child</button><button class="btn btn-default btn-xs hidden-xs">Rename</button><button class="btn btn-default btn-xs hidden-xs">Delete</button></span>
+		                                <ul class="tree-children" style="">
+		                                    <li class="tree-node"><span class="tree-link active"><i class="icon-fixed-width octicon octicon-primitive-dot text-extra-muted"></i> <a class="tree-label grey h6">Main - GWZ</a></span><span class="tree-node-toolbar btn-group" style="display: inline-block;"><button class="btn btn-default btn-xs">Open</button><button class="btn btn-default btn-xs hidden-xs">Rename</button><button class="btn btn-default btn-xs hidden-xs">Delete</button></span>
+		                                        <ul class="tree-children" style="display: none;"></ul>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <hr>
+		                <div style="padding: 0px 15px;">
+		                    <h3>Quick Help</h3>
+		                    <ol>
+		                        <li>To add child nodes, explore tree and click on the node under which you want to add more nodes.</li>
+		                        <li>Accounting Entries can be made against leaf nodes. Entries against Groups are not allowed.</li>
+		                        <li>Please do NOT create Accounts for Customers and Suppliers. They are created directly from the Customer / Supplier masters.</li>
+		                        <li><b>To create a Bank Account</b>: Go to the appropriate group (usually Application of Funds &gt; Current Assets &gt; Bank Accounts and create a new Account (by clicking on Add Child) of type "Bank"</li>
+		                        <li><b>To create a Tax Account</b>: Go to the appropriate group (usually Source of Funds &gt; Current Liabilities &gt; Taxes and Duties and create a new Account (by clicking on Add Child) of type "Tax" and do mention the Tax rate.</li>
+		                    </ol>
+		                    <p>Please setup your chart of accounts before you start Accounting Entries</p>
+		                </div>
+		            </div>
+		            <div class="layout-footer hide"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</template>
+

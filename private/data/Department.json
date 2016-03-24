@@ -1,0 +1,15 @@
+[
+	{ "name": "Accounts", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Accounts" },
+	{ "name": "Customer Service", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Customer Service" },
+	{ "name": "Dispatch", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Dispatch" },
+	{ "name": "Human Resources", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Human Resources" },
+	{ "name": "Legal", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Legal" },
+	{ "name": "Management", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Management" },
+	{ "name": "Marketing", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Marketing" },
+	{ "name": "Operations", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Operations" },
+	{ "name": "Production", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Production" },
+	{ "name": "Purchase", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Purchase" },
+	{ "name": "Quality Management", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Quality Management" },
+	{ "name": "Research & Development", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Research & Development" },
+	{ "name": "Sales", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "leave_block_list": null, "department_name": "Sales" }
+]

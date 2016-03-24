@@ -1,0 +1,12 @@
+[
+	{ "docstatus": 0, "parent": "Colour", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 2, "attribute_value": "Green", "abbr": "GRE" },
+	{ "docstatus": 0, "parent": "Size", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 1, "attribute_value": "Extra Small", "abbr": "XS" },
+	{ "docstatus": 0, "parent": "Size", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 5, "attribute_value": "Extra Large", "abbr": "XL" },
+	{ "docstatus": 0, "parent": "Colour", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 4, "attribute_value": "Black", "abbr": "BLA" },
+	{ "docstatus": 0, "parent": "Colour", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 5, "attribute_value": "White", "abbr": "WHI" },
+	{ "docstatus": 0, "parent": "Colour", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 3, "attribute_value": "Blue", "abbr": "BLU" },
+	{ "docstatus": 0, "parent": "Colour", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 1, "attribute_value": "Red", "abbr": "RED" },
+	{ "docstatus": 0, "parent": "Size", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 3, "attribute_value": "Medium", "abbr": "M" },
+	{ "docstatus": 0, "parent": "Size", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 2, "attribute_value": "Small", "abbr": "S" },
+	{ "docstatus": 0, "parent": "Size", "parentfield": "item_attribute_values", "parenttype": "Item Attribute", "idx": 4, "attribute_value": "Large", "abbr": "L" }
+]

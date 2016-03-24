@@ -1,0 +1,84 @@
+<template name="StockSetup">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> StockSetupModuleMenu}}
+	</div>
+</template>
+
+<template name="StockSetupModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.stock.brand'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.stock.brand'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Brand
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Brand master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.stock.item_attribute'}} module-list">
+			<a href="{{pathFor 'setup.stock.item_attribute'}}">
+				<span class="item-title-modules">
+					Item Attribute
+				</span>
+				<div class="module-description">Attributes for Item Variants. e.g Size, Color etc.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.item_group_tree'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.item_group_tree'}}">
+				<span class="item-title-modules">
+					Item Group Tree
+				</span>
+				<div class="module-description">Tree of Item Groups.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.item_price'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.item_price'}}">
+				<span class="item-title-modules">
+					Item Price
+				</span>
+				<div class="module-description">Multiple Item prices.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.purchasing.price_list'}} module-list">
+			<a href="{{pathFor 'setup.purchasing.price_list'}}">
+				<span class="item-title-modules">
+					Price List
+				</span>
+				<div class="module-description">Price List master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.stock.stock_settings'}} module-list">
+			<a href="{{pathFor 'setup.stock.stock_settings'}}">
+				<span class="item-title-modules">
+					Stock Settings
+				</span>
+				<div class="module-description">Default settings for stock transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.stock.unit_of_measure_uom'}} module-list">
+			<a href="{{pathFor 'setup.stock.unit_of_measure_uom'}}">
+				<span class="item-title-modules">
+					Unit of Measure (UOM)
+				</span>
+				<div class="module-description">e.g. Kg, Unit, Nos, m.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.stock.warehouse'}} module-list">
+			<a href="{{pathFor 'setup.stock.warehouse'}}">
+				<span class="item-title-modules">
+					Warehouse
+				</span>
+				<div class="module-description">Warehouses.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,3 @@
+[
+	{ "name": "QI-00001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "delivery_note_no": "", "naming_series": "QI-", "report_date": "2015-12-31", "purchase_receipt_no": "", "item_name": "TGWZ", "verified_by": null, "amended_from": null, "description": "TGWZ", "inspection_type": "Incoming", "item_serial_no": "", "item_code": "TGWZ", "remarks": "Cool", "inspected_by": "Administrator", "sample_size": 10.000000, "batch_no": "BATCH1" }
+]

@@ -1,0 +1,24 @@
+<template name="SetupReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.reports.reports'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.reports.reports'}}">
+				<span class="item-title-modules">
+					Reports List
+				</span>
+				<div class="module-description">All Reports in the System.</div>
+			</a>
+		</li>
+	</ul>
+</template>

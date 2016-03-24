@@ -1,0 +1,4 @@
+[
+	{ "name": "CNY-USD", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "to_currency": "USD", "exchange_rate": 0.160000000, "from_currency": "CNY" },
+	{ "name": "EUR-USD", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "to_currency": "USD", "exchange_rate": 1.130000000, "from_currency": "EUR" }
+]

@@ -1,0 +1,53 @@
+<template name="HumanResourcesStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> HumanResourcesStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="HumanResourcesStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'human_resources.standard_reports.employee_birthday'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'human_resources.standard_reports.employee_birthday'}}">
+				<span class="item-title-modules">
+					Employee Birthday
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.standard_reports.employee_information'}} module-list">
+			<a href="{{pathFor 'human_resources.standard_reports.employee_information'}}">
+				<span class="item-title-modules">
+					Employee Information
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.standard_reports.employee_leave_balance'}} module-list">
+			<a href="{{pathFor 'human_resources.standard_reports.employee_leave_balance'}}">
+				<span class="item-title-modules">
+					Employee Leave Balance
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.standard_reports.monthly_attendance_sheet'}} module-list">
+			<a href="{{pathFor 'human_resources.standard_reports.monthly_attendance_sheet'}}">
+				<span class="item-title-modules">
+					Monthly Attendance Sheet
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'human_resources.standard_reports.monthly_salary_register'}} module-list">
+			<a href="{{pathFor 'human_resources.standard_reports.monthly_salary_register'}}">
+				<span class="item-title-modules">
+					Monthly Salary Register
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

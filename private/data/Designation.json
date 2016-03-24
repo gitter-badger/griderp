@@ -1,0 +1,17 @@
+[
+	{ "name": "Accountant", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Accountant" },
+	{ "name": "Administrative Officer", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Administrative Officer" },
+	{ "name": "Analyst", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Analyst" },
+	{ "name": "Associate", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Associate" },
+	{ "name": "Business Development Manager", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Business Development Manager" },
+	{ "name": "CEO", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "CEO" },
+	{ "name": "Designer", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Designer" },
+	{ "name": "Engineer", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Engineer" },
+	{ "name": "Head of Marketing and Sales", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Head of Marketing and Sales" },
+	{ "name": "HR Manager", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "HR Manager" },
+	{ "name": "Manager", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Manager" },
+	{ "name": "Project Manager", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Project Manager" },
+	{ "name": "Researcher", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Researcher" },
+	{ "name": "Secretary", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Secretary" },
+	{ "name": "Software Developer", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "designation_name": "Software Developer" }
+]

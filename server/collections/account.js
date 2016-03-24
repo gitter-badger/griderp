@@ -1,0 +1,47 @@
+Account.allow({
+	insert: function (userId, doc) {
+		return Account.userCanInsert(userId, doc);
+	},
+
+	update: function (userId, doc, fields, modifier) {
+		return Account.userCanUpdate(userId, doc);
+	},
+
+	remove: function (userId, doc) {
+		return Account.userCanRemove(userId, doc);
+	}
+});
+
+Account.before.insert(function(userId, doc) {
+	doc.createdAt = new Date();
+	doc.createdBy = userId;
+	doc.modifiedAt = doc.createdAt;
+	doc.modifiedBy = doc.createdBy;
+
+	
+	if(!doc.ownerId) doc.ownerId = userId;
+});
+
+Account.before.update(function(userId, doc, fieldNames, modifier, options) {
+	modifier.$set = modifier.$set || {};
+	modifier.$set.modifiedAt = new Date();
+	modifier.$set.modifiedBy = userId;
+
+	
+});
+
+Account.before.remove(function(userId, doc) {
+	
+});
+
+Account.after.insert(function(userId, doc) {
+	
+});
+
+Account.after.update(function(userId, doc, fieldNames, modifier, options) {
+	
+});
+
+Account.after.remove(function(userId, doc) {
+	
+});

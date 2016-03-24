@@ -1,0 +1,232 @@
+<template name="PageHeading">
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">{{title}}</div>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						{{#if equals type "list"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="{{pathFor 'setup.data.import_export_data'}}">Data Import Tool</a></li>
+									<li><a href="{{pathFor 'setup.users.user'}}">User Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.users.role'}}">Role Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.customize.customize_form'}}">Customize Form</a></li>
+									<li><a href="{{pathFor 'tools.tools.todo'}}">Assign To</a></li>
+								</ul>
+						{{/if}}
+						{{#if equals type "print"}}
+							<div class="list-page-heading-btns pull-right">
+								<a class="btn btn-white btn-bitbucket btn-sm">
+									<i class="fa fa-print"></i>
+								</a>
+								<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+									<ul class="dropdown-menu pull-right dropdown-menu-right">
+								    	<li><a href="#">Print</a></li>
+								        <li><a href="#">Email</a></li>
+								        <li><a href="#">Reload</a></li>
+								    </ul>
+							</div>
+						{{/if}}
+						{{#if equals type "printer"}}
+							<div class="list-page-heading-btns pull-right">
+								<a class="btn btn-white btn-bitbucket btn-sm">
+									<i class="fa fa-print"></i>
+								</a>
+							</div>
+						{{/if}}
+						{{#if equals type "tree"}}
+							<div class="list-page-heading-btns pull-right">
+								<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" aria-expanded="false">Menu &nbsp;<span class="caret"></span></button>
+									<ul class="dropdown-menu pull-right" style="margin-right: 82px; margin-top: 5px;">
+								        <li><a href="#">New Company</a></li>
+								    </ul>
+								<button type="button" class="btn btn-primary btn-sm">New</button>
+							</div>
+						{{/if}}
+						{{#if equals type "groupTree"}}
+							<div class="list-page-heading-btns pull-right">
+								<button type="button" class="btn btn-primary btn-sm">New</button>
+							</div>
+						{{/if}}
+						{{#if equals type "calendar"}}
+							<div class="list-page-heading-btns pull-right">
+								<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Type &nbsp;<span class="caret"></span></button>
+									<ul class="dropdown-menu pull-right" style="margin-right: 82px; margin-top: 5px;">
+								    	<li><a href="#">Event</a></li>
+								        <li><a href="#">Leave Application</a></li>
+								        <li><a href="#">Production Order</a></li>
+								        <li><a href="#">Sales Order</a></li>
+										<li><a href="#">Task</a></li>
+										<li><a href="#">Time Log</a></li>
+								    </ul>
+								<button type="button" class="btn btn-primary btn-sm">New</button>
+							</div>
+						{{/if}}
+						{{#if equals type "activity"}}
+							<div class="list-page-heading-btns pull-right">
+								<button type="button" class="btn btn-default btn-sm">Build Report</button>
+							</div>
+						{{/if}}
+						{{#if equals type "fileManager"}}
+							<div class="list-page-heading-btns pull-right">
+								<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+									<ul class="dropdown-menu pull-right" style="margin-right: 82px; margin-top: 5px;">
+								    	<li><a href="#">New Folder</a></li>
+								        <li><a href="#">Edit Folder</a></li>
+										<li class="divider"></li>
+								    	<li><a href="{{pathFor 'setup.data.import_export_data'}}">Data Import Tool</a></li>
+								        <li><a href="{{pathFor 'setup.users.user'}}">User Permissions Manager</a></li>
+								        <li><a href="{{pathFor 'setup.users.role'}}">Role Permissions Manager</a></li>
+								        <li><a href="{{pathFor 'setup.customize.customize_form'}}">Customize Form</a></li>
+								        <li><a href="{{pathFor 'tools.tools.todo'}}">Assign To</a></li>
+								    </ul>
+								<button type="button" class="btn btn-primary btn-sm">New</button>
+							</div>
+						{{/if}}
+						{{#if equals type "timeLog"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Make Time Log Batch</a></li>
+									<li class="divider"></li>
+									<li><a href="{{pathFor 'setup.data.import_export_data'}}">Data Import Tool</a></li>
+									<li><a href="{{pathFor 'setup.users.user'}}">User Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.users.role'}}">Role Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.customize.customize_form'}}">Customize Form</a></li>
+									<li><a href="{{pathFor 'tools.tools.todo'}}">Assign To</a></li>
+								</ul>
+						{{/if}}	
+						{{#if equals type "task"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Set as Open</a></li>
+									<li><a href="#">Set as Closed</a></li>
+									<li class="divider"></li>
+									<li><a href="{{pathFor 'setup.data.import_export_data'}}">Data Import Tool</a></li>
+									<li><a href="{{pathFor 'setup.users.user'}}">User Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.users.role'}}">Role Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.customize.customize_form'}}">Customize Form</a></li>
+									<li><a href="{{pathFor 'tools.tools.todo'}}">Assign To</a></li>
+								</ul>
+						{{/if}}	
+						{{#if equals type "order"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+						        	<li><a href="#">Close</a></li>
+						            <li><a href="#">Stop</a></li>
+									<li><a href="#">Re-open</a></li>
+									<li class="divider"></li>
+									<li><a href="{{pathFor 'setup.data.import_export_data'}}">Data Import Tool</a></li>
+									<li><a href="{{pathFor 'setup.users.user'}}">User Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.users.role'}}">Role Permissions Manager</a></li>
+									<li><a href="{{pathFor 'setup.customize.customize_form'}}">Customize Form</a></li>
+									<li><a href="{{pathFor 'tools.tools.todo'}}">Assign To</a></li>
+								</ul>
+						{{/if}}
+						{{#if equals type "itemPriceReport"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+						        	<li><a href="#">New Item Price</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">Pick Columns</a></li>
+									<li><a href="#">Sort By</a></li>
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Export</a></li>
+									<li><a href="#">Save</a></li>
+									<li><a href="{{pathFor 'setup.users.user'}}">User Permissions</a></li>
+								</ul>
+						{{/if}}
+						{{#if equals type "renameTool"}}
+							<div class="list-page-heading-btns pull-right">
+								<button type="button" class="btn btn-primary btn-sm">Rename</button>
+							</div>
+						{{/if}}
+						{{#if equals type "docShareReport"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+						        	<li><a href="#">New DocShare</a></li>
+						            <li><a href="#">Delete</a></li>
+						            <li><a href="#">Pick Columns</a></li>
+						            <li><a href="#">Sort By</a></li>
+						            <li><a href="#">Print</a></li>
+						            <li><a href="#">Export</a></li>
+						            <li><a href="#">Save</a></li>
+						            <li><a href="{{pathFor 'setup.users.user'}}">User Permissions</a></li>
+								</ul>
+						{{/if}}
+						{{#if equals type "userDocsPermitted"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+						        	<li><a href="{{pathFor 'setup.reports.permitted_documents_for_user'}}">Edit</a></li>
+						            <li><a href="#">Print</a></li>
+						            <li><a href="#">Export</a></li>
+						            <li><a href="{{pathFor 'setup.users.user'}}">User Permissions</a></li>
+								</ul>
+						{{/if}}
+						{{#if equals type "report"}}
+							<div class="list-page-heading-btns pull-right">
+								<a class="btn btn-white btn-bitbucket btn-sm">
+									<i class="fa fa-print"></i>
+								</a>
+								<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+									<ul class="dropdown-menu pull-right dropdown-menu-right" style="margin-right:82px;">
+								    	<li><a href="#">Print</a></li>
+								        <li><a href="#">Email</a></li>
+								        <li><a href="#">Links</a></li>
+								    	<li><a href="#">Duplicate</a></li>
+								        <li><a href="#">Reload</a></li>
+								        <li><a href="#">Delete</a></li>
+										<li><a href="#">New Report</a></li>
+								    </ul>
+									<button type="button" class="btn btn-primary btn-sm">Save</button>
+							</div>
+						{{/if}}
+						{{#if equals type "showHideModules"}}
+							<div class="list-page-heading-btns pull-right">
+								<button type="button" class="btn btn-primary btn-sm">Update</button>
+							</div>
+						{{/if}}
+						{{#if equals type "reportView"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+						        	<li><a href="{{pathFor reportPath}}">Edit</a></li>
+						            <li><a href="#">Print</a></li>
+						            <li><a href="#">Export</a></li>
+						            <li><a href="{{pathFor 'setup.users.user'}}">User Permissions</a></li>
+								</ul>
+						{{/if}}
+						{{#if equals type "analytics"}}
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle pull-right list-page-heading-btns">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+						        	<li><a href="#">Reset Filters</a></li>
+						            <li><a href="#">Print</a></li>
+						            <li><a href="#">Export</a></li>
+								</ul>
+						{{/if}}
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+
+</template>

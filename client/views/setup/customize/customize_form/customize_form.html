@@ -1,0 +1,410 @@
+<template name="SetupCustomizeCustomizeForm">
+
+	{{> PageHeading title="Customize Form"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> CustomizeFormForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="CustomizeFormForm">
+	<form role="form">
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="workflow-button-area btn-group pull-right hide"></div>
+				<div class="clearfix"></div>
+				<div class="row layout-main">
+				    <div class="col-md-12 layout-main-section-wrapper">
+						<div class="layout-main-section">
+							<div class="form-inner-toolbar">
+								<button class="btn btn-default btn-xs" style="margin-left: 10px;">Refresh Form</button>
+								<button class="btn btn-default btn-xs" style="margin-left: 10px;">Reset to defaults</button>
+							</div>
+							<div class="page-form row hide"></div>
+							<div>
+								<div>
+									<div class="form-layout">
+										<div class="form-dashboard" style="display: none;">
+											<div class="row" style="padding: 15px 30px;"></div>
+										</div>
+										<div class="form-page">
+											<div class="row form-section visible-section">
+												<div class="section-body">
+												    <div class="form-column col-sm-12">
+												        <form>
+												            <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="doc_type" style="z-index: 1;">
+												                <div class="form-group" style="margin: 0px">
+												                    <label class="control-label" style="padding-right: 0px;">Enter Form Type</label>
+												                    <div class="control-input-wrapper">
+												                        <div class="control-input">
+												                            <div class="link-field ui-front" style="position: relative;">
+												                                <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="doc_type" placeholder="" data-doctype="Customize Form" autocomplete="off"> <span class="link-btn" style="display: none;">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+												                                <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-352" tabindex="0" style="display: none; width: 517px; top: 30px; left: 0.5px;">
+												                                    <li class="ui-menu-item" id="ui-id-354" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>About Us Team Member</strong>
+												                                                <br><span class="small">Website</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-355" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Account</strong>
+												                                                <br><span class="small">Accounts</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-356" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Activity Cost</strong>
+												                                                <br><span class="small">Projects</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-357" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Activity Type</strong>
+												                                                <br><span class="small">Projects</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-358" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Address</strong>
+												                                                <br><span class="small">Utilities</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-359" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Address Template</strong>
+												                                                <br><span class="small">Utilities</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-360" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Appraisal</strong>
+												                                                <br><span class="small">HR</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-361" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Appraisal Goal</strong>
+												                                                <br><span class="small">HR</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-362" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Appraisal Template</strong>
+												                                                <br><span class="small">HR</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-363" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Appraisal Template Goal</strong>
+												                                                <br><span class="small">HR</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-364" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Async Task</strong>
+												                                                <br><span class="small">Core</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-365" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Attendance</strong>
+												                                                <br><span class="small">HR</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-366" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Authorization Rule</strong>
+												                                                <br><span class="small">Setup</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-367" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Bank Reconciliation Detail</strong>
+												                                                <br><span class="small">Accounts</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-368" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Batch</strong>
+												                                                <br><span class="small">Stock</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-369" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Block Module</strong>
+												                                                <br><span class="small">Core</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-370" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Blog Category</strong>
+												                                                <br><span class="small">Website</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-371" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Blog Post</strong>
+												                                                <br><span class="small">Website</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-372" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>Blogger</strong>
+												                                                <br><span class="small">Website</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-373" tabindex="-1">
+												                                        <a>
+												                                            <p><strong>BOM</strong>
+												                                                <br><span class="small">Manufacturing</span></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-374" tabindex="-1">
+												                                        <a>
+												                                            <p><strong><span class="text-primary link-option"><i class="icon-plus" style="margin-right: 5px;"></i> Create a new DocType</span></strong></p>
+												                                        </a>
+												                                    </li>
+												                                    <li class="ui-menu-item" id="ui-id-375" tabindex="-1">
+												                                        <a>
+												                                            <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+												                                        </a>
+												                                    </li>
+												                                </ul>
+												                            </div>
+												                        </div>
+												                        <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/DocType/About%20Us%20Team%20Member" data-doctype="DocType">About Us Team Member</a></div>
+												                        <p class="help-box small text-muted hidden-xs"></p>
+												                    </div>
+												                </div>
+												            </div>
+												        </form>
+												    </div>
+												</div>
+											</div>
+											<div class="row form-section visible-section shaded-section">
+												<div class="section-body">
+												    <div class="form-column col-sm-6">
+												        <form>
+												            <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="default_print_format">
+												                <div class="form-group" style="margin: 0px">
+												                    <label class="control-label" style="padding-right: 0px;">Default Print Format</label>
+												                    <div class="control-input-wrapper">
+												                        <div class="control-input">
+												                            <div class="link-field ui-front" style="position: relative;">
+												                                <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="default_print_format" placeholder="" data-doctype="Customize Form" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+												                                <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-353" tabindex="0" style="display: none;"></ul>
+												                            </div>
+												                        </div>
+												                        <div class="control-value like-disabled-input" style="display: none;"></div>
+												                        <p class="help-box small text-muted hidden-xs"></p>
+												                    </div>
+												                </div>
+												            </div>
+												            <div class="griderp-control input-max-width" data-fieldtype="Int" data-fieldname="max_attachments">
+												                <div class="form-group" style="margin: 0px">
+												                    <label class="control-label" style="padding-right: 0px;">Max Attachments</label>
+												                    <div class="control-input-wrapper">
+												                        <div class="control-input">
+												                            <input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Int" data-fieldname="max_attachments" placeholder="" data-doctype="Customize Form">
+												                        </div>
+												                        <div class="control-value like-disabled-input" style="display: none;"></div>
+												                        <p class="help-box small text-muted hidden-xs"></p>
+												                    </div>
+												                </div>
+												            </div>
+												            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="allow_copy">
+												                <div class="cbox">
+												                    <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="allow_copy" placeholder="" data-doctype="Customize Form"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Hide Copy</span> </label>
+												                    <p class="help-box small text-muted"></p>
+												                </div>
+												            </div>
+												        </form>
+												    </div>
+												    <div class="form-column col-sm-6">
+												        <form>
+												            <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="title_field">
+												                <div class="form-group" style="margin: 0px">
+												                    <label class="control-label" style="padding-right: 0px;">Title Field</label>
+												                    <div class="control-input-wrapper">
+												                        <div class="control-input">
+												                            <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="title_field" placeholder="" data-doctype="Customize Form">
+												                        </div>
+												                        <div class="control-value like-disabled-input" style="display: none;"></div>
+												                        <p class="help-box small text-muted hidden-xs">Use this fieldname to generate title</p>
+												                    </div>
+												                </div>
+												            </div>
+												            <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="search_fields">
+												                <div class="form-group" style="margin: 0px">
+												                    <label class="control-label" style="padding-right: 0px;">Search Fields</label>
+												                    <div class="control-input-wrapper">
+												                        <div class="control-input">
+												                            <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="search_fields" placeholder="" data-doctype="Customize Form">
+												                        </div>
+												                        <div class="control-value like-disabled-input" style="display: none;"></div>
+												                        <p class="help-box small text-muted hidden-xs">Fields separated by comma (,) will be included in the "Search By" list of Search dialog box</p>
+												                    </div>
+												                </div>
+												            </div>
+												        </form>
+												    </div>
+												</div>
+											</div>
+											<div class="row form-section visible-section">
+												<div class="section-body">
+												    <div class="form-column col-sm-6">
+												        <form>
+												            <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="sort_field">
+												                <div class="form-group" style="margin: 0px">
+												                    <label class="control-label" style="padding-right: 0px;">Sort Field</label>
+												                    <div class="control-input-wrapper">
+												                        <div class="control-input">
+												                            <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="sort_field" placeholder="" data-doctype="Customize Form">
+												                                <option></option>
+												                                <option value="name">name</option>
+												                                <option value="modified">modified</option>
+												                                <option value="full_name">full_name</option>
+												                                <option value="image_link">image_link</option>
+												                                <option value="bio">bio</option>
+												                            </select>
+												                        </div>
+												                        <div class="control-value like-disabled-input" style="display: none;"></div>
+												                        <p class="help-box small text-muted hidden-xs"></p>
+												                    </div>
+												                </div>
+												            </div>
+												        </form>
+												    </div>
+												    <div class="form-column col-sm-6">
+												        <form>
+												            <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="sort_order">
+												                <div class="form-group" style="margin: 0px">
+												                    <label class="control-label" style="padding-right: 0px;">Sort Order</label>
+												                    <div class="control-input-wrapper">
+												                        <div class="control-input">
+												                            <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="sort_order" placeholder="" data-doctype="Customize Form">
+												                                <option value="ASC">ASC</option>
+												                                <option value="DESC">DESC</option>
+												                            </select>
+												                        </div>
+												                        <div class="control-value like-disabled-input" style="display: none;"></div>
+												                        <p class="help-box small text-muted hidden-xs"></p>
+												                    </div>
+												                </div>
+												            </div>
+												        </form>
+												    </div>
+												</div>
+											</div>
+											<div class="row form-section visible-section shaded-section">
+												<div class="col-sm-12">
+												    <h3 class="form-section-heading">Fields</h3></div>
+												<div class="col-sm-12 small text-muted">Customize Label, Print Hide, Default etc.</div>
+												<div class="section-body">
+												    <div class="form-column col-sm-12">
+												        <div style="padding: 10px"> <a id="fields_help" class="link_type">Help</a> </div>
+												        <form>
+												            <div class="griderp-control" data-fieldtype="Table" data-fieldname="fields">
+												                <div data-fieldname="fields">
+												                    <div class="form-grid">
+												                        <div class="grid-heading-row">
+												                            <div class="grid-row">
+												                                <div class="data-row row sortable-handle">
+												                                    <div class="row-index">&nbsp;</div>
+												                                    <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Label</div>
+												                                    <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldtype">Type</div>
+												                                    <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldname">Name</div>
+												                                    <div class="col col-xs-3 grid-overflow-no-ellipsis grid-static-col" data-fieldname="options">Options</div>
+												                                    <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="permlevel">Perm Level</div>
+												                                </div>
+												                            </div>
+												                        </div>
+												                        <div class="grid-body">
+												                            <div class="rows">
+												                                <div class="grid-row" data-idx="1">
+												                                    <div class="data-row row sortable-handle">
+												                                        <div class="row-index">1</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Full Name</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldtype">Data</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldname">full_name</div>
+												                                        <div class="col col-xs-3 grid-overflow-no-ellipsis grid-static-col" data-fieldname="options"></div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="permlevel">
+												                                            <div style="text-align: right">0</div>
+												                                        </div>
+												                                    </div>
+												                                </div>
+												                                <div class="grid-row" data-idx="2">
+												                                    <div class="data-row row sortable-handle">
+												                                        <div class="row-index">2</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Image Link</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldtype">Attach</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldname">image_link</div>
+												                                        <div class="col col-xs-3 grid-overflow-no-ellipsis grid-static-col" data-fieldname="options"></div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="permlevel">
+												                                            <div style="text-align: right">0</div>
+												                                        </div>
+												                                    </div>
+												                                </div>
+												                                <div class="grid-row" data-idx="3">
+												                                    <div class="data-row row sortable-handle">
+												                                        <div class="row-index">3</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Bio</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldtype">Small Text</div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="fieldname">bio</div>
+												                                        <div class="col col-xs-3 grid-overflow-no-ellipsis grid-static-col" data-fieldname="options"></div>
+												                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="permlevel">
+												                                            <div style="text-align: right">0</div>
+												                                        </div>
+												                                    </div>
+												                                </div>
+												                            </div>
+												                            <div class="grid-empty text-center hide">No Data</div>
+												                            <div class="small form-clickable-section grid-footer">
+												                                <div class="row">
+												                                    <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+												                                    <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+												                                </div>
+												                            </div>
+												                        </div>
+												                    </div>
+												                </div>
+												            </div>
+												        </form>
+												    </div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+			</div>
+		</div>
+		<div class="" style="padding-top:20px; padding-bottom: 7px;">
+			<div class="submit-div">
+				<button id="form-submit-button" class="btn btn-success" type="submit">
+					<span class="fa fa-check">
+					</span>
+					Save
+				</button>
+				<a href="#" id="form-cancel-button" class="btn btn-default">
+					Cancel
+				</a>
+			</div>
+		</div>
+	</form>
+</template>
+

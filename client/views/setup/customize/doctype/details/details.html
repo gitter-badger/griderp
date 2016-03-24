@@ -1,0 +1,1011 @@
+<template name="DoctypeDetails">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">{{doctype_details.name}}</div>
+								<!--<span class="indicator-blue indicator-text">{{doctype_details.voucher_type}}</span>-->
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Rename</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">New Doctype</a></li>
+								</ul>
+							<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+								{{doctype_details.name}}
+							</div>-->
+						</div>
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> DoctypeDetailsSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> DoctypeDetailsDetailsForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="DoctypeDetailsSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="DoctypeDetailsDetailsForm">
+	<div id="doctype-details-details-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-module">
+				<label for="module">
+					Module
+				</label>
+				<div class="input-div">
+					<p class="form-control-static">
+						{{doctype_details.module}}
+					</p>
+				</div>
+			</div>-->
+			<!-- Main Form Layout -->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+							<div class="form-dashboard" style="display: none;">
+								<div class="row" style="padding: 15px 30px;"></div>
+							</div>
+							<div class="form-page">
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="module">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Module</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input" style="display: none;">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="module" placeholder="" data-doctype="DocType" autocomplete="off" disabled=""> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="fa fa-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-42" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: block;"><a class="grey" href="#Form/Module%20Def/Website" data-doctype="Module%20Def">Website</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="istable">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="istable" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Is Child Table</span> </label>
+								                        <p class="help-box small text-muted">Child Tables are shown as a Grid in other Forms.</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="issingle">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="issingle" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="fa fa-check" style="margin-right: 8px;"></i></span> <span class="small">Is Single</span> </label>
+								                        <p class="help-box small text-muted">Single Types have only one record and no associated tables. Values are stored in collection Singles</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="document_type">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Document Type</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input" style="display: none;">
+								                                <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="document_type" placeholder="" data-doctype="DocType">
+								                                    <option></option>
+								                                    <option value="Document">Document</option>
+								                                    <option value="Setup">Setup</option>
+								                                    <option value="System">System</option>
+								                                    <option value="Other">Other</option>
+								                                </select>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: block;">Other</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="icon">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Icon</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input" style="display: none;">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="icon" placeholder="" data-doctype="DocType" disabled="">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: block;">icon-group</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="custom">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="custom" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Custom?</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="plugin">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Fields</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="fields">
+								                    <div data-fieldname="fields">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="row-data">
+								                                            <div class="row">
+								                                                <div class="col-sm-4"> Label </div>
+								                                                <div class="col-sm-4"> Field Type </div>
+								                                                <div class="col-sm-4"> Options </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows">
+								                                    <div class="grid-row" data-idx="1" draggable="false">
+								                                        <div class="data-row row sortable-handle" style="display: block;">
+								                                            <div class="row-index">1</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #fff; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> Help </div>
+								                                                    <div class="col-sm-3"> HTML
+								                                                        <br><span class="small">help</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col">
+								                                                        <div class="alert">Link for About Us Page is "/about"</div>
+								                                                    </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                        <div class="form-in-grid">
+								                                            <div class="grid-form-heading sortable-handle">
+								                                                <div class="toolbar"> <span class="panel-title"> Editing Row #<span class="grid-form-row-index">1</span></span>
+								                                                    <button class="btn btn-success btn-xs pull-right" style="margin-left: 7px;"> <i class="fa fa-check visible-xs" style="padding-bottom: 2px;"></i> <span class="hidden-xs">Done</span></button>
+								                                                    <button class="btn btn-default btn-xs pull-right grid-insert-row" style="margin-left: 7px;"> Insert Above</button>
+								                                                    <button class="btn btn-danger btn-xs pull-right grid-delete-row"> <i class="fa fa-trashcan visible-xs" style="padding-bottom: 2px; margin-top: 1px;"></i> <span class="hidden-xs">Remove</span></button>
+								                                                </div>
+								                                            </div>
+								                                            <div class="grid-form-body">
+								                                                <div class="form-area">
+								                                                    <div class="form-layout">
+								                                                        <div class="form-page">
+								                                                            <div class="row form-section visible-section">
+								                                                                <div class="section-body">
+								                                                                    <div class="form-column col-sm-6">
+								                                                                        <form>
+								                                                                            <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="label">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;">Label</label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input" style="display: none;"></div>
+								                                                                                        <div class="control-value like-disabled-input bold" style="">Help</div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="fieldtype">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;">Type</label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input" style="display: none;"></div>
+								                                                                                        <div class="control-value like-disabled-input bold" style="">HTML</div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="fieldname">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;">Name</label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input" style="display: none;"></div>
+								                                                                                        <div class="control-value like-disabled-input bold" style="">help</div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="reqd">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Mandatory</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width hide-control" data-fieldtype="Select" data-fieldname="precision">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width hide-control" data-fieldtype="Int" data-fieldname="length">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="search_index">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Index</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="in_list_view">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">In List View</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="bold">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Bold</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width hide-control" data-fieldtype="Check" data-fieldname="collapsible">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"></span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control hide-control" data-fieldtype="Small Text" data-fieldname="collapsible_depends_on">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                        </form>
+								                                                                    </div>
+								                                                                    <div class="form-column col-sm-6">
+								                                                                        <form>
+								                                                                            <div class="griderp-control" data-fieldtype="Text" data-fieldname="options">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;">Options</label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input" style="display: none;"></div>
+								                                                                                        <div class="control-value like-disabled-input for-description" style="">
+								                                                                                            <div class="alert">Link for About Us Page is "/about"</div>
+								                                                                                        </div>
+								                                                                                        <p class="help-box small text-muted hidden-xs">For Links, enter the DocType as range. For Select, enter list of Options, each on a new line.</p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control hide-control" data-fieldtype="Small Text" data-fieldname="default">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                        </form>
+								                                                                    </div>
+								                                                                </div>
+								                                                            </div>
+								                                                            <div class="row form-section visible-section shaded-section">
+								                                                                <div class="col-sm-12">
+								                                                                    <h3 class="form-section-heading">Permissions</h3></div>
+								                                                                <div class="section-body">
+								                                                                    <div class="form-column col-sm-6">
+								                                                                        <form>
+								                                                                            <div class="griderp-control hide-control" data-fieldtype="Small Text" data-fieldname="depends_on">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="hidden">
+								                                                                                <div class="">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Hidden</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="read_only">
+								                                                                                <div class="">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Read Only</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="unique">
+								                                                                                <div class="">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Unique</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="set_only_once">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Set Only Once</span> </label>
+								                                                                                    <p class="help-box small text-muted">Do not allow user to change after set the first time</p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                        </form>
+								                                                                    </div>
+								                                                                    <div class="form-column col-sm-6">
+								                                                                        <form>
+								                                                                            <div class="griderp-control input-max-width" data-fieldtype="Int" data-fieldname="permlevel">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;">Perm Level</label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input" style="display: none;"></div>
+								                                                                                        <div class="control-value like-disabled-input" style="">0</div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="ignore_user_permissions">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Ignore User Permissions</span> </label>
+								                                                                                    <p class="help-box small text-muted">User permissions should not apply for this Link</p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="allow_on_submit">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Allow on Submit</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="report_hide">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Report Hide</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                        </form>
+								                                                                    </div>
+								                                                                </div>
+								                                                            </div>
+								                                                            <div class="row form-section visible-section">
+								                                                                <div class="col-sm-12">
+								                                                                    <h3 class="form-section-heading">Display</h3></div>
+								                                                                <div class="section-body">
+								                                                                    <div class="form-column col-sm-6">
+								                                                                        <form>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="in_filter">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">In Filter</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="no_copy">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">No Copy</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="print_hide">
+								                                                                                <div class="ckbox">
+								                                                                                    <label> <span class="input-area" style="display: none;"></span> <span class="disp-area" style="margin-left: -20px;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="label-area small">Print Hide</span> </label>
+								                                                                                    <p class="help-box small text-muted"></p>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="print_width">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="width">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                        </form>
+								                                                                    </div>
+								                                                                    <div class="form-column col-sm-6">
+								                                                                        <form>
+								                                                                            <div class="griderp-control hide-control" data-fieldtype="Small Text" data-fieldname="description">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="oldfieldname">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                            <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="oldfieldtype">
+								                                                                                <div class="form-group" style="margin: 0px">
+								                                                                                    <label class="control-label" style="padding-right: 0px;"></label>
+								                                                                                    <div class="control-input-wrapper">
+								                                                                                        <div class="control-input"></div>
+								                                                                                        <div class="control-value like-disabled-input" style="display: none;"></div>
+								                                                                                        <p class="help-box small text-muted hidden-xs"></p>
+								                                                                                    </div>
+								                                                                                </div>
+								                                                                            </div>
+								                                                                        </form>
+								                                                                    </div>
+								                                                                </div>
+								                                                            </div>
+								                                                        </div>
+								                                                    </div>
+								                                                </div>
+								                                                <div class="grid-footer-toolbar clearfix hidden-xs"> <span class="text-muted"> <i class="fa fa-keyboard"></i> – <kbd>Ctrl + Up</kbd>, <kbd>Ctrl + Down</kbd>, <kbd>ESC</kbd> </span>
+								                                                    <button class="btn btn-default btn-xs pull-right grid-append-row" style="margin-left: 7px;"> Insert Below</button>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="2">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">2</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #fff; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> <i class="fa fa-list"></i> Company Introduction
+								                                                        <p class="text-muted small">Introduce your company to the website visitor.</p>
+								                                                    </div>
+								                                                    <div class="col-sm-3"> Text Editor
+								                                                        <br><span class="small">company_introduction</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="3">
+								                                        <div class="data-row row sortable-handle" style="font-weight: bold;">
+								                                            <div class="row-index">3</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #D9EDF7; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> <strong>                                                      Org History                   </strong> </div>
+								                                                    <div class="col-sm-3"> Section Break
+								                                                        <br><span class="small">sb0</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="4">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">4</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #fff; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> <i class="fa fa-list"></i> Org History Heading
+								                                                        <p class="text-muted small">"Company History"</p>
+								                                                    </div>
+								                                                    <div class="col-sm-3"> Data
+								                                                        <br><span class="small">company_history_heading</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="5">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">5</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #fff; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> <i class="fa fa-th"></i> Org History </div>
+								                                                    <div class="col-sm-3"> Table
+								                                                        <br><span class="small">company_history</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> Company History </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="6">
+								                                        <div class="data-row row sortable-handle" style="font-weight: bold;">
+								                                            <div class="row-index">6</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #D9EDF7; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> <strong>                                                      Team Members                   </strong> </div>
+								                                                    <div class="col-sm-3"> Section Break
+								                                                        <br><span class="small">sb1</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="7">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">7</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #fff; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> Team Members Heading
+								                                                        <p class="text-muted small">"Team Members" or "Management"</p>
+								                                                    </div>
+								                                                    <div class="col-sm-3"> Data
+								                                                        <br><span class="small">team_members_heading</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="8">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">8</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #fff; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> <i class="fa fa-th"></i> Team Members </div>
+								                                                    <div class="col-sm-3"> Table
+								                                                        <br><span class="small">team_members</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> About Us Team Member </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="9">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">9</div>
+								                                            <div class="row-data">
+								                                                <div class="row" style="background-color: #fff; padding: 10px; margin: -10px -15px;">
+								                                                    <div class="col-sm-4"> Footer
+								                                                        <p class="text-muted small">More content for the bottom of the page.</p>
+								                                                    </div>
+								                                                    <div class="col-sm-3"> Text Editor
+								                                                        <br><span class="small">footer</span> </div>
+								                                                    <div class="col-sm-4 grid-static-col"> </div>
+								                                                </div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                </div>
+								                                <div class="grid-empty text-center hide">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top:4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Naming</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="autoname">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Auto Name</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="autoname" placeholder="" data-doctype="DocType">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"><a onclick="msgprint('<ol>\
+																<li><b>field:[fieldname]</b> - By Field\
+																<li><b>naming_series:</b> - By Naming Series (field called naming_series must be present\
+																<li><b>Prompt</b> - Prompt user for a name\
+																<li><b>[series]</b> - Series by prefix (separated by a dot); for example PRE.#####\
+																</ol>')">Naming Options</a></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Select" data-fieldname="name_case">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Name Case</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="name_case" placeholder="" data-doctype="DocType">
+								                                    <option></option>
+								                                    <option value="Title Case">Title Case</option>
+								                                    <option value="UPPER CASE">UPPER CASE</option>
+								                                </select>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Small Text" data-fieldname="description">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Description</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input" style="display: none;">
+								                                <textarea type="text" class="input-with-feedback form-control" data-fieldtype="Small Text" data-fieldname="description" placeholder="" data-doctype="DocType"></textarea>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: block;">Settings for the About Us Page</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="title_field">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Title Field</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="title_field" placeholder="" data-doctype="DocType">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Show this field as title</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="search_fields">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Search Fields</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="search_fields" placeholder="" data-doctype="DocType">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="sort_field">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Sort Field</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="sort_field" placeholder="" data-doctype="DocType">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">modified</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Select" data-fieldname="sort_order">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Sort Order</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="sort_order" placeholder="" data-doctype="DocType">
+								                                    <option value="ASC">ASC</option>
+								                                    <option value="DESC">DESC</option>
+								                                </select>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">DESC</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Permission Rules</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="permissions">
+								                    <div data-fieldname="permissions">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="role">Role</div>
+								                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="permlevel">Level</div>
+								                                        <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="read">Read</div>
+								                                        <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="write">Write</div>
+								                                        <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="create">Create</div>
+								                                        <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="delete">Delete</div>
+								                                        <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="submit">Submit</div>
+								                                        <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="cancel">Cancel</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows">
+								                                    <div class="grid-row" data-idx="1">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">1</div>
+								                                            <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="role"><a class="grey" href="#Form/Role/Website%20Manager" data-doctype="Role">Website Manager</a></div>
+								                                            <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="permlevel">
+								                                                <div style="text-align: right">0</div>
+								                                            </div>
+								                                            <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="read"><i class="fa fa-check" style="margin-right: 8px;"></i></div>
+								                                            <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="write"><i class="fa fa-check" style="margin-right: 8px;"></i></div>
+								                                            <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="create"><i class="fa fa-check" style="margin-right: 8px;"></i></div>
+								                                            <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="delete"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></div>
+								                                            <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="submit"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></div>
+								                                            <div class="col col-xs-1 grid-overflow-ellipsis grid-static-col" data-fieldname="cancel"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></div>
+								                                        </div>
+								                                    </div>
+								                                </div>
+								                                <div class="grid-empty text-center hide">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top:4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <label class="control-label">Permissions Settings</label>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="in_create">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="in_create" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">User Cannot Create</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="read_only">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="read_only" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">User Cannot Search</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="is_submittable">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="is_submittable" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Is Submittable</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="allow_import">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="allow_import" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Allow Import</span> </label>
+								                        <p class="help-box small text-muted">Allow Import via Data Import Tool</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="allow_rename">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="allow_rename" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Allow Rename</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="in_dialog">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="in_dialog" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">In Dialog</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="read_only_onload">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="read_only_onload" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Show Print First</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Int" data-fieldname="max_attachments">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Max Attachments</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Int" data-fieldname="max_attachments" placeholder="" data-doctype="DocType">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <label class="control-label">Hide Actions</label>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="hide_heading">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="hide_heading" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Hide Heading</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="hide_toolbar">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="hide_toolbar" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Hide Toolbar</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="allow_copy">
+								                    <div class="ckbox">
+								                        <label> <span class="input-area" style="display: none;"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="allow_copy" placeholder="" data-doctype="DocType" disabled=""></span> <span class="disp-area" style="margin-left: -20px; display: inline;"><i class="icon-check-empty text-extra-muted" style="margin-right: 8px;"></i></span> <span class="small">Hide Copy</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="default_print_format">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Default Print Format</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="default_print_format" placeholder="" data-doctype="DocType">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="timeline-items">
+								    <div class="media timeline-item" data-name=""> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+								            <div>
+								                <div class="pull-right"> <span class="small text-muted">  </span> </div>
+								                <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created </span><span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2013-03-19 12:02:15" title="03-19-2013 12:02:15">3 years ago</span></span> </h5> </div>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

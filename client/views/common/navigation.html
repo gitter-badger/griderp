@@ -1,0 +1,97 @@
+<template name="navigation">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+		
+            <!-- Close canvas menu used only on OffCanvas page -->
+            <!-- You can remove this tag if you dont use offCanvas menu -->
+            <a class="close-canvas-menu"><i class="fa fa-times"></i></a>
+            <!-- End offCanvas menu toggle -->
+
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+						<span>
+							<img alt="image" class="img-circle" width="48" height="48" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm">
+						</span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> 
+								<span class="block m-t-xs"> 
+									<strong class="font-bold">{{userFullName}}</strong>
+                             	</span>
+								<span class="text-muted text-xs block">Lead Developer <b class="caret"></b></span>
+							</span>
+						</a>
+                        <ul class="dropdown-menu m-t-xs">
+                            <li><a href="{{pathFor 'user_settings'}}">My Profile</a></li>
+							<li><a href="#">View Website</a></li>
+                            <li class="divider"></li>
+							<li><a href="#">About GridERP</a></li>
+							<li><a href="#">Documentation</a></li>
+							<li><a href="#">GridERP Forums</a></li>
+							<li class="divider"></li>
+                            <li><a href="{{pathFor 'logout'}}">Sign Out</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        ERP+
+                    </div>
+                </li>
+                <li>
+                    <a href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard" title="Dashboard"></i> <span class="nav-label">Dashboard</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'accounts'}}"><i class="fa fa-sitemap" title="Accounting"></i> <span class="nav-label">Accounting</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'crm'}}"><i class="fa fa-share-alt-square" title="CRM"></i> <span class="nav-label">CRM</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'tools'}}"><i class="fa fa-calendar" title="Tools"></i> <span class="nav-label">Tools</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'file'}}"><i class="fa fa-folder" title="File Manager"></i> <span class="nav-label">File Manager</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'human_resources'}}"><i class="fa fa-group" title="HR"></i> <span class="nav-label">Human Resources</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'manufacturing'}}"><i class="fa fa-industry" title="Manufacturing"></i> <span class="nav-label">Manufacturing</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'pos'}}"><i class="fa fa-dollar" title="POS"></i> <span class="nav-label">Point-of-Sale</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'projects'}}"><i class="fa fa-pie-chart" title="Projects"></i> <span class="nav-label">Projects</span> </a>
+                </li>
+	     		<li>
+                    <a href="{{pathFor 'purchasing'}}"><i class="fa fa-cart-plus" title="Purchasing"></i> <span class="nav-label">Purchasing</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'selling'}}"><i class="fa fa-bar-chart" title="Selling"></i> <span class="nav-label">Selling</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'stock'}}"><i class="fa fa-tags" title="Stock"></i> <span class="nav-label">Stock</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'support'}}"><i class="fa fa-support" title="Support"></i> <span class="nav-label">Support</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'tutorials'}}"><i class="fa fa-graduation-cap" title="Tutorials"></i> <span class="nav-label">Tutorials</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'website'}}"><i class="fa fa-globe" title="Website"></i> <span class="nav-label">Website</span> </a>
+                </li>
+				<li><hr class="nav" /> </li>
+          		<li>
+                    <a href="{{pathFor 'all_applications'}}"><i class="fa fa-list" title="All Apps"></i> <span class="nav-label">All Applications</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'setup'}}"><i class="fa fa-gears" title="System Setup"></i> <span class="nav-label">System Setup</span> </a>
+                </li>
+          		<li>
+                    <a href="{{pathFor 'core_settings'}}"><i class="fa fa-wrench" title="Core Settings"></i> <span class="nav-label">Core Settings</span> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</template>

@@ -1,0 +1,56 @@
+<template name="Support">
+	{{> PageHeading title="Support"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-md-12" id="content">
+				<div class="row" id="title_row">
+					<div class="col-md-12">
+						<div id="page_menu" class="pull-right">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="menu" class="col-sm-3 col-md-2">
+				<h2>
+				</h2>
+				{{> SupportSideMenu}}
+			</div>
+			<div id="subcontent" class="col-sm-9 col-md-10" style="padding-bottom:25px;">
+				{{> yield region='SupportSubcontent'}}
+			</div>
+		</div>		
+ 	</div>
+</template>
+
+<template name="SupportSideMenu">
+	<ul class="nav nav-pills nav-stacked" id="side-menu">
+		<li class="{{menuItemClass 'support.documents'}} module-sidebar-item">
+			<a href="{{pathFor 'support.documents'}}">
+				<span>
+					Documents
+				</span>
+				<span class="glyphicon glyphicon-chevron-right pull-right" style="display: none;"></span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'support.setup'}} module-sidebar-item">
+			<a href="{{pathFor 'support.setup'}}">
+				<span>
+					Setup
+				</span>
+				<span class="glyphicon glyphicon-chevron-right pull-right" style="display: none;"></span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'support.standard_reports'}} module-sidebar-item">
+			<a href="{{pathFor 'support.standard_reports'}}">
+				<span>
+					Standard Reports
+				</span>
+				<span class="glyphicon glyphicon-chevron-right pull-right" style="display: none;"></span>
+			</a>
+		</li>
+	</ul>
+</template>
+

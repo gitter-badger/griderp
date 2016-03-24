@@ -1,0 +1,25 @@
+<template name="ManufacturingHelp">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ManufacturingHelpModuleMenu}}
+	</div>
+</template>
+
+<template name="ManufacturingHelpModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'manufacturing.help.bill_of_materials'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'manufacturing.help.bill_of_materials'}}">
+				<span class="item-title-modules">
+					Bill of Materials
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

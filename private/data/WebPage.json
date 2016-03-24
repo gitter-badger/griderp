@@ -1,0 +1,27 @@
+[
+    {
+        "name": "warp-power-llc",
+        "docstatus": 0,
+        "parent": null,
+        "parentfield": null,
+        "parenttype": null,
+        "idx": null,
+        "insert_style": 0,
+        "parent_website_route": null,
+        "header": "<div class=\"hero text-center\"><h1>For all your Wrinkles in Space-Time Needs</h1><p>This is an example website auto-generated from GridERP</p><p><a class=\"btn btn-primary\" href=\"/login\">Login</a></p></div>",
+        "title": "Warp Power LLC",
+        "text_align": "Left",
+        "page_name": "warp-power-llc",
+        "enable_comments": 0,
+        "parent_web_page": null,
+        "css": ".page-header {\n\tcolor: white;\n\tbackground: #263248;\n\ttext-align: center;\n\tpadding: 80px 0px;\n}\n\n.page-header .page-header-left {\n\twidth: 100%;\n}\n\n.page-header h1 {\n\tcolor: white;\n}\n\n.slide h2 {\n\tmargin-bottom: 30px;\n}\n\n.slides {\n\tmargin-top: -15px;\n}\n\n.slide {\n\tpadding: 30px 40px;\n\tmax-width: 800px;\n\tmargin: auto;\n}\n\n.container {\n\tmax-width: 900px;\n}\n\n.img-wrapper {\n\ttext-align: center;\n\tpadding: 30px;\n\tbackground-color: #eee;\n\tborder-radius: 5px;\n\tmargin-bottom: 15px;\n}",
+        "description": "Warp Power LLC:For all your wrinkles in space-time needs",
+        "insert_code": 0,
+        "javascript": null,
+        "slideshow": null,
+        "show_title": 1,
+        "main_section": "<div class=\"slides\">\n\t<div class=\"row slide\">\n\t\t<h2 class=\"text-center\">Awesome Products</h2>\n\t\t<div class=\"col-md-6 text-center\">\n\t\t\t<div class=\"img-wrapper\">\n\t\t\t\t<i class=\"icon-wrench text-muted\" style=\"font-size: 100px;\"></i>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>\n\t\t</div>\n\t</div>\n\t<div class=\"row slide alt\">\n\t\t<h2 class=\"text-center\">Awesome Services</h2>\n\t\t<div class=\"col-md-6 text-center\">\n\t\t\t<div class=\"img-wrapper\">\n\t\t\t\t<i class=\"icon-phone text-muted\" style=\"font-size: 100px;\"></i>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"col-md-6\">\n\t\t\t<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>\n\t\t</div>\n\t</div>\n</div>\n<p class=\"text-center\" style=\"margin-bottom: 50px;\">\n\t<a href=\"/products\" class=\"btn btn-success\">Explore <i class=\"icon-chevron-right\"></i></a>\n</p>\n<!-- no-sidebar -->",
+        "template_path": null,
+        "published": 1
+    }
+]

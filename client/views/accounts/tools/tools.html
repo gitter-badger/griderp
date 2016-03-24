@@ -1,0 +1,52 @@
+<template name="AccountsTools">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> AccountsToolsModuleMenu}}
+	</div>
+</template>
+
+<template name="AccountsToolsModuleMenu">
+	<ul id="menu-items" class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'accounts.tools.bank_reconciliation'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'accounts.tools.bank_reconciliation'}}">
+				<div class="module-description module-timestamp">20 days ago</div>
+				<span class="item-title-modules">
+					Bank Reconciliation
+				</span>
+				<span class="module-badge">2</span>
+				<div class="module-description">Update bank payment dates with journals.</div>
+				
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.tools.payment_reconciliation'}} module-list">
+			<a href="{{pathFor 'accounts.tools.payment_reconciliation'}}">
+				<span class="item-title-modules">
+					Payment Reconciliation
+				</span>
+				<div class="module-description">Match non-linked Invoices and Payments.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.tools.payment_tool'}} module-list">
+			<a href="{{pathFor 'accounts.tools.payment_tool'}}">
+				<span class="item-title-modules">
+					Payment Tool
+				</span>
+				<div class="module-description">Create Payment Entries against Orders or Invoices.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.tools.period_closing_voucher'}} module-list">
+			<a href="{{pathFor 'accounts.tools.period_closing_voucher'}}">
+				<span class="item-title-modules">
+					Period Closing Voucher
+				</span>
+				<div class="module-description">Close Balance Sheet and book Profit or Loss.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+

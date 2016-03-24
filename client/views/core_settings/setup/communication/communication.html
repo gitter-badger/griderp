@@ -1,0 +1,194 @@
+<template name="CoreSettingsSetupCommunication">
+
+	{{> PageHeading title="Communication" type="list"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> CommunicationSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 50px;">
+						{{> CommunicationView}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="CommunicationSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#">Quick Report</a></li>
+			<li class="list-unstyled"><a href="#">Assigned To Me</a></li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">USER TAGS</span> 
+			</li>
+			<li class="list-unstyled">No records tagged.</li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">STATUS</span> 
+			</li>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span>Open</span> <span class="sidebar-badge sidebar-badge-position">1</span></a></li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">SENT OR RECEIVED</span> 
+			</li>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span>Sent</span> <span class="sidebar-badge sidebar-badge-position">1</span></a></li>
+		</ul>
+	</div>
+</template>
+
+<template name="CommunicationView">
+	<div id="communication-view">
+		<h3 id="component-title">
+			Communication View
+		</h3>
+		<form id="dataview-controls" class="form-inline">
+			<div id="dataview-controls-insert" class="form-group pull-left {{insertButtonClass}}">
+				<button type="submit" id="dataview-communication-insert-delete-button" class="{{toggleAddDeleteButton}}">
+					{{setAddDeleteButtonText}}
+				</button>
+			</div>
+			<div id="dataview-controls-search" style="float: right;">
+				{{#if isNotEmpty}}
+				<div id="dataview-controls-search-group" class="input-group">
+					<label class="sr-only" for="search">
+						Search
+					</label>
+					<span class="input-group-btn">
+						<input type="text" class="input form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+						<button type="button" id="dataview-search-button" class="btn btn-primary">
+							<span class="fa fa-search">
+							</span>
+						</button>
+					</span>
+				</div>
+				{{/if}}
+			</div>
+			<div id="dataview-controls-export" class="form-group" style="margin-left: 8px;">
+				{{#if isNotEmpty}}			
+		{{#if isFound}}
+				<div>
+				</div>
+				{{else}}
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" id="dataview-export-default">
+						Export
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret">
+						</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#" id="dataview-export-csv">
+								Export data to CSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-tsv">
+								Export data to TSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-json">
+								Export data to JSON
+							</a>
+						</li>
+					</ul>
+				</div>
+				{{/if}}			
+		{{/if}}
+			</div>
+		</form>
+		{{#if isNotEmpty}}	
+			{{#if isNotFound}}
+		<div class="alert alert-warning">
+			"{{searchString}}" not found.
+		</div>
+		{{else}}
+		<div id="dataview-data">
+			{{#if viewAsTable}} {{> CommunicationViewTable}} {{> CommunicationViewTableFooter}} {{/if}}
+		</div>
+		{{/if}}	
+		{{else}}
+		<br />
+		<div class="alert alert-info">
+			No Communications :(
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="CommunicationViewTable">
+	<table id="dataview-table" class="table table-striped table-hover">
+		<thead id="dataview-table-header">
+			<tr id="dataview-table-header-row">
+				<th class="{{insertButtonClass}} table-checkbox">
+					<input type="checkbox" class="list-select-all">
+				</th>
+				<th class="th-sortable" data-sort="subject">
+					Subject
+				</th>
+				<th class="th-sortable" data-sort="status">
+					Status
+				</th>
+				<th class="th-sortable" data-sort="sent_or_received">
+					Sent or Received
+				</th>
+				<th class="th-sortable" data-sort="name">
+					&nbsp;
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+		</thead>
+		<tbody id="dataview-table-items">
+			{{#each tableItems}} {{> CommunicationViewTableItems}} {{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="CommunicationViewTableItems">
+	<tr id="dataview-table-items-row">
+		<td class="{{insertButtonClass}} table-checkbox">
+			<input type="checkbox" class="check-complete list-delete" checked={{checkComplete}}>
+		</td>
+		<td>
+			<a href="{{pathFor 'core_settings.setup.communication.edit'}}"><span id="field">{{subject}}</span></a>
+		</td>
+		<td>
+			<span class="indicator-red">{{status}}</span>
+		</td>
+		<td>
+			<span class="indicator-grey">{{sent_or_received}}</span>
+		</td>
+		<td>
+			<span>{{name}}</span>
+		</td>
+		<td class="td-icon text-center" style="width:75px;">
+			<span>3 d
+			</span>&nbsp;&nbsp;
+			<span class="fa fa-comments" title="Comments">&nbsp;0
+			</span>
+		</td>
+	</tr>
+</template>
+
+<template name="CommunicationViewTableFooter">
+	<div id="dataview-footer">
+		<hr /> 
+		<div id="dataview-communication-paginate-buttons" class="btn-group pull-right">
+			<button class="btn btn-sm btn-primary" type="button">20</button>
+			<button class="btn btn-sm btn-default" type="button">100</button>
+			<button class="btn btn-sm btn-default" type="button">500</button>
+		</div>
+	</div>
+</template>

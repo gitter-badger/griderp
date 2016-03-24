@@ -1,0 +1,524 @@
+<template name="SalesPartnerEdit">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">{{sales_partner_details.name}}</div>
+								<!--<span class="indicator-blue indicator-text">{{sales_partner_details.voucher_type}}</span>-->
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">New Sales Partner</a></li>
+								</ul>
+						</div>
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{sales_partner_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> SalesPartnerEditSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> SalesPartnerEditEditForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="SalesPartnerEditSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="SalesPartnerEditEditForm">
+	<div id="sales-partner-edit-edit-form" class="">
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}		
+		
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<!--<div class="form-group  field-name">
+				<label for="name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="name" value="{{sales_partner_details.name}}" class="form-control" autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-partner-type">
+				<label for="partner_type">
+					Partner Type
+				</label>
+				<div class="input-div">
+					<input type="text" name="partner_type" value="{{sales_partner_details.partner_type}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-territory">
+				<label for="territory">
+					Territory
+				</label>
+				<div class="input-div">
+					<input type="text" name="territory" value="{{sales_partner_details.territory}}" class="form-control">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>-->
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+							<div class="form-dashboard" style="display: none;">
+								<div class="row" style="padding: 15px 30px;"></div>
+							</div>
+							<div class="form-page">
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width hide-control" data-fieldtype="Data" data-fieldname="partner_name">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Sales Partner Name</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="partner_name" placeholder="" data-doctype="Sales Partner">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">Developer and Sons</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="partner_type">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Partner Type</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="partner_type" placeholder="" data-doctype="Sales Partner">
+								                                    <option></option>
+								                                    <option value="Channel Partner">Channel Partner</option>
+								                                    <option value="Distributor">Distributor</option>
+								                                    <option value="Dealer">Dealer</option>
+								                                    <option value="Agent">Agent</option>
+								                                    <option value="Retailer">Retailer</option>
+								                                    <option value="Implementation Partner">Implementation Partner</option>
+								                                    <option value="Reseller">Reseller</option>
+								                                </select>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">Implementation Partner</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="territory">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Territory</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="territory" placeholder="" data-doctype="Sales Partner" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-6" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Territory/All%20Territories" data-doctype="Territory">All Territories</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Float" data-fieldname="commission_rate">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Commission Rate</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Float" data-fieldname="commission_rate" placeholder="" data-doctype="Sales Partner">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">0.100</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Address &amp; Contacts</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control hide-control" data-fieldtype="HTML" data-fieldname="address_desc"><em>Addresses will appear only when you save the customer</em></div>
+								                <div class="griderp-control" data-fieldtype="HTML" data-fieldname="address_html">
+								                    <p>
+								                        <button class="btn btn-xs btn-default btn-address">New Address</button>
+								                    </p>
+								                    <div class="clearfix"></div>
+								                    <p class="h6"> 1. Billing <span class="text-muted">(Primary)</span> <a href="#Form/Address/Developer and Son-Billing" class="btn btn-default btn-xs pull-right"> Edit</a> </p>
+								                    <div style="padding-left: 15px;">
+								                        <p style="margin-top: 5px; font-size: 12px;"> 29 Camden Street
+								                            <br>Suite 205
+								                            <br>Toronto
+								                            <br> ON
+								                            <br>M5V3N3
+								                            <br>Canada
+								                            <br> Phone: 905-397-9884
+								                            <br>Email: dave@devandson.com
+								                            <br>
+								                        </p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control hide-control" data-fieldtype="HTML" data-fieldname="contact_desc"><em>Contact Details will appear only when you save the customer</em></div>
+								                <div class="griderp-control" data-fieldtype="HTML" data-fieldname="contact_html">
+								                    <p>
+								                        <button class="btn btn-xs btn-default btn-contact"> New Contact</button>
+								                    </p>
+								                    <div class="clearfix"></div>
+								                    <p class="text-muted">No contacts added yet.</p>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Sales Partner Target</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="targets">
+								                    <div data-fieldname="targets">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="item_group">Item Group</div>
+								                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="fiscal_year">Fiscal Year</div>
+								                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="target_qty">Target Qty</div>
+								                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="target_amount">Target Amount</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows">
+								                                    <div class="grid-row" data-idx="1">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">1</div>
+								                                            <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="item_group"><a class="grey" href="#Form/Item%20Group/Products" data-doctype="Item%20Group">Products</a></div>
+								                                            <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="fiscal_year"><a class="grey" href="#Form/Fiscal%20Year/2015-2016" data-doctype="Fiscal%20Year">2015-2016</a></div>
+								                                            <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="target_qty">
+								                                                <div style="text-align: right">10</div>
+								                                            </div>
+								                                            <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="target_amount">
+								                                                <div style="text-align: right">20,000</div>
+								                                            </div>
+								                                        </div>
+								                                    </div>
+								                                </div>
+								                                <div class="grid-empty text-center hide">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="distribution_id">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Target Distribution</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="distribution_id" placeholder="" data-doctype="Sales Partner" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-7" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Select Monthly Distribution to unevenly distribute targets across months.</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Website</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="show_in_website">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="show_in_website" placeholder="" data-doctype="Sales Partner"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Show In Website</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Attach" data-fieldname="logo">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Logo</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div style="margin-top: 5px; display: none;">
+								                                    <div class="text-ellipsis" style="display: inline-block; width: 90%;"> <i class="icon-paper-clip"></i>
+								                                        <a class="attached-file" target="_blank"></a>
+								                                    </div> <a class="close">×</a></div>
+								                                <button class="btn btn-default btn-sm btn-attach" data-fieldtype="Attach" data-fieldname="logo" placeholder="" data-doctype="Sales Partner">Attach</button>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="partner_website">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Partner's Website</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="partner_website" placeholder="" data-doctype="Sales Partner">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">http://devandson.com</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="page_name">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Page Name</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input" style="display: none;"></div>
+								                            <div class="control-value like-disabled-input" style="">developer-and-sons</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Text" data-fieldname="introduction">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Introduction</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <textarea type="text" class="input-with-feedback form-control" data-fieldtype="Text" data-fieldname="introduction" placeholder="" data-doctype="Sales Partner"></textarea>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;">Great implementation partner.</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Text Editor" data-fieldname="description">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Description</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div>
+								                                    <div>
+																		<!-- Summernote Editor -->
+																		<div class="summernote" style="display: none;">
+																			<h3>Hello Customers! </h3> dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+																			<br>
+																			<br>
+
+																		</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Read Only" data-fieldname="parent_website_route">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Parent Website Route</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input" style="display: none;"></div>
+								                            <div class="control-value like-disabled-input" style="">partners</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="timeline-items">
+								    <div class="media timeline-item" data-name=""> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+								            <div>
+								                <div class="pull-right"> <span class="small text-muted">  </span> </div>
+								                <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created </span><span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2013-03-19 12:02:15" title="03-19-2013 12:02:15">3 years ago</span></span> </h5> </div>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

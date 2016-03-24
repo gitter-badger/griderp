@@ -1,0 +1,6 @@
+[
+	{ "docstatus": 0, "parent": "Wind Turbine-M", "parentfield": "attributes", "parenttype": "Item", "idx": 1, "from_range": null, "numeric_values": 0, "attribute": "Size", "to_range": null, "increment": null, "attribute_value": "Medium" },
+	{ "docstatus": 0, "parent": "Wind Turbine", "parentfield": "attributes", "parenttype": "Item", "idx": 1, "from_range": null, "numeric_values": 0, "attribute": "Size", "to_range": null, "increment": null, "attribute_value": null },
+	{ "docstatus": 0, "parent": "Wind Turbine-L", "parentfield": "attributes", "parenttype": "Item", "idx": 1, "from_range": null, "numeric_values": 0, "attribute": "Size", "to_range": null, "increment": null, "attribute_value": "Large" },
+	{ "docstatus": 0, "parent": "Wind Turbine-S", "parentfield": "attributes", "parenttype": "Item", "idx": 1, "from_range": null, "numeric_values": 0, "attribute": "Size", "to_range": null, "increment": null, "attribute_value": "Small" }
+]

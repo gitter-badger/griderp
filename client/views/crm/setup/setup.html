@@ -1,0 +1,68 @@
+<template name="CrmSetup">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> CrmSetupModuleMenu}}
+	</div>
+</template>
+
+<template name="CrmSetupModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'crm.setup.campaign'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'crm.setup.campaign'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Campaign
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Sales campaigns.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.setup.customer_group'}} module-list">
+			<a href="{{pathFor 'crm.setup.customer_group'}}">
+				<span class="item-title-modules">
+					Customer Group
+				</span>
+				<div class="module-description">Manage Customer Group Tree.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.setup.newsletter_list'}} module-list">
+			<a href="{{pathFor 'crm.setup.newsletter_list'}}">
+				<span class="item-title-modules">
+					Newsletter List
+				</span>
+				<div class="module-description">Newsletter Mailing List.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.sales_person'}} module-list">
+			<a href="{{pathFor 'setup.selling.sales_person'}}">
+				<span class="item-title-modules">
+					Sales Person
+				</span>
+				<div class="module-description">Manage Sales Person Tree.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.sms_settings'}} module-list">
+			<a href="{{pathFor 'setup.email.sms_settings'}}">
+				<span class="item-title-modules">
+					SMS Settings
+				</span>
+				<div class="module-description">Setup SMS gateway settings.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.selling.territory'}} module-list">
+			<a href="{{pathFor 'setup.selling.territory'}}">
+				<span class="item-title-modules">
+					Territory
+				</span>
+				<div class="module-description">Manage Territory Tree.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

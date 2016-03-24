@@ -1,0 +1,32 @@
+<template name="ProjectsStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ProjectsStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="ProjectsStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'projects.standard_reports.daily_time_log_summary'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'projects.standard_reports.daily_time_log_summary'}}">
+				<span class="item-title-modules">
+					Daily Time Log Summary
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'projects.standard_reports.project_wise_stock_tracking'}} module-list">
+			<a href="{{pathFor 'projects.standard_reports.project_wise_stock_tracking'}}">
+				<span class="item-title-modules">
+					Project-wise Stock Tracking
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

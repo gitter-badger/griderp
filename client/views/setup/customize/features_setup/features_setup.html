@@ -1,0 +1,310 @@
+<template name="SetupCustomizeFeaturesSetup">
+
+	{{> PageHeading title="Features Setup" type="print"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> FeaturesSetupSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> FeaturesSetupForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="FeaturesSetupSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="FeaturesSetupForm">
+	<div id="features-setup-edit-edit-form" class="">
+		<form role="form">
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+							<div class="form-dashboard" style="display: none;">
+								<div class="row" style="padding: 15px 30px;"></div>
+							</div>
+							<div class="form-page">
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Materials</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_item_serial_nos">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_item_serial_nos" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Item Serial Nos</span> </label>
+								                        <p class="help-box small text-muted">To track item in sales and purchase documents based on their serial nos. This is can also used to track warranty details of the product.</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_item_batch_nos">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_item_batch_nos" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Item Batch Nos</span> </label>
+								                        <p class="help-box small text-muted">To track items in sales and purchase documents with batch nos. "Preferred Industry: Chemicals"</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_brands">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_brands" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Brands</span> </label>
+								                        <p class="help-box small text-muted">To track brand name in the following documents Delivery Note, Opportunity, Material Request, Item, Purchase Order, Purchase Voucher, Purchaser Receipt, Quotation, Sales Invoice, Product Bundle, Sales Order, Serial No</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_item_barcode">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_item_barcode" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Item Barcode</span> </label>
+								                        <p class="help-box small text-muted">To track items using barcode. You will be able to enter items in Delivery Note and Sales Invoice by scanning barcode of item.</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_item_advanced">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_item_advanced" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Item Advanced</span> </label>
+								                        <p class="help-box small text-muted">1. To maintain the customer wise item code and to make them searchable based on their code use this option</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_item_group_in_details">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_item_group_in_details" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Item Groups in Details</span> </label>
+								                        <p class="help-box small text-muted">To get Item Group in details table</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Sales and Purchase</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_exports">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_exports" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Exports</span> </label>
+								                        <p class="help-box small text-muted">All export related fields like currency, conversion rate, export total, export grand total etc are available in Delivery Note, POS, Quotation, Sales Invoice, Sales Order etc.</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_imports">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_imports" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Imports</span> </label>
+								                        <p class="help-box small text-muted">All import related fields like currency, conversion rate, import total, import grand total etc are available in Purchase Receipt, Supplier Quotation, Purchase Invoice, Purchase Order etc.</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_discounts">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_discounts" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Sales Discounts</span> </label>
+								                        <p class="help-box small text-muted">Field available in Delivery Note, Quotation, Sales Invoice, Sales Order</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_purchase_discounts">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_purchase_discounts" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Purchase Discounts</span> </label>
+								                        <p class="help-box small text-muted">Discount Fields will be available in Purchase Order, Purchase Receipt, Purchase Invoice</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_after_sales_installations">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_after_sales_installations" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;After Sale Installations</span> </label>
+								                        <p class="help-box small text-muted">To track any installation or commissioning related work after sales</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_projects">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_projects" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Projects</span> </label>
+								                        <p class="help-box small text-muted">Available in BOM, Delivery Note, Purchase Invoice, Production Order, Purchase Order, Purchase Receipt, Sales Invoice, Sales Order, Stock Entry, Timesheet</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_sales_extras">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_sales_extras" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Sales Extras</span> </label>
+								                        <p class="help-box small text-muted">If you have Sales Team and Sale Partners (Channel Partners) they can be tagged and maintain their contribution in the sales activity</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Accounts</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_recurring_invoice">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_recurring_invoice" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Recurring Invoice</span> </label>
+								                        <p class="help-box small text-muted">Check if you need automatic recurring invoices. After submitting any sales invoice, Recurring section will be visible.</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_pos">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_pos" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Point of Sale</span> </label>
+								                        <p class="help-box small text-muted">To enable "Point of Sale" features</p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_pos_view">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_pos_view" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;POS View</span> </label>
+								                        <p class="help-box small text-muted">To enable "Point of Sale" view</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Manufacturing</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_manufacturing">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_manufacturing" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Manufacturing</span> </label>
+								                        <p class="help-box small text-muted">If you involve in manufacturing activity. Enables Item 'Is Manufactured'</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_quality">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_quality" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Quality</span> </label>
+								                        <p class="help-box small text-muted">If you follow Quality Inspection. Enables Item QA Required and QA No in Purchase Receipt</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Miscelleneous</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_page_break">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_page_break" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Page Break</span> </label>
+								                        <p class="help-box small text-muted">If you have long print formats, this feature can be used to split the page to be printed on multiple pages with all headers and footers on each page</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="fs_more_info">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="fs_more_info" placeholder="" data-doctype="Features Setup"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;More Information</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="timeline-items">
+								    <div class="media timeline-item" data-name=""> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+								            <div>
+								                <div class="pull-right"> <span class="small text-muted">  </span> </div>
+								                <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created </span><span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2013-03-19 12:02:15" title="03-19-2013 12:02:15">3 years ago</span></span> </h5> </div>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

@@ -1,0 +1,343 @@
+<template name="SetupPermissionsUserPermissionsManager">
+
+	{{> PageHeading title="User Permissions Manager"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> UserPermissionsManagerForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="UserPermissionsManagerForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row">
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Select" data-fieldname="user" title="" data-original-title="User">
+		        <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="user" placeholder="User">
+		            <option value="Select User...">Select User...</option>
+		            <option value="dave@gridworkz.com">dave@gridworkz.com</option>
+		            <option value="shells@gridworkz.com">shells@gridworkz.com</option>
+		        </select>
+		    </div>
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Select" data-fieldname="doctype" title="" data-original-title="DocType">
+		        <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="doctype" placeholder="DocType">
+		            <option value="Select DocType...">Select DocType...</option>
+		            <option value="Account">Account</option>
+		            <option value="Activity Cost">Activity Cost</option>
+		            <option value="Activity Type">Activity Type</option>
+		            <option value="Address">Address</option>
+		            <option value="Address Template">Address Template</option>
+		            <option value="Appraisal">Appraisal</option>
+		            <option value="Appraisal Template">Appraisal Template</option>
+		            <option value="Async Task">Async Task</option>
+		            <option value="Attendance">Attendance</option>
+		            <option value="Authorization Rule">Authorization Rule</option>
+		            <option value="Batch">Batch</option>
+		            <option value="Bin">Bin</option>
+		            <option value="Blog Category">Blog Category</option>
+		            <option value="Blog Post">Blog Post</option>
+		            <option value="Blogger">Blogger</option>
+		            <option value="BOM">BOM</option>
+		            <option value="Branch">Branch</option>
+		            <option value="Brand">Brand</option>
+		            <option value="Bulk Email">Bulk Email</option>
+		            <option value="C-Form">C-Form</option>
+		            <option value="Campaign">Campaign</option>
+		            <option value="Comment">Comment</option>
+		            <option value="Communication">Communication</option>
+		            <option value="Company">Company</option>
+		            <option value="Contact">Contact</option>
+		            <option value="Cost Center">Cost Center</option>
+		            <option value="Country">Country</option>
+		            <option value="Currency">Currency</option>
+		            <option value="Currency Exchange">Currency Exchange</option>
+		            <option value="Custom Field">Custom Field</option>
+		            <option value="Custom Script">Custom Script</option>
+		            <option value="Customer">Customer</option>
+		            <option value="Customer Group">Customer Group</option>
+		            <option value="Deduction Type">Deduction Type</option>
+		            <option value="Delivery Note">Delivery Note</option>
+		            <option value="Department">Department</option>
+		            <option value="Designation">Designation</option>
+		            <option value="DocShare">DocShare</option>
+		            <option value="DocType">DocType</option>
+		            <option value="Earning Type">Earning Type</option>
+		            <option value="Email Account">Email Account</option>
+		            <option value="Email Alert">Email Alert</option>
+		            <option value="Email Digest">Email Digest</option>
+		            <option value="Email Unsubscribe">Email Unsubscribe</option>
+		            <option value="Employee">Employee</option>
+		            <option value="Employment Type">Employment Type</option>
+		            <option value="Event">Event</option>
+		            <option value="Expense Claim">Expense Claim</option>
+		            <option value="Expense Claim Type">Expense Claim Type</option>
+		            <option value="Feed">Feed</option>
+		            <option value="File">File</option>
+		            <option value="Fiscal Year">Fiscal Year</option>
+		            <option value="GL Entry">GL Entry</option>
+		            <option value="Holiday List">Holiday List</option>
+		            <option value="Industry Type">Industry Type</option>
+		            <option value="Installation Note">Installation Note</option>
+		            <option value="Issue">Issue</option>
+		            <option value="Item">Item</option>
+		            <option value="Item Attribute">Item Attribute</option>
+		            <option value="Item Group">Item Group</option>
+		            <option value="Item Price">Item Price</option>
+		            <option value="Job Applicant">Job Applicant</option>
+		            <option value="Job Opening">Job Opening</option>
+		            <option value="Journal Entry">Journal Entry</option>
+		            <option value="Landed Cost Voucher">Landed Cost Voucher</option>
+		            <option value="Lead">Lead</option>
+		            <option value="Leave Allocation">Leave Allocation</option>
+		            <option value="Leave Application">Leave Application</option>
+		            <option value="Leave Block List">Leave Block List</option>
+		            <option value="Leave Type">Leave Type</option>
+		            <option value="Letter Head">Letter Head</option>
+		            <option value="Maintenance Schedule">Maintenance Schedule</option>
+		            <option value="Maintenance Visit">Maintenance Visit</option>
+		            <option value="Material Request">Material Request</option>
+		            <option value="Mode of Payment">Mode of Payment</option>
+		            <option value="Module Def">Module Def</option>
+		            <option value="Monthly Distribution">Monthly Distribution</option>
+		            <option value="Newsletter">Newsletter</option>
+		            <option value="Newsletter List">Newsletter List</option>
+		            <option value="Newsletter List Subscriber">Newsletter List Subscriber</option>
+		            <option value="Note">Note</option>
+		            <option value="Offer Letter">Offer Letter</option>
+		            <option value="Offer Term">Offer Term</option>
+		            <option value="Operation">Operation</option>
+		            <option value="Opportunity">Opportunity</option>
+		            <option value="Packing Slip">Packing Slip</option>
+		            <option value="Page">Page</option>
+		            <option value="Patch Log">Patch Log</option>
+		            <option value="Period Closing Voucher">Period Closing Voucher</option>
+		            <option value="POS Profile">POS Profile</option>
+		            <option value="Price List">Price List</option>
+		            <option value="Pricing Rule">Pricing Rule</option>
+		            <option value="Print Format">Print Format</option>
+		            <option value="Print Heading">Print Heading</option>
+		            <option value="Product Bundle">Product Bundle</option>
+		            <option value="Production Order">Production Order</option>
+		            <option value="Project">Project</option>
+		            <option value="Property Setter">Property Setter</option>
+		            <option value="Purchase Invoice">Purchase Invoice</option>
+		            <option value="Purchase Order">Purchase Order</option>
+		            <option value="Purchase Receipt">Purchase Receipt</option>
+		            <option value="Purchase Taxes and Charges Template">Purchase Taxes and Charges Template</option>
+		            <option value="Quality Inspection">Quality Inspection</option>
+		            <option value="Quotation">Quotation</option>
+		            <option value="Quotation Lost Reason">Quotation Lost Reason</option>
+		            <option value="Report">Report</option>
+		            <option value="Role">Role</option>
+		            <option value="Salary Slip">Salary Slip</option>
+		            <option value="Salary Structure">Salary Structure</option>
+		            <option value="Sales Invoice">Sales Invoice</option>
+		            <option value="Sales Order">Sales Order</option>
+		            <option value="Sales Partner">Sales Partner</option>
+		            <option value="Sales Person">Sales Person</option>
+		            <option value="Sales Taxes and Charges Template">Sales Taxes and Charges Template</option>
+		            <option value="Scheduler Log">Scheduler Log</option>
+		            <option value="Serial No">Serial No</option>
+		            <option value="Shipping Rule">Shipping Rule</option>
+		            <option value="SMS Log">SMS Log</option>
+		            <option value="Standard Reply">Standard Reply</option>
+		            <option value="Stock Entry">Stock Entry</option>
+		            <option value="Stock Ledger Entry">Stock Ledger Entry</option>
+		            <option value="Stock Reconciliation">Stock Reconciliation</option>
+		            <option value="Supplier">Supplier</option>
+		            <option value="Supplier Quotation">Supplier Quotation</option>
+		            <option value="Supplier Type">Supplier Type</option>
+		            <option value="Task">Task</option>
+		            <option value="Tax Rule">Tax Rule</option>
+		            <option value="Terms and Conditions">Terms and Conditions</option>
+		            <option value="Territory">Territory</option>
+		            <option value="Time Log">Time Log</option>
+		            <option value="Time Log Batch">Time Log Batch</option>
+		            <option value="ToDo">ToDo</option>
+		            <option value="UOM">UOM</option>
+		            <option value="User">User</option>
+		            <option value="Version">Version</option>
+		            <option value="Warehouse">Warehouse</option>
+		            <option value="Warranty Claim">Warranty Claim</option>
+		            <option value="Web Form">Web Form</option>
+		            <option value="Web Page">Web Page</option>
+		            <option value="Website Slideshow">Website Slideshow</option>
+		            <option value="Website Theme">Website Theme</option>
+		            <option value="Workflow">Workflow</option>
+		            <option value="Workflow Action">Workflow Action</option>
+		            <option value="Workflow State">Workflow State</option>
+		            <option value="Workstation">Workstation</option>
+		        </select>
+		    </div>
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Link" data-fieldname="user_permission" title="" data-original-title="Name" style="z-index: 1;">
+		        <div class="link-field ui-front" style="position: relative;">
+		            <input type="text" class="input-with-feedback form-control ui-autocomplete-input ui-autocomplete-loading" data-fieldtype="Link" data-fieldname="user_permission" placeholder="Name" autocomplete="off">
+		            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-161" tabindex="0" style="display: none; top: 30px; left: -0.3125px; width: 201px;">
+		                <li class="ui-menu-item" id="ui-id-206" tabindex="-1">
+		                    <a>
+		                        <p><strong>Accounts Payable - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-207" tabindex="-1">
+		                    <a>
+		                        <p><strong>Accounts Receivable - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-208" tabindex="-1">
+		                    <a>
+		                        <p><strong>Administrative Expenses - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-209" tabindex="-1">
+		                    <a>
+		                        <p><strong>Application of Funds (Assets) - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-210" tabindex="-1">
+		                    <a>
+		                        <p><strong>Bank Accounts - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-211" tabindex="-1">
+		                    <a>
+		                        <p><strong>Bank Overdraft Account - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-212" tabindex="-1">
+		                    <a>
+		                        <p><strong>Capital Equipments - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-213" tabindex="-1">
+		                    <a>
+		                        <p><strong>Capital Stock - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-214" tabindex="-1">
+		                    <a>
+		                        <p><strong>Cash - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-215" tabindex="-1">
+		                    <a>
+		                        <p><strong>Cash In Hand - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-216" tabindex="-1">
+		                    <a>
+		                        <p><strong>Commission on Sales - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-217" tabindex="-1">
+		                    <a>
+		                        <p><strong>Computers - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-218" tabindex="-1">
+		                    <a>
+		                        <p><strong>Cost of Goods Sold - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-219" tabindex="-1">
+		                    <a>
+		                        <p><strong>Creditors - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-220" tabindex="-1">
+		                    <a>
+		                        <p><strong>Current Assets - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-221" tabindex="-1">
+		                    <a>
+		                        <p><strong>Current Liabilities - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-222" tabindex="-1">
+		                    <a>
+		                        <p><strong>Debtors - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-223" tabindex="-1">
+		                    <a>
+		                        <p><strong>Depreciation - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-224" tabindex="-1">
+		                    <a>
+		                        <p><strong>Direct Expenses - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-225" tabindex="-1">
+		                    <a>
+		                        <p><strong>Direct Income - GWZ</strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-226" tabindex="-1">
+		                    <a>
+		                        <p><strong><span class="text-primary link-option"><i class="icon-plus" style="margin-right: 5px;"></i> Create a new Account</span></strong></p>
+		                    </a>
+		                </li>
+		                <li class="ui-menu-item" id="ui-id-227" tabindex="-1">
+		                    <a>
+		                        <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+		                    </a>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Button" data-fieldname="download" title="" data-original-title="Download" style="margin-top: 2px;">
+		        <button class="btn btn-success btn-sm" data-fieldtype="Button" data-fieldname="download" placeholder="Download" value="" style="width: 100%; margin-top: -1px;"><i class="icon-download icon-fixed-width" style="margin-top: -2px;"></i> Download</button>
+		    </div>
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Button" data-fieldname="upload" title="" data-original-title="Upload" style="margin-top: 2px;">
+		        <button class="btn btn-success btn-sm" data-fieldtype="Button" data-fieldname="upload" placeholder="Upload" value="" style="width: 100%; margin-top: -1px;"><i class="icon-upload icon-fixed-width" style="margin-top: -2px;"></i> Upload</button>
+		    </div>
+		</div>
+		<div class="user-settings" style="min-height: 200px; padding: 15px;">
+		    <table class="table table-bordered">
+		        <thead>
+		            <tr>
+		                <th style="width: 150px;"><h4>Allow User</h4></th>
+		                <th style="width: 150px;"><h4>If Document Type</h4></th>
+		                <th style="width: 150px;"><h4>Is</h4></th>
+		                <th style="width: 50px;"></th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr>
+		                <td style="vertical-align: middle;"><a class="grey" href="#Form/User/dave%40gridworkz.com">dave@gridworkz.com</a></td>
+		                <td style="vertical-align: middle;">Blogger</td>
+		                <td style="vertical-align: middle;">dave</td>
+		                <td>
+		                    <button class="btn btn-sm btn-default" data-name="6bfa55e459" data-user="dave@gridworkz.com" data-defkey="Blogger" data-defvalue="dave" style="margin-top: -1px; margin-bottom: 0px;"><i class="icon-remove" style="position: relative; vertical-align: text-top; top: 3px;"></i></button>
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		    <p class="text-muted small">These restrictions will apply for Document Types where 'Apply User Permissions' is checked for the permission rule and a field with this value is present.</p>
+		    <p class="btn-area">
+		        <button class="btn btn-success btn-sm">Add A User Restriction</button>
+		    </p>
+		</div>
+		<p style="padding: 15px; padding-bottom: 0px;"> <a class="view-role-permissions grey">Edit Role Permissions</a> </p>
+		<hr>
+		<div style="padding: 0px 15px;">
+		    <h3>Help for User Permissions:</h3>
+		    <ol>
+		        <li>Apart from Role based Permission Rules, you can apply User Permissions based on DocTypes.</li>
+		        <li>These permissions will apply for all transactions where the permitted record is linked. For example, if Company C is added to User Permissions of user X, user X will only be able to see transactions that has company C as a linked value.</li>
+		        <li>These will also be set as default values for those links, if only one such permission record is defined.</li>
+		        <li>A user can be permitted to multiple records of the same DocType.</li>
+		    </ol>
+		</div>
+	</div>
+</template>
+

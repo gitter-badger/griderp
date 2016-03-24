@@ -1,0 +1,7 @@
+[
+	{ "name": "Bank Draft", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "mode_of_payment": "Bank Draft" },
+	{ "name": "Cash", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "mode_of_payment": "Cash" },
+	{ "name": "Check", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "mode_of_payment": "Check" },
+	{ "name": "Credit Card", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "mode_of_payment": "Credit Card" },
+	{ "name": "Wire Transfer", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "mode_of_payment": "Wire Transfer" }
+]

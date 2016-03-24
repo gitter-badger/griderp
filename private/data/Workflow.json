@@ -1,0 +1,3 @@
+[
+	{ "name": "Workflow 1", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "document_type": "Account", "workflow_name": "Workflow 1", "is_active": 1, "workflow_state_field": "workflow_state" }
+]

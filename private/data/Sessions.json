@@ -1,0 +1,3 @@
+[
+	{ "user": "admin", "sid": "893247f6bc10ffbb2178f0f88072209bac5de01fefdb7f94d20c2b8e", "sessiondata": "{u\"session_expiry\": u\"06:00:00\", u\"session_country\": None, \"csrf_token\": \"64e281463ecc469127f40314d7ab3a2942a98f7688617f007114e971\", u\"last_updated\": \"2015-10-26 23:07:15.792492\", u\"lang\": u\"en\", u\"user_type\": None, \"user\": u\"admin\", u\"full_name\": None, u\"device\": u\"desktop\", \"session_ip\": u\"127.0.0.1\"}", "ipaddress": null, "lastupdate": "2015-10-27 03:07:15.000000", "device": "desktop", "status": "Active" }
+]

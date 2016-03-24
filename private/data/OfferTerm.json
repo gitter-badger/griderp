@@ -1,0 +1,14 @@
+[
+	{ "name": "Annual Salary", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Annual Salary" },
+	{ "name": "Date of Joining", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Date of Joining" },
+	{ "name": "Department", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Department" },
+	{ "name": "Employee Benefits", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Employee Benefits" },
+	{ "name": "Incentives", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Incentives" },
+	{ "name": "Job Description", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Job Description" },
+	{ "name": "Leaves per Year", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Leaves per Year" },
+	{ "name": "Notice Period", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Notice Period" },
+	{ "name": "Probationary Period", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Probationary Period" },
+	{ "name": "Responsibilities", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Responsibilities" },
+	{ "name": "Stock Options", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Stock Options" },
+	{ "name": "Working Hours", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "offer_term": "Working Hours" }
+]

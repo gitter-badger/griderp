@@ -1,0 +1,68 @@
+<template name="ManufacturingDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ManufacturingDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="ManufacturingDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'manufacturing.documents.bill_of_material'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'manufacturing.documents.bill_of_material'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Bill of Material
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Bill of Materials (BOM).</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.item'}} module-list">
+			<a href="{{pathFor 'stock.documents.item'}}">
+				<span class="item-title-modules">
+					Item
+				</span>
+				<div class="module-description">All Products or Services.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.documents.operation'}} module-list">
+			<a href="{{pathFor 'manufacturing.documents.operation'}}">
+				<span class="item-title-modules">
+					Operation
+				</span>
+				<div class="module-description">Details of the operations carried out.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.documents.production_order'}} module-list">
+			<a href="{{pathFor 'manufacturing.documents.production_order'}}">
+				<span class="item-title-modules">
+					Production Order
+				</span>
+				<div class="module-description">Orders released for production.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'projects.documents.time_log'}} module-list">
+			<a href="{{pathFor 'projects.documents.time_log'}}">
+				<span class="item-title-modules">
+					Time Log
+				</span>
+				<div class="module-description">Time Logs for manufacturing.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.documents.workstation'}} module-list">
+			<a href="{{pathFor 'manufacturing.documents.workstation'}}">
+				<span class="item-title-modules">
+					Workstation
+				</span>
+				<div class="module-description">Where manufacturing operations are carried out.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

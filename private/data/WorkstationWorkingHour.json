@@ -1,0 +1,7 @@
+[
+	{ "docstatus": 0, "parent": "Drilling Machine 1", "parentfield": "working_hours", "parenttype": "Workstation", "idx": 1, "start_time": "08:00:00.000000", "enabled": 1, "end_time": "15:00:00.000000" },
+	{ "docstatus": 0, "parent": "Packing and Testing Station", "parentfield": "working_hours", "parenttype": "Workstation", "idx": 1, "start_time": "08:00:00.000000", "enabled": 1, "end_time": "15:00:00.000000" },
+	{ "docstatus": 0, "parent": "Assembly Station 2", "parentfield": "working_hours", "parenttype": "Workstation", "idx": 1, "start_time": "08:00:00.000000", "enabled": 1, "end_time": "15:00:00.000000" },
+	{ "docstatus": 0, "parent": "Assembly Station 1", "parentfield": "working_hours", "parenttype": "Workstation", "idx": 1, "start_time": "08:00:00.000000", "enabled": 1, "end_time": "15:00:00.000000" },
+	{ "docstatus": 0, "parent": "Lathe 1", "parentfield": "working_hours", "parenttype": "Workstation", "idx": 1, "start_time": "08:00:00.000000", "enabled": 1, "end_time": "15:00:00.000000" }
+]

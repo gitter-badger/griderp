@@ -1,0 +1,3 @@
+[
+	{ "name": "Sales Team", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "parent_sales_person": "", "distribution_id": null, "sales_person_name": "Sales Team", "is_group": "Yes", "old_parent": "", "lft": 1, "employee": null, "rgt": 2 }
+]

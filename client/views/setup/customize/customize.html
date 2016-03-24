@@ -1,0 +1,78 @@
+<template name="SetupCustomize">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupCustomizeModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupCustomizeModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.customize.authorization_rule'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.customize.authorization_rule'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Authorization Rule
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Create rules to restrict transactions based on values.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.customize.custom_field'}} module-list">
+			<a href="{{pathFor 'setup.customize.custom_field'}}">
+				<span class="item-title-modules">
+					Custom Field
+				</span>
+				<div class="module-description">Add fields to forms.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.customize.custom_script'}} module-list">
+			<a href="{{pathFor 'setup.customize.custom_script'}}">
+				<span class="item-title-modules">
+					Custom Script
+				</span>
+				<div class="module-description">Add custom javascript to forms.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.customize.customize_form'}} module-list">
+			<a href="{{pathFor 'setup.customize.customize_form'}}">
+				<span class="item-title-modules">
+					Customize Form
+				</span>
+				<div class="module-description">Change field properties (hide, readonly, permission etc.)</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.customize.doctype'}} module-list">
+			<a href="{{pathFor 'setup.customize.doctype'}}">
+				<span class="item-title-modules">
+					DocType
+				</span>
+				<div class="module-description">Add custom forms.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.customize.email_notifications'}} module-list">
+			<a href="{{pathFor 'setup.customize.email_notifications'}}">
+				<span class="item-title-modules">
+					Email Notifications
+				</span>
+				<div class="module-description">Automatically compose message on submission of transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.customize.features_setup'}} module-list">
+			<a href="{{pathFor 'setup.customize.features_setup'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Features Setup
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Show / Hide features like Serial Nos, POS etc.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

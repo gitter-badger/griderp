@@ -1,0 +1,53 @@
+<template name="ManufacturingStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ManufacturingStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="ManufacturingStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'manufacturing.standard_reports.bom_search'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'manufacturing.standard_reports.bom_search'}}">
+				<span class="item-title-modules">
+					BOM Search
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.standard_reports.completed_production_orders'}} module-list">
+			<a href="{{pathFor 'manufacturing.standard_reports.completed_production_orders'}}">
+				<span class="item-title-modules">
+					Completed Production Orders
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.standard_reports.issued_items_against_production_order'}} module-list">
+			<a href="{{pathFor 'manufacturing.standard_reports.issued_items_against_production_order'}}">
+				<span class="item-title-modules">
+					Issued Items Against Production Order
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.standard_reports.open_production_orders'}} module-list">
+			<a href="{{pathFor 'manufacturing.standard_reports.open_production_orders'}}">
+				<span class="item-title-modules">
+					Open Production Orders
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.standard_reports.production_orders_in_progress'}} module-list">
+			<a href="{{pathFor 'manufacturing.standard_reports.production_orders_in_progress'}}">
+				<span class="item-title-modules">
+					Production Orders in Progress
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

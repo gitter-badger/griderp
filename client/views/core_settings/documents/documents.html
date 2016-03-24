@@ -1,0 +1,36 @@
+<template name="CoreSettingsDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> CoreSettingsDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="CoreSettingsDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'core_settings.documents.async_task'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'core_settings.documents.async_task'}}">
+				<div class="module-description module-timestamp">a month ago</div>
+				<span class="item-title-modules">
+					Async Task
+				</span>
+				<span class="module-badge">2</span>
+				<div class="module-description">Asynchronous tasks running.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.customize.doctype'}} module-list">
+			<a href="{{pathFor 'setup.customize.doctype'}}">
+				<span class="item-title-modules">
+					DocType
+				</span>
+				<div class="module-description">DocType is a table / form in the application.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

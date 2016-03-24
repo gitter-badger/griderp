@@ -1,0 +1,6 @@
+[
+	{ "docstatus": 0, "parent": "EMP/0002/SST/00001", "parentfield": "deductions", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "d_type": "Income Tax", "d_modified_amt": 674.000000 },
+	{ "docstatus": 0, "parent": "EMP/0004/SST/00001", "parentfield": "deductions", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "d_type": "Income Tax", "d_modified_amt": 300.000000 },
+	{ "docstatus": 0, "parent": "EMP/0003/SST/00001", "parentfield": "deductions", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "d_type": "Income Tax", "d_modified_amt": 600.000000 },
+	{ "docstatus": 0, "parent": "EMP/0001/SST/00001", "parentfield": "deductions", "parenttype": "Salary Structure", "idx": 1, "depend_on_lwp": 0, "d_type": "Income Tax", "d_modified_amt": 345.000000 }
+]

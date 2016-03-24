@@ -1,0 +1,53 @@
+<template name="SetupHelp">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupHelpModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupHelpModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.help.data_import_and_export'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.help.data_import_and_export'}}">
+				<span class="item-title-modules">
+					Data Import and Export
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.help.printing_and_branding'}} module-list">
+			<a href="{{pathFor 'setup.help.printing_and_branding'}}">
+				<span class="item-title-modules">
+					Printing and Branding
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.help.setting_up_email'}} module-list">
+			<a href="{{pathFor 'setup.help.setting_up_email'}}">
+				<span class="item-title-modules">
+					Setting Up Email
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.help.users_and_permissions'}} module-list">
+			<a href="{{pathFor 'setup.help.users_and_permissions'}}">
+				<span class="item-title-modules">
+					Users and Permissions
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.help.workflow'}} module-list">
+			<a href="{{pathFor 'setup.help.workflow'}}">
+				<span class="item-title-modules">
+					Workflow
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

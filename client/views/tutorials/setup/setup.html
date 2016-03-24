@@ -1,0 +1,60 @@
+<template name="TutorialsSetup">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TutorialsSetupModuleMenu}}
+	</div>
+</template>
+
+<template name="TutorialsSetupModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tutorials.setup.data_import_and_export'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tutorials.setup.data_import_and_export'}}">
+				<span class="item-title-modules">
+					Data Import and Export
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.setup.opening_stock_balance'}} module-list">
+			<a href="{{pathFor 'tutorials.setup.opening_stock_balance'}}">
+				<span class="item-title-modules">
+					Opening Stock Balance
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.setup.printing_and_branding'}} module-list">
+			<a href="{{pathFor 'tutorials.setup.printing_and_branding'}}">
+				<span class="item-title-modules">
+					Printing and Branding
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.setup.setting_up_email'}} module-list">
+			<a href="{{pathFor 'tutorials.setup.setting_up_email'}}">
+				<span class="item-title-modules">
+					Setting Up Email
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.setup.users_and_permissions'}} module-list">
+			<a href="{{pathFor 'tutorials.setup.users_and_permissions'}}">
+				<span class="item-title-modules">
+					Users and Permissions
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.setup.workflow'}} module-list">
+			<a href="{{pathFor 'tutorials.setup.workflow'}}">
+				<span class="item-title-modules">
+					Workflow
+				</span>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

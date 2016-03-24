@@ -1,0 +1,7 @@
+[
+	{ "name": "Casual Leave", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "is_lwp": 0, "is_encash": 1, "is_carry_forward": 1, "allow_negative": 0, "leave_type_name": "Casual Leave", "max_days_allowed": "3", "include_holiday": 1 },
+	{ "name": "Compensatory Off", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "is_lwp": 0, "is_encash": 0, "is_carry_forward": 0, "allow_negative": 0, "leave_type_name": "Compensatory Off", "max_days_allowed": null, "include_holiday": 1 },
+	{ "name": "Leave Without Pay", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "is_lwp": 1, "is_encash": 0, "is_carry_forward": 0, "allow_negative": 0, "leave_type_name": "Leave Without Pay", "max_days_allowed": null, "include_holiday": 1 },
+	{ "name": "Privilege Leave", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "is_lwp": 0, "is_encash": 0, "is_carry_forward": 0, "allow_negative": 0, "leave_type_name": "Privilege Leave", "max_days_allowed": null, "include_holiday": 1 },
+	{ "name": "Sick Leave", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "is_lwp": 0, "is_encash": 0, "is_carry_forward": 0, "allow_negative": 0, "leave_type_name": "Sick Leave", "max_days_allowed": null, "include_holiday": 1 }
+]

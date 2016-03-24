@@ -1,0 +1,31 @@
+<template name="Admin">
+
+	{{> PageHeading title="Administrator"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div id="menu" class="col-sm-3 col-md-2">
+				<h2>
+				</h2>
+				{{> AdminSideMenu}}
+			</div>
+			<div id="subcontent" class="col-sm-9 col-md-10" style="padding-bottom:25px;">
+				{{> yield region='AdminSubcontent'}}
+			</div>
+		</div>		
+ 	</div>
+</template>
+
+<template name="AdminSideMenu">
+	<ul class="nav nav-pills nav-stacked" id="side-menu">
+		<li class="{{menuItemClass 'admin.users'}} module-sidebar-item">
+			<a href="{{pathFor 'admin.users'}}">
+				<span>
+					System Users
+				</span>
+				<span class="glyphicon glyphicon-chevron-right pull-right" style="display: none;"></span>
+			</a>
+		</li>
+	</ul>
+</template>
+

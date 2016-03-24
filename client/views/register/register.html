@@ -1,0 +1,50 @@
+<template name="Register">
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+ 
+	{{#if verificationEmailSent}}
+	<div>
+        <div>
+            <h1 class="logo-name" style="font-size: 100px; margin-left: -80px;">GridERP</h1>
+        </div>
+		<h2>
+			Thanks for signing up!
+		</h2>
+		<p>
+			We've sent a verification link to your e-mail address.
+		</p>
+		<br />	<button class="btn btn-lg btn-primary btn-block go-home" type="button" data-loading-text="Please  wait...">
+			OK
+		</button>
+	</div>
+	{{else}}
+        <div>
+            <h1 class="logo-name" style="font-size: 100px; margin-left: -20px;">GridERP</h1>
+        </div>
+        <h3>Register with GridERP</h3>
+
+        <p>Create account to see it in action.</p>
+
+        <form id="register_form" class="m-t" role="form">
+            <div class="form-group">
+                <input id="register_name" type="text" class="form-control" placeholder="Name" required="">
+            </div>
+            <div class="form-group">
+                <input id="register_email" type="email" class="form-control" placeholder="Email" required="">
+            </div>
+            <div class="form-group">
+                <input id="register_password" type="password" class="form-control" placeholder="Password" required="">
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
+
+            <p class="text-muted text-center">
+                <small>Already have an account?</small>
+            </p>
+            <a class="btn btn-sm btn-white btn-block" href="{{pathFor 'login'}}">Login</a>
+        </form>
+	{{/if}}
+        <p class="m-t">
+            <small>GridERP designed with Meteor Framework &copy; 2015</small>
+        </p>
+    </div>
+</template>

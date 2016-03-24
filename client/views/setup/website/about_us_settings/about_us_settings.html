@@ -1,0 +1,271 @@
+<template name="SetupWebsiteAboutUsSettings">
+
+	{{> PageHeading title="About Us Settings" type="print"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> AboutUsSettingsSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> AboutUsSettingsForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="AboutUsSettingsSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="AboutUsSettingsForm">
+	<div id="page-edit-edit-form" class="">
+		<form role="form">
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+							<div class="form-dashboard" style="display: none;">
+								<div class="row" style="padding: 15px 30px;"></div>
+							</div>
+							<div class="form-page">
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="HTML" data-fieldname="help">
+								                    <div class="alert alert-info"><i class="fa fa-info-circle"></i> Link for About Us Page is "/about"</div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Text Editor" data-fieldname="company_introduction">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Company Introduction</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div>
+								                                    <div>
+																		<!-- Summernote Editor -->
+																		<div class="summernote" style="display: none;">
+																			<h3>Hello Customers! </h3> dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+																			<br>
+																			<br>
+
+																		</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Introduce your company to the website visitor.</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Org History</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="company_history_heading">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Org History Heading</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="company_history_heading" placeholder="" data-doctype="About Us Settings">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">"Company History"</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="company_history">
+								                    <div data-fieldname="company_history">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="col col-xs-5 grid-overflow-ellipsis grid-static-col" data-fieldname="year">Year</div>
+								                                        <div class="col col-xs-6 grid-overflow-no-ellipsis grid-static-col" data-fieldname="highlight">Highlight</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows"></div>
+								                                <div class="grid-empty text-center">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top:4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Team Members</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="team_members_heading">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Team Members Heading</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="team_members_heading" placeholder="" data-doctype="About Us Settings">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">"Team Members" or "Management"</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="team_members">
+								                    <div data-fieldname="team_members">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="full_name">Full Name</div>
+								                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="image_link">Image Link</div>
+								                                        <div class="col col-xs-4 grid-overflow-no-ellipsis grid-static-col" data-fieldname="bio">Bio</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows"></div>
+								                                <div class="grid-empty text-center">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top:4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Text Editor" data-fieldname="footer">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Footer</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div>
+								                                    <div>
+																		<!-- Summernote Editor -->
+																		<div class="summernote" style="display: none;">
+																			<h3>Contact Us! </h3> dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+																			<br>
+																			<br>
+
+																		</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">More content for the bottom of the page.</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="timeline-items">
+								    <div class="media timeline-item" data-name=""> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+								            <div>
+								                <div class="pull-right"> <span class="small text-muted">  </span> </div>
+								                <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created </span><span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2013-03-19 12:02:15" title="03-19-2013 12:02:15">3 years ago</span></span> </h5> </div>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

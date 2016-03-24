@@ -1,0 +1,44 @@
+<template name="SetupSystem">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupSystemModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupSystemModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.system.application_installer'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.system.application_installer'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Application Installer
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Install Applications.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.system.scheduler_log'}} module-list">
+			<a href="{{pathFor 'setup.system.scheduler_log'}}">
+				<span class="item-title-modules">
+					Scheduler Log
+				</span>
+				<div class="module-description">Log of error on automated events (scheduler).</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.system.download_backups'}} module-list">
+			<a href="{{pathFor 'setup.system.download_backups'}}">
+				<span class="item-title-modules">
+					Download Backups
+				</span>
+				<div class="module-description">List of backups available for download.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

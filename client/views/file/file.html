@@ -1,0 +1,190 @@
+<template name="File">
+
+	{{> PageHeading title="File Manager" type="fileManager"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> FileSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox">
+					<div class="ibox-content" style="padding-bottom: 528px; padding-top: 20px;">
+						{{> FileView}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="FileSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#">Quick Report</a></li>
+			<li class="list-unstyled"><a href="#">Assigned To Me</a></li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">TAGS</span> 
+					<a class="td-icon" href="#">&nbsp;
+						<i class="fa fa-pencil"></i>
+					</a>
+			</li>
+			<li class="list-unstyled">No records tagged.</li>
+		</ul>
+	</div>
+</template>
+
+<template name="FileView">
+	<div id="file-view">
+		<section class="grdblock uploadarea">
+			<form enctype="multipart/form-data" method="post" id="upForm" action="http://fileman/"> <input type="hidden" name="location" value="./uploads/">
+				<div id="upload_container" class="input-group pull-left span-6"><span class="input-group-addon ie_hidden" style="background-color: #f3f3f3;"><i class="fa fa-files-o fa-fw"></i></span><span class="input-group-btn" id="upload_file">
+				        <span class="upfile btn btn-default btn-file"><i class="fa fa-plus fa-fw"></i>
+				        <input name="userfile[]" type="file" multiple="" class="upload_file"></span></span><input class="form-control" type="text" readonly="" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" placeholder="Drag files here">
+				    <span class="input-group-btn">
+				        <button class="upload_sumbit btn btn-primary" type="submit" id="upformsubmit">
+				        <i class="fa fa-upload fa-fw"></i></button>
+				        <a href="#" class="btn btn-primary" id="upchunk"><i class="fa fa-upload fa-fw"></i><input type="file" multiple="multiple" style="display: none;"></a>
+				     </span>
+				</div>
+			</form>
+			<form enctype="multipart/form-data" method="post">
+				<div id="newdir_container" class="input-group pull-right span-6"><span class="input-group-addon" style="background-color: #f3f3f3;"><i class="fa fa-folder-open-o fa-fw"></i></span><input name="userdir" type="text" class="upload_dirname form-control" placeholder="New directory">
+				    <span class="input-group-btn">
+				<button class="btn btn-success upfolder" type="submit" disabled="disabled"><i class="fa fa-plus fa-fw"></i></button></span></div>
+			</form>
+			<div class="full">
+				<div class="progress progress-striped active" id="progress-up">
+				    <div class="upbar progress-bar " role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+				        <p class="pull-left propercent"></p>
+				    </div>
+				</div>
+			</div>
+		</section>
+		<ol class="breadcrumb" style="margin-bottom: 10px; padding: 8px 0; background: none; line-height: 14px; float: left; width: 100%;">
+			<li>
+				<a href="?dir="><i class="fa fa-folder-open"></i> Root</a>
+			</li>
+		</ol>
+		<section class="grdblock tableblock" style="opacity: 1;">
+			<table class="table table-striped table-condensed" width="100%" id="sortable">
+				<thead>
+				    <tr class="rowa two">
+				        <td class="firstfolderitem icon col-xs-1 centertext">
+				        </td>
+				        <td></td>
+				        <td class="mini del centertext col-xs-1"><i class="fa fa-pencil"></i></td>
+				        <td class="mini del centertext col-xs-1"><i class="fa fa-trash-o"></i></td>
+				    </tr>
+				</thead>
+				<tbody>
+				    <tr class="rowa">
+				        <td class="icon centertext"><a href="{{pathFor 'file.edit'}}"><i class="fa fa-folder"></i></a></td>
+				        <td class="name">
+				            <a href="{{pathFor 'file.edit'}}">Test</a>
+				        </td>
+				        <td class="icon centertext rename"><a href="{{pathFor 'file.edit'}}" data-thisdir="uploads/" data-thisname="Test"><i class="fa fa-pencil-square-o" style="position: relative; top: 1px;"></i></a></td>
+				        <td class="del centertext">
+				            <a data-name="Test" href="#">
+				                <i class="fa fa-times"></i></a>
+				        </td>
+				    </tr>
+				</tbody>
+			</table>
+		</section>
+		<section class="grdblock tableblock" style="opacity: 1;">
+			<div class="action-group">
+				<div class="btn-group">
+				    <button type="button" class="btn btn-default dropdown-toggle groupact" data-toggle="dropdown" disabled="disabled">
+				            <i class="fa fa-cog"></i> 
+				            Group actions 
+				            <span class="caret"></span>
+				        </button>
+				    <ul class="dropdown-menu" role="menu">
+				        <li>
+				            <a class="multid" href="#">
+				                <i class="fa fa-cloud-download"></i> Download
+				            </a>
+				        </li>
+				        <li><a class="multic" href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+				    </ul>
+				</div>
+				<!-- .btn-group -->
+				<button class="btn btn-default manda" disabled="disabled"><i class="fa fa-paper-plane"></i> Share </button>
+			</div>
+			<!-- .action-group -->
+			<form id="tableform">
+				<div id="sort_wrapper" class="dataTables_wrapper no-footer">
+				    <div class="dataTables_length" id="sort_length"><label><i class="fa fa-list-ol"></i> <select name="sort_length" aria-controls="sort" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label></div>
+				    <div id="sort_filter" class="dataTables_filter"><label><span class="input-group-addon"><i class="fa fa-search"></i></span> <input type="search" class="" aria-controls="sort"></label></div>
+				    <table class="table table-striped dataTable no-footer" width="100%" id="sort" role="grid" aria-describedby="sort_info" style="width: 100%;">
+				        <thead>
+				            <tr class="rowa one" role="row">
+				                <td class="text-center sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 99px;">
+				                    <a href="#" id="selectall"><i class="fa fa-check fa-lg"></i></a>
+				                </td>
+				                <td class="icon sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 60px;"></td>
+				                <td class="mini header" tabindex="0" aria-controls="sort" rowspan="1" colspan="1" aria-label="File name: activate to sort column ascending" style="width: 266px;">
+				                    <span class="sorta nowrap">File name</span>
+				                </td>
+				                <td class="hidden header" tabindex="0" aria-controls="sort" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 0px;"></td>
+				                <td class="taglia reduce mini header" tabindex="0" aria-controls="sort" rowspan="1" colspan="1" aria-label="Size: activate to sort column ascending" style="width: 123px;">
+				                    <span class="hidden-xs centertext sorta nowrap">Size</span>
+				                </td>
+				                <td class="hidden header" tabindex="0" aria-controls="sort" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" aria-sort="descending" style="width: 0px;"></td>
+				                <td class="reduce mini header headerSortUp" tabindex="0" aria-controls="sort" rowspan="1" colspan="1" aria-label="Last change: activate to sort column ascending" style="width: 352px;">
+				                    <span class="hidden-xs centertext sorta nowrap">Last change</span>
+				                </td>
+				                <td class="mini centertext header" tabindex="0" aria-controls="sort" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 70px;"><i class="fa fa-pencil"></i></td>
+				                <td class="mini centertext header" tabindex="0" aria-controls="sort" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 68px;"><i class="fa fa-trash-o"></i></td>
+				            </tr>
+				        </thead>
+				        <tbody>
+				            <tr class="rowa  odd" role="row">
+				                <td class="checkb centertext">
+				                    <input type="checkbox" name="selecta" class="selecta" value="dXBsb2Fkcy8uRFNfU3RvcmU="></td>
+				                <td class="icon centertext"><a href="download/dXBsb2Fkcy8uRFNfU3RvcmU=/h/d95a2548659d243bcdf11251b4931008" class="item"><i class="fa fa-file-o"></i></a></td>
+				                <td class="name"><a href="download/dXBsb2Fkcy8uRFNfU3RvcmU=/h/d95a2548659d243bcdf11251b4931008" class="item">.DS_Store</a><span class="hover"><i class="fa fa-download fa-fw"></i></span></td>
+				                <td class="hidden">6</td>
+				                <td class="mini reduce nowrap"><span class="hidden-xs centertext">6 KB</span></td>
+				                <td class="hidden">1435606248</td>
+				                <td class="mini reduce sorting_1"><span class="hidden-xs centertext">29/06/2015 - 19:30</span></td>
+				                <td class="icon rename centertext"><a href="#" data-thisdir="uploads/" data-thisext="DS_Store" data-thisname=".DS_Store"><i class="fa fa-pencil-square-o" style="position: relative; top: 1px;"></i></a></td>
+				                <td class="del centertext">
+				                    <a data-name=".DS_Store" href="?dir=uploads/&amp;del=dXBsb2Fkcy8uRFNfU3RvcmU=&amp;h=3377401a530dcd83a4e1147b17e65438">
+				                        <i class="fa fa-times"></i>
+				                    </a>
+				                </td>
+				            </tr>
+				            <tr class="rowa  even" role="row">
+				                <td class="checkb centertext">
+				                    <input type="checkbox" name="selecta" class="selecta" value="dXBsb2Fkcy8uXy5EU19TdG9yZQ=="></td>
+				                <td class="icon centertext"><a href="download/dXBsb2Fkcy8uXy5EU19TdG9yZQ==/h/f38272bff56f5cdcd51b7a30422b5e83" class="item"><i class="fa fa-file-o"></i></a></td>
+				                <td class="name"><a href="download/dXBsb2Fkcy8uXy5EU19TdG9yZQ==/h/f38272bff56f5cdcd51b7a30422b5e83" class="item">._.DS_Store</a><span class="hover"><i class="fa fa-download fa-fw"></i></span></td>
+				                <td class="hidden">0</td>
+				                <td class="mini reduce nowrap"><span class="hidden-xs centertext">70 B</span></td>
+				                <td class="hidden">1435606248</td>
+				                <td class="mini reduce sorting_1"><span class="hidden-xs centertext">29/06/2015 - 19:30</span></td>
+				                <td class="icon rename centertext"><a href="#" data-thisdir="uploads/" data-thisext="DS_Store" data-thisname="._.DS_Store"><i class="fa fa-pencil-square-o" style="position: relative; top: 1px;"></i></a></td>
+				                <td class="del centertext">
+				                    <a data-name="._.DS_Store" href="?dir=uploads/&amp;del=dXBsb2Fkcy8uXy5EU19TdG9yZQ==&amp;h=89b87a3ccc6958d2cd248bb75880d8a5">
+				                        <i class="fa fa-times"></i>
+				                    </a>
+				                </td>
+				            </tr>
+				        </tbody>
+				    </table>
+				    <div class="dataTables_info" id="sort_info" role="status" aria-live="polite">1 / 2 - 2 </div>
+				    <div class="dataTables_paginate paging_full_numbers" id="sort_paginate" style="display: none;"><a class="paginate_button first disabled" aria-controls="sort" data-dt-idx="0" tabindex="0" id="sort_first"><i class="fa fa-angle-double-left"></i></a><a class="paginate_button previous disabled" aria-controls="sort" data-dt-idx="1" tabindex="0" id="sort_previous"><i class="fa fa-angle-left"></i></a><span><a class="paginate_button current" aria-controls="sort" data-dt-idx="2" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="sort" data-dt-idx="3" tabindex="0" id="sort_next"><i class="fa fa-angle-right"></i></a><a class="paginate_button last disabled" aria-controls="sort" data-dt-idx="4" tabindex="0" id="sort_last"><i class="fa fa-angle-double-right"></i></a></div>
+				</div>
+			</form>
+		</section>
+	</div>
+</template>
+
+

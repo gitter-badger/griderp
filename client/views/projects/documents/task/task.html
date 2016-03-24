@@ -1,0 +1,201 @@
+<template name="ProjectsDocumentsTask">
+
+	{{> PageHeading title="Task" type="list"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> TaskSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 50px;">
+						{{> TaskView}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="TaskSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#">Quick Report</a></li>
+			<li class="list-unstyled"><a href="#">Calendar</a></li>
+			<li class="list-unstyled"><a href="#">Gannt</a></li>
+			<li class="list-unstyled"><a href="#">Assigned To Me</a></li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">TAGS</span> 
+					<a class="td-icon" href="#">&nbsp;
+						<i class="fa fa-pencil"></i>
+					</a>
+			</li>
+			<li class="list-unstyled">No records tagged.</li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">STATUS</span> 
+			</li>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span>Open</span> <span class="sidebar-badge sidebar-badge-position">5</span></a></li>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span>Working</span> <span class="sidebar-badge sidebar-badge-position">1</span></a></li>
+			<li class="list-unstyled" style="margin-top:15px;">
+				<span class="text-muted">PRIORITY</span> 
+			</li>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span>Low</span> <span class="sidebar-badge sidebar-badge-position">6</span></a></li>
+		</ul>
+	</div>
+</template>
+
+<template name="TaskView">
+	<div id="task-view">
+		<h3 id="component-title">
+			Task View
+		</h3>
+		<form id="dataview-controls" class="form-inline">
+			<div id="dataview-controls-insert" class="form-group pull-left {{insertButtonClass}}">
+				<button type="submit" id="dataview-task-insert-delete-button" class="{{toggleAddDeleteButton}}">
+					{{setAddDeleteButtonText}}
+				</button>
+			</div>
+			<div id="dataview-controls-search" style="float: right;">
+				{{#if isNotEmpty}}
+				<div id="dataview-controls-search-group" class="input-group">
+					<label class="sr-only" for="search">
+						Search
+					</label>
+					<span class="input-group-btn">
+						<input type="text" class="input form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+						<button type="button" id="dataview-search-button" class="btn btn-primary">
+							<span class="fa fa-search">
+							</span>
+						</button>
+					</span>
+				</div>
+				{{/if}}
+			</div>
+			<div id="dataview-controls-export" class="form-group" style="margin-left: 8px;">
+				{{#if isNotEmpty}}			
+		{{#if isFound}}
+				<div>
+				</div>
+				{{else}}
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" id="dataview-export-default">
+						Export
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret">
+						</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#" id="dataview-export-csv">
+								Export data to CSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-tsv">
+								Export data to TSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-json">
+								Export data to JSON
+							</a>
+						</li>
+					</ul>
+				</div>
+				{{/if}}			
+		{{/if}}
+			</div>
+		</form>
+		{{#if isNotEmpty}}	
+			{{#if isNotFound}}
+		<div class="alert alert-warning">
+			"{{searchString}}" not found.
+		</div>
+		{{else}}
+		<div id="dataview-data">
+			{{#if viewAsTable}} {{> TaskViewTable}} {{> TaskViewTableFooter}} {{/if}}
+		</div>
+		{{/if}}	
+		{{else}}
+		<br />
+		<div class="alert alert-info">
+			No Tasks :(
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="TaskViewTable">
+	<table id="dataview-table" class="table table-striped table-hover">
+		<thead id="dataview-table-header">
+			<tr id="dataview-table-header-row">
+				<th class="{{insertButtonClass}} table-checkbox">
+					<input type="checkbox" class="list-select-all">
+				</th>
+				<th class="th-sortable" data-sort="subject">
+					Subject
+				</th>
+				<th class="th-sortable" data-sort="project">
+					Project
+				</th>
+				<th class="th-sortable" data-sort="status">
+					Status
+				</th>
+				<th class="th-sortable" data-sort="name">
+					&nbsp;
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+		</thead>
+		<tbody id="dataview-table-items">
+			{{#each tableItems}} {{> TaskViewTableItems}} {{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="TaskViewTableItems">
+	<tr id="dataview-table-items-row">
+		<td class="{{insertButtonClass}} table-checkbox">
+			<input type="checkbox" class="check-complete list-delete" checked={{checkComplete}}>
+		</td>
+		<td>
+			<a href="{{pathFor 'projects.documents.task.edit'}}"><span id="field">{{subject}}</span></a>
+		</td>
+		<td>
+			<span>{{project}}</span>
+		</td>
+		<td>
+			<span class="indicator-blue">{{status}}</span>
+		</td>
+		<td>
+			<span>{{name}}</span>
+		</td>
+		<td class="td-icon text-center" style="width:75px;">
+			<span>3 d
+			</span>&nbsp;&nbsp;
+			<span class="fa fa-comments" title="Comments">&nbsp;0
+			</span>
+		</td>
+	</tr>
+</template>
+
+<template name="TaskViewTableFooter">
+	<div id="dataview-footer">
+		<hr /> 
+		<div id="dataview-task-paginate-buttons" class="btn-group pull-right">
+			<button class="btn btn-sm btn-primary" type="button">20</button>
+			<button class="btn btn-sm btn-default" type="button">100</button>
+			<button class="btn btn-sm btn-default" type="button">500</button>
+		</div>
+	</div>
+</template>
+

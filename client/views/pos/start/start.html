@@ -1,0 +1,387 @@
+<template name="PosStart">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">New Sales Invoice 1</div>
+								<span class="indicator-orange indicator-text">Not Saved</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-th"></i>
+							</a>
+							<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Form View</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">New Sales Invoice</a></li>
+								</ul>
+							<div class="pull-right" style="position: relative; margin-left: 4px;">
+								<button class="btn btn-primary btn-sm">Pay</button>
+							</div>
+							<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+								{{company_details.name}}
+							</div>-->
+						</div>
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> PosStartForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="PosStartForm">
+	<div style="display: block;">
+		<div class="pos" style="padding-left: 15px; padding-right: 15px;">
+			<div class="row">
+			    <div class="col-sm-5 pos-bill-wrapper" style="border-top: 1px solid #ddd;">
+			        <div class="pos-bill-toolbar row">
+			            <div class="party-area col-xs-12">
+			                <div class="form-group griderp-control input-max-width" data-fieldtype="Link" data-fieldname="pos_party" style="z-index: 1;">
+			                    <div class="link-field ui-front" style="position: relative; margin-bottom: 3px;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input ui-autocomplete-loading" data-fieldtype="Link" data-fieldname="pos_party" placeholder="Customer" autocomplete="off">
+			                        <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-33" tabindex="0" style="display: none; top: 30px; left: 0px; width: 456px;">
+			                            <li class="ui-menu-item" id="ui-id-1344" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Adaptas</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1345" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Asian Fusion</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1346" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Asian Junction</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1347" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Big D Supermarkets</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1348" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Buttrey Food &amp; Drug</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1349" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Chi-Chis</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1350" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Choices</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1351" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Consumers and Consumers Express</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1352" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Crafts Canada</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1353" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Endicott Shoes</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1354" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Fayva</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1355" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Hind Enterprises</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1356" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Intelacard</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1357" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Landskip Yard Care</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1358" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Life Plan Counselling</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1359" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Mr Fables</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1360" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Nelson Brothers</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1361" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Netobill</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1362" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Red Food</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1363" tabindex="-1">
+			                                <a>
+			                                    <p><strong>Two Pesos</strong><br><span class="small">Commercial, Rest Of The World</span></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1364" tabindex="-1">
+			                                <a>
+			                                    <p><strong><span class="text-primary link-option"><i class="icon-plus" style="margin-right: 5px;"></i> Create a new Customer</span></strong></p>
+			                                </a>
+			                            </li>
+			                            <li class="ui-menu-item" id="ui-id-1365" tabindex="-1">
+			                                <a>
+			                                    <p><strong><span class="text-primary link-option"><i class="icon-search" style="margin-right: 5px;"></i> Advanced Search</span></strong></p>
+			                                </a>
+			                            </li>
+			                        </ul>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="pos-bill">
+			            <div class="item-cart">
+			                <div class="row pos-bill-row pos-bill-header">
+			                    <div class="col-xs-5">
+			                        <h5>Item</h5></div>
+			                    <div class="col-xs-4">
+			                        <h5 class="text-right">Quantity</h5></div>
+			                    <div class="col-xs-3">
+			                        <h5 class="text-right">Rate</h5></div>
+			                </div>
+			                <div class="items"></div>
+			            </div>
+			            <div class="totals-area">
+			                <div class="row pos-bill-row net-total-area">
+			                    <div class="col-xs-6">
+			                        <h5 class="text-muted">Net Total</h5></div>
+			                    <div class="col-xs-6">
+			                        <h5 class="net-total text-right">$ 0.00</h5></div>
+			                </div>
+			                <div class="pos-row pos-bill-row tax-area hide">
+			                    <div class="col-xs-12 text-muted">
+			                        <h5>Taxes</h5>
+			                        <div class="tax-table small"></div>
+			                    </div>
+			                </div>
+			                <div class="row pos-bill-row discount-amount-area">
+			                    <div class="col-xs-6">
+			                        <h5 class="text-muted">Discount Amount</h5></div>
+			                    <div class="col-xs-6"><input type="text" class="form-control discount-amount text-right" style="margin-top: -3px;"></div>
+			                </div>
+			                <div class="row pos-bill-row grand-total-area">
+			                    <div class="col-xs-6">
+			                        <h5>Grand Total</h5></div>
+			                    <div class="col-xs-6">
+			                        <h5 class="grand-total text-right">$ 0.00</h5></div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <div class="col-sm-7 pos-item-area" style="border-top: 1px solid #ddd;">
+			        <div class="row pos-item-toolbar">
+			            <div class="search-area col-xs-12">
+			                <div class="form-group griderp-control input-max-width" data-fieldtype="Data" data-fieldname="pos_item"><input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="pos_item" placeholder="Search Item"></div>
+			            </div>
+			        </div>
+			        <div class="item-list-area">
+			            <div class="item-list">
+			                <div class="pos-item" data-item-code="Base Bearing Plate" title="" data-original-title="Base Bearing Plate">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Base Bearing Plate</h6>
+			                        <div class="small text-ellipsis">$ 28.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Base Plate" title="" data-original-title="Base Plate">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Base Plate</h6>
+			                        <div class="small text-ellipsis">$ 21.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Bearing Assembly" title="" data-original-title="Bearing Assembly">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Bearing Assembly</h6>
+			                        <div class="small text-ellipsis">$ 300.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Bearing Block" title="" data-original-title="Bearing Block">
+			                    <div class="pos-item-image " style=" background-image: url('/griderp_demo/images/bearing.jpg') "> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Bearing Block</h6>
+			                        <div class="small text-ellipsis">$ 14.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Bearing Collar" title="" data-original-title="Bearing Collar">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Bearing Collar</h6>
+			                        <div class="small text-ellipsis">$ 103.60</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Bearing Pipe" title="" data-original-title="Bearing Pipe">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Bearing Pipe</h6>
+			                        <div class="small text-ellipsis">$ 63.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Blade Rib" title="" data-original-title="Blade Rib">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Blade Rib</h6>
+			                        <div class="small text-ellipsis">$ 46.20</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Disc Collars" title="" data-original-title="Disc Collars">
+			                    <div class="pos-item-image " style=" background-image: url('/griderp_demo/images/disc.png') "> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Disc Collars</h6>
+			                        <div class="small text-ellipsis">$ 42.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="External Disc" title="" data-original-title="External Disc">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">External Disc</h6>
+			                        <div class="small text-ellipsis">$ 56.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Internal Disc" title="" data-original-title="Internal Disc">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Internal Disc</h6>
+			                        <div class="small text-ellipsis">$ 70.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Shaft" title="" data-original-title="Shaft">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Shaft</h6>
+			                        <div class="small text-ellipsis">$ 340.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Stand" title="" data-original-title="Stand">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Stand</h6>
+			                        <div class="small text-ellipsis">$ 400.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Upper Bearing Plate" title="" data-original-title="Upper Bearing Plate">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Upper Bearing Plate</h6>
+			                        <div class="small text-ellipsis">$ 300.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Wind Mill A Series" title="" data-original-title="Wind Mill A Series">
+			                    <div class="pos-item-image " style=" background-image: url('/griderp_demo/images/wind-turbine.png') "> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Wind Mill A Series</h6>
+			                        <div class="small text-ellipsis">$ 320.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Wind Mill A Series with Spare Bearing" title="" data-original-title="Wind Mill A Series with Spare Bearing">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Wind Mill A Series with Spare Bearing</h6>
+			                        <div class="small text-ellipsis">$ 750.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Wind MIll C Series" title="" data-original-title="Wind MIll C Series">
+			                    <div class="pos-item-image " style=" background-image: url('/griderp_demo/images/wind-turbine-2.png') "> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Wind MIll C Series</h6>
+			                        <div class="small text-ellipsis">$ 400.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Wind Turbine-L" title="" data-original-title="Wind Turbine-L">
+			                    <div class="pos-item-image " style=" background-image: url('/griderp_demo/images/wind-turbine-1.jpg') "> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Wind Turbine-L</h6>
+			                        <div class="small text-ellipsis">$ 400.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Wind Turbine-M" title="" data-original-title="Wind Turbine-M">
+			                    <div class="pos-item-image " style=" background-image: url('/griderp_demo/images/wind-turbine-1.jpg') "> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Wind Turbine-M</h6>
+			                        <div class="small text-ellipsis">$ 400.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Wind Turbine-S" title="" data-original-title="Wind Turbine-S">
+			                    <div class="pos-item-image " style=" background-image: url('/griderp_demo/images/wind-turbine-1.jpg') "> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Wind Turbine-S</h6>
+			                        <div class="small text-ellipsis">$ 400.00</div>
+			                    </div>
+			                </div>
+			                <div class="pos-item" data-item-code="Wing Sheet" title="" data-original-title="Wing Sheet">
+			                    <div class="pos-item-image  no-image " style=""> </div>
+			                    <div class="pos-item-text">
+			                        <h6 class="item-code text-ellipsis" style="font-size: 12px; line-height: 1.2em;">Wing Sheet</h6>
+			                        <div class="small text-ellipsis">$ 30.80</div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</template>
+

@@ -1,0 +1,67 @@
+<template name="PurchasingStandardReports">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> PurchasingStandardReportsModuleMenu}}
+	</div>
+</template>
+
+<template name="PurchasingStandardReportsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'purchasing.standard_reports.item_wise_purchase_history'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'purchasing.standard_reports.item_wise_purchase_history'}}">
+				<span class="item-title-modules">
+					Item-wise Purchase History
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.standard_reports.items_to_be_requested'}} module-list">
+			<a href="{{pathFor 'purchasing.standard_reports.items_to_be_requested'}}">
+				<span class="item-title-modules">
+					Items to be Requested
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.standard_reports.material_requests_for_which_supplier_quotations_are_not_created'}} module-list">
+			<a href="{{pathFor 'purchasing.standard_reports.material_requests_for_which_supplier_quotations_are_not_created'}}">
+				<span class="item-title-modules">
+					Material Requests for which Supplier Quotations are not Created
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.standard_reports.purchase_order_trends'}} module-list">
+			<a href="{{pathFor 'purchasing.standard_reports.purchase_order_trends'}}">
+				<span class="item-title-modules">
+					Purchase Order Trends
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.standard_reports.requested_items_to_be_ordered'}} module-list">
+			<a href="{{pathFor 'purchasing.standard_reports.requested_items_to_be_ordered'}}">
+				<span class="item-title-modules">
+					Requested Items to be Ordered
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.standard_reports.supplier_addresses_and_contacts'}} module-list">
+			<a href="{{pathFor 'purchasing.standard_reports.supplier_addresses_and_contacts'}}">
+				<span class="item-title-modules">
+					Supplier Addresses and Contacts
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'purchasing.standard_reports.supplier_wise_sales_analytics'}} module-list">
+			<a href="{{pathFor 'purchasing.standard_reports.supplier_wise_sales_analytics'}}">
+				<span class="item-title-modules">
+					Supplier-wise Sales Analytics
+				</span>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

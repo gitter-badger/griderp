@@ -1,0 +1,150 @@
+<template name="SetupAccounts">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupAccountsModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupAccountsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.accounts.accounts_settings'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.accounts.accounts_settings'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Accounts Settings
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Default settings for accounting transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.chart_of_accounts'}} module-list">
+			<a href="{{pathFor 'setup.accounts.chart_of_accounts'}}">
+				<span class="item-title-modules">
+					Chart of Accounts
+				</span>
+				<div class="module-description">Tree of financial accounts.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.chart_of_cost_centers'}} module-list">
+			<a href="{{pathFor 'setup.accounts.chart_of_cost_centers'}}">
+				<span class="item-title-modules">
+					Chart of Cost Centers
+				</span>
+				<div class="module-description">Tree of financial Cost Centers.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.company'}} module-list">
+			<a href="{{pathFor 'setup.accounts.company'}}">
+				<span class="item-title-modules">
+					Company
+				</span>
+				<div class="module-description">Company (not Customer or Supplier) master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.currency'}} module-list">
+			<a href="{{pathFor 'setup.accounts.currency'}}">
+				<span class="item-title-modules">
+					Currency
+				</span>
+				<div class="module-description">Enable / disable currencies.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.currency_exchange'}} module-list">
+			<a href="{{pathFor 'setup.accounts.currency_exchange'}}">
+				<span class="item-title-modules">
+					Currency Exchange
+				</span>
+				<div class="module-description">Currency exchange rate master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.fiscal_year'}} module-list">
+			<a href="{{pathFor 'setup.accounts.fiscal_year'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Fiscal Year
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Financial / accounting year.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.mode_of_payment'}} module-list">
+			<a href="{{pathFor 'setup.accounts.mode_of_payment'}}">
+				<span class="item-title-modules">
+					Mode of Payment
+				</span>
+				<div class="module-description">e.g. Bank, Cash, Credit Card.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.monthly_distribution'}} module-list">
+			<a href="{{pathFor 'setup.accounts.monthly_distribution'}}">
+				<span class="item-title-modules">
+					Monthly Distribution
+				</span>
+				<div class="module-description">Seasonality for setting budgets, targets etc.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.point_of_sale_profile'}} module-list">
+			<a href="{{pathFor 'setup.accounts.point_of_sale_profile'}}">
+				<span class="item-title-modules">
+					Point-of-Sale Profile
+				</span>
+				<div class="module-description">Rules to calculate shipping amount for a sale.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.pricing_rule'}} module-list">
+			<a href="{{pathFor 'setup.accounts.pricing_rule'}}">
+				<span class="item-title-modules">
+					Pricing Rule
+				</span>
+				<div class="module-description">Rules for applying pricing and discount.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.purchase_taxes_and_charges_template'}} module-list">
+			<a href="{{pathFor 'setup.accounts.purchase_taxes_and_charges_template'}}">
+				<span class="item-title-modules">
+					Purchase Taxes and Charges Template
+				</span>
+				<div class="module-description">Tax template for buying transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.sales_taxes_and_charges_template'}} module-list">
+			<a href="{{pathFor 'setup.accounts.sales_taxes_and_charges_template'}}">
+				<span class="item-title-modules">
+					Sales Taxes and Charges Template
+				</span>
+				<div class="module-description">Tax template for selling transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.shipping_rule'}} module-list">
+			<a href="{{pathFor 'setup.accounts.shipping_rule'}}">
+				<span class="item-title-modules">
+					Shipping Rule
+				</span>
+				<div class="module-description">Rules for adding shipping costs.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.accounts.tax_rule'}} module-list">
+			<a href="{{pathFor 'setup.accounts.tax_rule'}}">
+				<span class="item-title-modules">
+					Tax Rule
+				</span>
+				<div class="module-description">Tax rule for transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.printing.terms_and_conditions'}} module-list">
+			<a href="{{pathFor 'setup.printing.terms_and_conditions'}}">
+				<span class="item-title-modules">
+					Terms and Conditions Template
+				</span>
+				<div class="module-description">Template of terms or contract.</div>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

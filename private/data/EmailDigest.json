@@ -1,0 +1,4 @@
+[
+	{ "name": "Default Weekly Digest - Warp Power LLC", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "expense_year_to_date": 1, "bank_balance": 1, "recipient_list": "test_demo@griderp.com", "expenses_booked": 1, "company": "Warp Power LLC", "payables": 1, "invoiced_amount": 1, "income_year_to_date": 1, "next_send": null, "frequency": "Weekly", "income": 1, "enabled": 1 },
+	{ "name": "Scheduler Errors", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "expense_year_to_date": 0, "bank_balance": 0, "recipient_list": "test_demo@griderp.com", "expenses_booked": 0, "company": "Warp Power LLC", "payables": 0, "invoiced_amount": 0, "income_year_to_date": 0, "next_send": null, "frequency": "Daily", "income": 0, "enabled": 1 }
+]

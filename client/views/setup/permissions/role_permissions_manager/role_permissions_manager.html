@@ -1,0 +1,288 @@
+<template name="SetupPermissionsRolePermissionsManager">
+
+	{{> PageHeading title="Role Permissions Manager"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> RolePermissionsManagerForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="RolePermissionsManagerForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row">
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Select" title="" data-original-title="Document Types" style="margin-right: 25px;">
+		        <select type="text" class="input-with-feedback form-control" maxlength="225" data-fieldtype="Select" placeholder="Document Types" width="225" style="width: 225px;">
+		            <option value="">Select Document Type...</option>
+		            <option value="About Us Settings">About Us Settings</option>
+		            <option value="Account">Account</option>
+		            <option value="Accounts Settings">Accounts Settings</option>
+		            <option value="Activity Cost">Activity Cost</option>
+		            <option value="Activity Type">Activity Type</option>
+		            <option value="Address">Address</option>
+		            <option value="Address Template">Address Template</option>
+		            <option value="Appraisal">Appraisal</option>
+		            <option value="Appraisal Template">Appraisal Template</option>
+		            <option value="Async Task">Async Task</option>
+		            <option value="Attendance">Attendance</option>
+		            <option value="Authorization Rule">Authorization Rule</option>
+		            <option value="Bank Reconciliation">Bank Reconciliation</option>
+		            <option value="Batch">Batch</option>
+		            <option value="Bin">Bin</option>
+		            <option value="Blog Category">Blog Category</option>
+		            <option value="Blog Post">Blog Post</option>
+		            <option value="Blog Settings">Blog Settings</option>
+		            <option value="Blogger">Blogger</option>
+		            <option value="BOM">BOM</option>
+		            <option value="BOM Replace Tool">BOM Replace Tool</option>
+		            <option value="Branch">Branch</option>
+		            <option value="Brand">Brand</option>
+		            <option value="Bulk Email">Bulk Email</option>
+		            <option value="Buying Settings">Buying Settings</option>
+		            <option value="C-Form">C-Form</option>
+		            <option value="Campaign">Campaign</option>
+		            <option value="Comment">Comment</option>
+		            <option value="Communication">Communication</option>
+		            <option value="Company">Company</option>
+		            <option value="Contact">Contact</option>
+		            <option value="Contact Us Settings">Contact Us Settings</option>
+		            <option value="Cost Center">Cost Center</option>
+		            <option value="Country">Country</option>
+		            <option value="Currency">Currency</option>
+		            <option value="Currency Exchange">Currency Exchange</option>
+		            <option value="Custom Field">Custom Field</option>
+		            <option value="Custom Script">Custom Script</option>
+		            <option value="Customer">Customer</option>
+		            <option value="Customer Group">Customer Group</option>
+		            <option value="Customize Form">Customize Form</option>
+		            <option value="Deduction Type">Deduction Type</option>
+		            <option value="Delivery Note">Delivery Note</option>
+		            <option value="Department">Department</option>
+		            <option value="Designation">Designation</option>
+		            <option value="DocShare">DocShare</option>
+		            <option value="Dropbox Backup">Dropbox Backup</option>
+		            <option value="Earning Type">Earning Type</option>
+		            <option value="Email Account">Email Account</option>
+		            <option value="Email Alert">Email Alert</option>
+		            <option value="Email Digest">Email Digest</option>
+		            <option value="Email Unsubscribe">Email Unsubscribe</option>
+		            <option value="Employee">Employee</option>
+		            <option value="Employment Type">Employment Type</option>
+		            <option value="Event">Event</option>
+		            <option value="Expense Claim">Expense Claim</option>
+		            <option value="Expense Claim Type">Expense Claim Type</option>
+		            <option value="Features Setup">Features Setup</option>
+		            <option value="Feed">Feed</option>
+		            <option value="File">File</option>
+		            <option value="Fiscal Year">Fiscal Year</option>
+		            <option value="GL Entry">GL Entry</option>
+		            <option value="Global Defaults">Global Defaults</option>
+		            <option value="Holiday List">Holiday List</option>
+		            <option value="HR Settings">HR Settings</option>
+		            <option value="Hub Settings">Hub Settings</option>
+		            <option value="Industry Type">Industry Type</option>
+		            <option value="Installation Note">Installation Note</option>
+		            <option value="Issue">Issue</option>
+		            <option value="Item">Item</option>
+		            <option value="Item Attribute">Item Attribute</option>
+		            <option value="Item Group">Item Group</option>
+		            <option value="Item Price">Item Price</option>
+		            <option value="Job Applicant">Job Applicant</option>
+		            <option value="Job Opening">Job Opening</option>
+		            <option value="Journal Entry">Journal Entry</option>
+		            <option value="Landed Cost Voucher">Landed Cost Voucher</option>
+		            <option value="Lead">Lead</option>
+		            <option value="Leave Allocation">Leave Allocation</option>
+		            <option value="Leave Application">Leave Application</option>
+		            <option value="Leave Block List">Leave Block List</option>
+		            <option value="Leave Control Panel">Leave Control Panel</option>
+		            <option value="Leave Type">Leave Type</option>
+		            <option value="Letter Head">Letter Head</option>
+		            <option value="Maintenance Schedule">Maintenance Schedule</option>
+		            <option value="Maintenance Visit">Maintenance Visit</option>
+		            <option value="Manufacturing Settings">Manufacturing Settings</option>
+		            <option value="Material Request">Material Request</option>
+		            <option value="Mode of Payment">Mode of Payment</option>
+		            <option value="Module Def">Module Def</option>
+		            <option value="Monthly Distribution">Monthly Distribution</option>
+		            <option value="Naming Series">Naming Series</option>
+		            <option value="Newsletter">Newsletter</option>
+		            <option value="Newsletter List">Newsletter List</option>
+		            <option value="Newsletter List Subscriber">Newsletter List Subscriber</option>
+		            <option value="Note">Note</option>
+		            <option value="Notification Control">Notification Control</option>
+		            <option value="Offer Letter">Offer Letter</option>
+		            <option value="Offer Term">Offer Term</option>
+		            <option value="Operation">Operation</option>
+		            <option value="Opportunity">Opportunity</option>
+		            <option value="Packing Slip">Packing Slip</option>
+		            <option value="Page">Page</option>
+		            <option value="Patch Log">Patch Log</option>
+		            <option value="Payment Reconciliation">Payment Reconciliation</option>
+		            <option value="Payment Tool">Payment Tool</option>
+		            <option value="Period Closing Voucher">Period Closing Voucher</option>
+		            <option value="POS Profile">POS Profile</option>
+		            <option value="Price List">Price List</option>
+		            <option value="Pricing Rule">Pricing Rule</option>
+		            <option value="Print Format">Print Format</option>
+		            <option value="Print Heading">Print Heading</option>
+		            <option value="Print Settings">Print Settings</option>
+		            <option value="Process Payroll">Process Payroll</option>
+		            <option value="Product Bundle">Product Bundle</option>
+		            <option value="Production Order">Production Order</option>
+		            <option value="Production Planning Tool">Production Planning Tool</option>
+		            <option value="Project">Project</option>
+		            <option value="Property Setter">Property Setter</option>
+		            <option value="Purchase Invoice">Purchase Invoice</option>
+		            <option value="Purchase Order">Purchase Order</option>
+		            <option value="Purchase Receipt">Purchase Receipt</option>
+		            <option value="Purchase Taxes and Charges Template">Purchase Taxes and Charges Template</option>
+		            <option value="Quality Inspection">Quality Inspection</option>
+		            <option value="Quotation">Quotation</option>
+		            <option value="Quotation Lost Reason">Quotation Lost Reason</option>
+		            <option value="Rename Tool">Rename Tool</option>
+		            <option value="Report">Report</option>
+		            <option value="Role">Role</option>
+		            <option value="Salary Slip">Salary Slip</option>
+		            <option value="Salary Structure">Salary Structure</option>
+		            <option value="Sales Invoice">Sales Invoice</option>
+		            <option value="Sales Order">Sales Order</option>
+		            <option value="Sales Partner">Sales Partner</option>
+		            <option value="Sales Person">Sales Person</option>
+		            <option value="Sales Taxes and Charges Template">Sales Taxes and Charges Template</option>
+		            <option value="Scheduler Log">Scheduler Log</option>
+		            <option value="Selling Settings">Selling Settings</option>
+		            <option value="Serial No">Serial No</option>
+		            <option value="Shipping Rule">Shipping Rule</option>
+		            <option value="Shopping Cart Settings">Shopping Cart Settings</option>
+		            <option value="SMS Center">SMS Center</option>
+		            <option value="SMS Log">SMS Log</option>
+		            <option value="SMS Settings">SMS Settings</option>
+		            <option value="Social Login Keys">Social Login Keys</option>
+		            <option value="Standard Reply">Standard Reply</option>
+		            <option value="Stock Entry">Stock Entry</option>
+		            <option value="Stock Ledger Entry">Stock Ledger Entry</option>
+		            <option value="Stock Reconciliation">Stock Reconciliation</option>
+		            <option value="Stock Settings">Stock Settings</option>
+		            <option value="Supplier">Supplier</option>
+		            <option value="Supplier Quotation">Supplier Quotation</option>
+		            <option value="Supplier Type">Supplier Type</option>
+		            <option value="System Settings">System Settings</option>
+		            <option value="Task">Task</option>
+		            <option value="Tax Rule">Tax Rule</option>
+		            <option value="Terms and Conditions">Terms and Conditions</option>
+		            <option value="Territory">Territory</option>
+		            <option value="Time Log">Time Log</option>
+		            <option value="Time Log Batch">Time Log Batch</option>
+		            <option value="ToDo">ToDo</option>
+		            <option value="UOM">UOM</option>
+		            <option value="Upload Attendance">Upload Attendance</option>
+		            <option value="User">User</option>
+		            <option value="Version">Version</option>
+		            <option value="Warehouse">Warehouse</option>
+		            <option value="Warranty Claim">Warranty Claim</option>
+		            <option value="Web Form">Web Form</option>
+		            <option value="Web Page">Web Page</option>
+		            <option value="Website Script">Website Script</option>
+		            <option value="Website Settings">Website Settings</option>
+		            <option value="Website Slideshow">Website Slideshow</option>
+		            <option value="Website Theme">Website Theme</option>
+		            <option value="Workflow">Workflow</option>
+		            <option value="Workflow Action">Workflow Action</option>
+		            <option value="Workflow State">Workflow State</option>
+		            <option value="Workstation">Workstation</option>
+		        </select>
+		    </div>
+		    <div class="form-group griderp-control input-max-width col-md-2" data-fieldtype="Select" title="" data-original-title="Roles" style="margin-left: 15px;">
+		        <select type="text" class="input-with-feedback form-control" maxlength="180" data-fieldtype="Select" placeholder="Roles" width="180" style="width: 180px;">
+		            <option value="Select Role...">Select Role...</option>
+		            <option value="Accounts Manager">Accounts Manager</option>
+		            <option value="Accounts User">Accounts User</option>
+		            <option value="All">All</option>
+		            <option value="Analytics">Analytics</option>
+		            <option value="Auditor">Auditor</option>
+		            <option value="Blogger">Blogger</option>
+		            <option value="Customer">Customer</option>
+		            <option value="Employee">Employee</option>
+		            <option value="Expense Approver">Expense Approver</option>
+		            <option value="Guest">Guest</option>
+		            <option value="HR Manager">HR Manager</option>
+		            <option value="HR User">HR User</option>
+		            <option value="Item Manager">Item Manager</option>
+		            <option value="Leave Approver">Leave Approver</option>
+		            <option value="Maintenance Manager">Maintenance Manager</option>
+		            <option value="Maintenance User">Maintenance User</option>
+		            <option value="Manufacturing Manager">Manufacturing Manager</option>
+		            <option value="Manufacturing User">Manufacturing User</option>
+		            <option value="Newsletter Manager">Newsletter Manager</option>
+		            <option value="Projects Manager">Projects Manager</option>
+		            <option value="Projects User">Projects User</option>
+		            <option value="Purchase Manager">Purchase Manager</option>
+		            <option value="Purchase Master Manager">Purchase Master Manager</option>
+		            <option value="Purchase User">Purchase User</option>
+		            <option value="Quality Manager">Quality Manager</option>
+		            <option value="Report Manager">Report Manager</option>
+		            <option value="Sales Manager">Sales Manager</option>
+		            <option value="Sales Master Manager">Sales Master Manager</option>
+		            <option value="Sales User">Sales User</option>
+		            <option value="Stock Manager">Stock Manager</option>
+		            <option value="Stock User">Stock User</option>
+		            <option value="Supplier">Supplier</option>
+		            <option value="Support Team">Support Team</option>
+		            <option value="System Manager">System Manager</option>
+		            <option value="Website Manager">Website Manager</option>
+		        </select>
+		    </div>
+		</div>
+		<div class="perm-engine" style="min-height: 200px; padding: 15px;">
+		    <p class="text-muted">Select Document Type or Role to start.</p>
+		</div>
+		<hr>
+		<div style="padding: 0px 15px;">
+		    <h3>Quick Help for Setting Permissions:</h3>
+		    <ol>
+		        <li>Permissions are set on Roles and Document Types (called DocTypes) by setting rights like Read, Write, Create, Delete, Submit, Cancel, Amend, Report, Import, Export, Print, Email and Set User Permissions.</li>
+		        <li>Permissions get applied on Users based on what Roles they are assigned.</li>
+		        <li>Roles can be set for users from their User page. <a href="#List/User">Setup &gt; User</a></li>
+		        <li>The system provides many pre-defined roles. You can add new roles to set finer permissions.<a href="#List/Role"> Add a New Role</a></li>
+		        <li>Permissions are automatically translated to Standard Reports and Searches.</li>
+		        <li>As a best practice, do not assign the same set of permission rule to different Roles. Instead, set multiple Roles to the same User.</li>
+		    </ol>
+		    <hr>
+		    <h3>Meaning of Submit, Cancel, Amend:</h3>
+		    <ol>
+		        <li>Certain documents, like an Invoice, should not be changed once final. The final state for such documents is called Submitted. You can restrict which roles can Submit.</li>
+		        <li>You can change Submitted documents by cancelling them and then, amending them.</li>
+		        <li>When you Amend a document after Cancel and save it, it will get a new number that is a version of the old number.</li>
+		        <li>For example if you cancel and amend INV004 it will become a new document INV004-1. This helps you to keep track of each amendment.</li>
+		    </ol>
+		    <hr>
+		    <h3>Permission Levels:</h3>
+		    <ol>
+		        <li>Permissions at level 0 are Document Level permissions, i.e. they are primary for access to the document.</li>
+		        <li>If a Role does not have access at Level 0, then higher levels are meaningless.</li>
+		        <li>Permissions at higher levels are Field Level permissions. All Fields have a Permission Level set against them and the rules defined at that permissions apply to the field. This is useful in case you want to hide or make certain field read-only for certain Roles.</li>
+		        <li>You can use Customize Form to set levels on fields. <a href="#Form/Customize Form">Setup &gt; Customize Form</a></li>
+		    </ol>
+		    <hr>
+		    <h3>User Permissions:</h3>
+		    <ol>
+		        <li>To give acess to a role for only specific records, check the Apply User Permissions. User Permissions are used to limit users with such role to specific records. <a href="#user-permissions">Setup &gt; User Permissions Manager</a></li>
+		        <li>Select Document Types to set which User Permissions are used to limit access.</li>
+		        <li>Once you have set this, the users will only be able access documents (eg. Blog Post) where the link exists (eg. Blogger).</li>
+		        <li>Apart from System Manager, roles with Set User Permissions right can set permissions for other users for that Document Type.</li>
+		    </ol>
+		    <p>If these instructions where not helpful, please add in your suggestions on GitHub Issues. <a href="https://github.com/griderp/griderp/issues" target="_blank">Submit an Issue</a> </p>
+		</div>
+	</div>
+</template>
+

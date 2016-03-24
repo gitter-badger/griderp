@@ -1,0 +1,7 @@
+[
+	{ "name": "Communication", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "billing_rate": null, "costing_rate": null, "activity_type": "Communication" },
+	{ "name": "Execution", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "billing_rate": null, "costing_rate": null, "activity_type": "Execution" },
+	{ "name": "Planning", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "billing_rate": null, "costing_rate": null, "activity_type": "Planning" },
+	{ "name": "Proposal Writing", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "billing_rate": null, "costing_rate": null, "activity_type": "Proposal Writing" },
+	{ "name": "Research", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "billing_rate": null, "costing_rate": null, "activity_type": "Research" }
+]

@@ -1,0 +1,3 @@
+[
+	{ "name": "PS-0000001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "net_weight_uom": "Kg", "from_case_no": "1", "naming_series": "PS-", "gross_weight_uom": "Kg", "delivery_note": "DN-00001", "letter_head": "GridERP Letterhead", "to_case_no": "1", "amended_from": null, "net_weight_pkg": 1000.000000, "gross_weight_pkg": 1000.000000 }
+]

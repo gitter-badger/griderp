@@ -1,0 +1,574 @@
+<template name="SetupWebsiteWebsiteSettings">
+
+	{{> PageHeading title="Website Settings" type="print"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> WebsiteSettingsSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> WebsiteSettingsForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="WebsiteSettingsSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="WebsiteSettingsForm">
+	<div id="website-settings-edit-edit-form" class="">
+		<form role="form">
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+							<div class="form-dashboard" style="display: none;">
+								<div class="row" style="padding: 15px 30px;"></div>
+							</div>
+							<div class="form-page">
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Landing Page</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="home_page">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Home Page</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="home_page" placeholder="" data-doctype="Website Settings">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">gridworkz</div>
+								                            <p class="help-box small text-muted hidden-xs">Link that is the website home page. Standard Links (index, login, products, blog, about, contact)</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="home_page_is_products">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="home_page_is_products" placeholder="" data-doctype="Website Settings"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="small"> &nbsp;Home Page is Products</span> </label>
+								                        <p class="help-box small text-muted">If checked, the Home page will be the default Item Group for the website.</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="title_prefix">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Title Prefix</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="title_prefix" placeholder="" data-doctype="Website Settings">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Show title in browser window as "Prefix - title"</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="website_theme">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Website Theme</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div class="link-field ui-front" style="position: relative;">
+								                                    <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="website_theme" placeholder="" data-doctype="Website Settings" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+								                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-9" tabindex="0" style="display: none;"></ul>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Website%20Theme/Standard" data-doctype="Website%20Theme">Standard</a></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Image" data-fieldname="website_theme_image" style="margin: 0px;">
+								                    <div style="margin-bottom: 10px;">
+								                        <div class="missing-image"><i class="octicon octicon-circle-slash"></i></div>
+								                    </div>
+								                    <div class="clearfix"></div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Small Text" data-fieldname="website_theme_image_link">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Banner</h3></div>
+								    <div class="col-sm-12 small text-muted">Add a banner to the site. (small banners are usually good)</div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Attach Image" data-fieldname="banner_image">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Banner Image</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div style="margin: 7px 0px;">
+								                                    <div class="missing-image attach-missing-image"><i class="octicon octicon-circle-slash"></i></div><img class="img-responsive attach-image-display" style="display: none;"></div>
+								                                <div style="margin-top: 5px; display: none;">
+								                                    <div class="text-ellipsis" style="display: inline-block; width: 90%;"> <i class="icon-paper-clip"></i>
+								                                        <a class="attached-file" target="_blank"></a>
+								                                    </div> <a class="close">×</a></div>
+								                                <button class="btn btn-default btn-sm btn-attach" data-fieldtype="Attach Image" data-fieldname="banner_image" placeholder="" data-doctype="Website Settings">Attach</button>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Select an image of approx width 150px with a transparent background for best results.</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="set_banner_from_image">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="set_banner_from_image" placeholder="" data-doctype="Website Settings" value="">Set Banner from Image</button>
+								                            </div>
+								                            <div class="hide" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Small Text" data-fieldname="banner_html">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Banner HTML</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <textarea type="text" class="input-with-feedback form-control" data-fieldtype="Small Text" data-fieldname="banner_html" placeholder="" data-doctype="Website Settings"></textarea>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Banner is above the Top Menu Bar.</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Top Bar</h3></div>
+								    <div class="col-sm-12 small text-muted">Menu items in the Top Bar. For setting the color of the Top Bar, go to selected Website Theme.</div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Small Text" data-fieldname="brand_html">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Brand HTML</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <textarea type="text" class="input-with-feedback form-control" data-fieldtype="Small Text" data-fieldname="brand_html" placeholder="" data-doctype="Website Settings"></textarea>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;">Gridworkz</div>
+								                            <p class="help-box small text-muted hidden-xs">Brand is what appears on the top-left of the toolbar. If it is an image, make sure it has a transparent background and use the &lt;img /&gt; tag. Keep size as 200px x 30px</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="top_bar_items">
+								                    <div data-fieldname="top_bar_items">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Label</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="parent_label">Parent Label</div>
+								                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="url">URL</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows">
+								                                    <div class="grid-row" data-idx="1">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">1</div>
+								                                            <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Contact</div>
+								                                            <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="parent_label"></div>
+								                                            <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="url">/contact</div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="2">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">2</div>
+								                                            <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Blog</div>
+								                                            <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="parent_label"></div>
+								                                            <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="url">/blog</div>
+								                                        </div>
+								                                    </div>
+								                                    <div class="grid-row" data-idx="3">
+								                                        <div class="data-row row sortable-handle">
+								                                            <div class="row-index">3</div>
+								                                            <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Products</div>
+								                                            <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="parent_label"></div>
+								                                            <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="url">/products</div>
+								                                        </div>
+								                                    </div>
+								                                </div>
+								                                <div class="grid-empty text-center hide">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top:4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Sidebar</h3></div>
+								    <div class="col-sm-12 small text-muted">Sidebar Links for Home Page only</div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="sidebar_items">
+								                    <div data-fieldname="sidebar_items">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Label</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="parent_label">Parent Label</div>
+								                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="url">URL</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows"></div>
+								                                <div class="grid-empty text-center">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top:4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Footer</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="copyright">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Copyright</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="copyright" placeholder="" data-doctype="Website Settings">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;">Gridworkz</div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Text Editor" data-fieldname="address">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Address</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div>
+								                                    <div>
+																		<!-- Summernote Editor -->
+																		<div class="summernote" style="display: none;">
+																			<h3>Hello Customers! </h3>
+																			<br>
+																			<br>
+																		</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Address and other legal information you may want to put in the footer.</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Table" data-fieldname="footer_items">
+								                    <div data-fieldname="footer_items">
+								                        <div class="form-grid">
+								                            <div class="grid-heading-row">
+								                                <div class="grid-row">
+								                                    <div class="data-row row sortable-handle">
+								                                        <div class="row-index">&nbsp;</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="label">Label</div>
+								                                        <div class="col col-xs-4 grid-overflow-ellipsis grid-static-col" data-fieldname="parent_label">Parent Label</div>
+								                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="url">URL</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="grid-body">
+								                                <div class="rows"></div>
+								                                <div class="grid-empty text-center">No Data</div>
+								                                <div class="small form-clickable-section grid-footer">
+								                                    <div class="row">
+								                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top:4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+								                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="hide_footer_signup">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="hide_footer_signup" placeholder="" data-doctype="Website Settings"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="small"> &nbsp;Hide Footer Signup</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Integrations</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="google_analytics_id">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Google Analytics ID</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="google_analytics_id" placeholder="" data-doctype="Website Settings">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Add Google Analytics ID: eg. UA-89XXX57-1. Please search help on Google Analytics for more information.</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="google_plus_one">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="google_plus_one" placeholder="" data-doctype="Website Settings"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="small"> &nbsp;Google Plus One</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="facebook_share">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="facebook_share" placeholder="" data-doctype="Website Settings"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="small"> &nbsp;Facebook Share</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="linked_in_share">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="linked_in_share" placeholder="" data-doctype="Website Settings"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="small"> &nbsp;Linked In Share</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="twitter_share">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="twitter_share" placeholder="" data-doctype="Website Settings"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="small"> &nbsp;Twitter Share</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Data" data-fieldname="twitter_share_via">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Twitter Share via</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <input type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Data" data-fieldname="twitter_share_via" placeholder="" data-doctype="Website Settings">
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">Tweet will be shared via your user account (if specified)</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">More Information</h3></div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Attach" data-fieldname="favicon">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">FavIcon</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div style="margin-top: 5px; display: none;">
+								                                    <div class="text-ellipsis" style="display: inline-block; width: 90%;"> <i class="icon-paper-clip"></i>
+								                                        <a class="attached-file" target="_blank"></a>
+								                                    </div> <a class="close">×</a></div>
+								                                <button class="btn btn-default btn-sm btn-attach" data-fieldtype="Attach" data-fieldname="favicon" placeholder="" data-doctype="Website Settings">Attach</button>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs">An icon file with .ico extension. Should be 16 x 16 px. Generated using a favicon generator. [favicon-generator.org]</p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="subdomain">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6">
+								            <form>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="disable_signup">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="disable_signup" placeholder="" data-doctype="Website Settings"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="small"> &nbsp;Disable Signup</span> </label>
+								                        <p class="help-box small text-muted">Disable Customer Signup link in Login page</p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section">
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control" data-fieldtype="Code" data-fieldname="head_html">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">&lt;head&gt; HTML</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <textarea type="text" class="input-with-feedback form-control" data-fieldtype="Code" data-fieldname="head_html" placeholder="" data-doctype="Website Settings" style="height: 400px; font-family: Monaco, 'Courier New', monospace;"></textarea>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"><pre></pre></div>
+								                            <p class="help-box small text-muted hidden-xs">Added HTML in the &lt;head&gt; section of the web page, primarily used for website verification and SEO</p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="timeline-items">
+								    <div class="media timeline-item" data-name=""> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+								            <div>
+								                <div class="pull-right"> <span class="small text-muted">  </span> </div>
+								                <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created </span><span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2013-03-19 12:02:15" title="03-19-2013 12:02:15">3 years ago</span></span> </h5> </div>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

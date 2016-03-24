@@ -1,0 +1,68 @@
+<template name="CrmDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> CrmDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="CrmDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'core_settings.setup.communication'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'core_settings.setup.communication'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Communication
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Record of all communications of type email, phone, chat, visit, etc.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.documents.contact'}} module-list">
+			<a href="{{pathFor 'crm.documents.contact'}}">
+				<span class="item-title-modules">
+					Contact
+				</span>
+				<div class="module-description">All contacts.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.documents.customer'}} module-list">
+			<a href="{{pathFor 'accounts.documents.customer'}}">
+				<span class="item-title-modules">
+					Customer
+				</span>
+				<div class="module-description">Customer database.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.documents.lead'}} module-list">
+			<a href="{{pathFor 'crm.documents.lead'}}">
+				<span class="item-title-modules">
+					Lead
+				</span>
+				<div class="module-description">Database of potential customers.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.documents.newsletter'}} module-list">
+			<a href="{{pathFor 'crm.documents.newsletter'}}">
+				<span class="item-title-modules">
+					Newsletter
+				</span>
+				<div class="module-description">Newsletters to contacts, leads.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.documents.opportunity'}} module-list">
+			<a href="{{pathFor 'crm.documents.opportunity'}}">
+				<span class="item-title-modules">
+					Opportunity
+				</span>
+				<div class="module-description">Potential opportunities for selling.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

@@ -1,0 +1,5 @@
+[
+	{ "name": "Approved", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "style": "Success", "workflow_state_name": "Approved", "icon": "ok-sign" },
+	{ "name": "Pending", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "style": "", "workflow_state_name": "Pending", "icon": "question-sign" },
+	{ "name": "Rejected", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "style": "Danger", "workflow_state_name": "Rejected", "icon": "remove" }
+]

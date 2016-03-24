@@ -1,0 +1,90 @@
+<template name="TopNavbar">
+    <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a id="navbar-minimalize" class="minimalize-styl-2 btn btn-primary " href="#" title="Collapse Sidebar" alt="Collapse Sidebar"><i class="fa fa-bars"></i> </a>
+                <form role="search" class="navbar-form-custom" action="search_results">
+                    <div class="form-group">
+                        <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                    </div>
+                </form>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+				<li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-danger">8</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-th-list fa-fw"></i> To Do
+                                    <span class="pull-right sidebar-badge sidebar-badge-position">1</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Communication
+                                    <span class="pull-right sidebar-badge sidebar-badge-position">3</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-sticky-note fa-fw"></i> Delivery Note
+                                    <span class="pull-right sidebar-badge sidebar-badge-position">1</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-user fa-fw"></i> Job Applicant
+                                    <span class="pull-right sidebar-badge sidebar-badge-position">1</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-thumbs-up fa-fw"></i> Opportunity
+                                    <span class="pull-right sidebar-badge sidebar-badge-position">2</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+				{{#if isAdministrator}}
+                <li>
+                    <a href="{{pathFor 'admin'}}">
+                        <i class="fa fa-wrench"> Administrator</i>
+                    </a>
+                </li>
+				{{/if}}
+                <li>
+                    <a href="{{pathFor 'logout'}}">
+                        Sign out &nbsp;<i class="fa fa-sign-out"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </div>
+</template>

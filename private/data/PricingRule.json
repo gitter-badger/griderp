@@ -1,0 +1,3 @@
+[
+	{ "name": "PRULE-00001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "price_or_discount": "Price", "campaign": null, "for_price_list": "Standard Selling", "min_qty": 1.000000, "valid_from": "2015-12-30", "discount_percentage": null, "brand": null, "priority": 2, "supplier": null, "territory": null, "company": "Gridworkz", "sales_partner": null, "selling": 1, "applicable_for": "Customer", "price": 1000.000000, "apply_on": "Item Code", "item_code": "MeteorERP", "disable": 0, "max_qty": 2.000000, "supplier_type": null, "buying": 0, "customer": "SigmaStar", "valid_upto": "2016-01-20", "customer_group": null, "item_group": null, "title": "Pricing Rule1" }
+]

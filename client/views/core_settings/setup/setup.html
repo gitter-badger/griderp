@@ -1,0 +1,81 @@
+<template name="CoreSettingsSetup">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> CoreSettingsSetupModuleMenu}}
+	</div>
+</template>
+
+<template name="CoreSettingsSetupModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'core_settings.setup.comment'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'core_settings.setup.comment'}}">
+				<span class="item-title-modules">
+					Comment
+				</span>
+				<div class="module-description">Comments list.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'core_settings.setup.communication'}} module-list">
+			<a href="{{pathFor 'core_settings.setup.communication'}}">
+				<div class="module-description module-timestamp">20 days ago</div>
+				<span class="item-title-modules">
+					Communication
+				</span>
+				<div class="module-description">Keep track of all communications.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'file'}} module-list">
+			<a href="{{pathFor 'file'}}">
+				<span class="item-title-modules">
+					File Manager
+				</span>
+				<div class="module-description">File manager.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'core_settings.setup.module_def'}} module-list">
+			<a href="{{pathFor 'core_settings.setup.module_def'}}">
+				<span class="item-title-modules">
+					Module Definition
+				</span>
+				<div class="module-description">List of defined system modules.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'core_settings.setup.page'}} module-list">
+			<a href="{{pathFor 'core_settings.setup.page'}}">
+				<span class="item-title-modules">
+					Page
+				</span>
+				<div class="module-description">List of system web pages.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.users.role'}} module-list">
+			<a href="{{pathFor 'setup.users.role'}}">
+				<span class="item-title-modules">
+					Role
+				</span>
+				<div class="module-description" style="margin-top:-3px;">List of User roles in the system.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.users.user'}} module-list">
+			<a href="{{pathFor 'setup.users.user'}}">
+				<span class="item-title-modules">
+					User
+				</span>
+				<div class="module-description">Represents a User in the system.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'core_settings.setup.versions'}} module-list">
+			<a href="{{pathFor 'core_settings.setup.versions'}}">
+				<span class="item-title-modules">
+					Version
+				</span>
+				<div class="module-description">Keep track of site versions.</div>
+			</a>
+		</li>
+	</ul>
+</template>

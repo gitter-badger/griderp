@@ -1,0 +1,10 @@
+[
+	{ "name": "Box", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Box", "must_be_whole_number": 1 },
+	{ "name": "Hour", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Hour", "must_be_whole_number": 0 },
+	{ "name": "Kg", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Kg", "must_be_whole_number": 0 },
+	{ "name": "Minute", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Minute", "must_be_whole_number": 0 },
+	{ "name": "Nos", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Nos", "must_be_whole_number": 1 },
+	{ "name": "Pair", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Pair", "must_be_whole_number": 1 },
+	{ "name": "Set", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Set", "must_be_whole_number": 1 },
+	{ "name": "Unit", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "uom_name": "Unit", "must_be_whole_number": 1 }
+]

@@ -1,0 +1,328 @@
+<template name="SetupCustomizeEmailNotifications">
+
+	{{> PageHeading title="Notification Control"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						{{> EmailNotificationsSideBox}}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> EmailNotificationsForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="EmailNotificationsSideBox">
+	<div class="list-sidebox">
+		<ul>
+			<li class="list-unstyled"><a href="#" class="sidebar-badge-hover"><span><b>Comments</b></span> <span class="sidebar-badge sidebar-badge-position">0</span></a></li>
+			<li class="list-unstyled spacer text-muted">ASSIGNED TO</li>
+			<li class="list-unstyled"><a href="#"><b>Assign <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">ATTACHMENTS</li>
+			<li class="list-unstyled"><a href="#"><b>Attach File <i class="fa fa-plus"></i></b></a></li>
+			<li class="list-unstyled spacer text-muted">TAGS</li>
+			<li class="list-unstyled text-muted"><i>Add a tag...</i></li>
+			<li class="list-unstyled spacer text-muted">SHARED WITH</li>
+			<li class="list-unstyled form-shared"><span class="avatar avatar-small avatar-empty share-doc-btn" title="Share"> <i class="fa fa-plus text-muted" style="padding-left:6px;"></i></span></li>
+			<li class="list-unstyled spacer text-muted"><strong>Dave Cook</strong> edited this</li>
+			<li class="list-unstyled text-muted">4 months ago</li>
+			<li class="list-unstyled spacer text-muted"><strong>You</strong> created this</li>
+			<li class="list-unstyled text-muted">2 years ago</li>
+		</ul>
+	</div>
+</template>
+
+<template name="EmailNotificationsForm">
+	<div id="email-notifications-edit-edit-form" class="">
+		<form role="form">
+			<div class="layout-main-section">
+				<div class="form-inner-toolbar hide"></div>
+				<div class="page-form row hide"></div>
+				<div>
+					<div>
+						<div class="form-layout">
+							<div class="form-dashboard" style="display: none;">
+								<div class="row" style="padding: 15px 30px;"></div>
+							</div>
+							<div class="form-page">
+								<div class="row form-section visible-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Prompt for Email on Submission of</h3></div>
+								    <div class="col-sm-12 small text-muted">When any of the checked transactions are "Submitted", an email pop-up automatically opens to send an email to the associated "Contact" in that transaction, with the transaction as an attachment. The user may or may not send the email.</div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-6" style="margin-top:5px;">
+								            <form>
+								                <label class="control-label">Sales</label>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="quotation">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="quotation" placeholder="" data-doctype="Notification Control"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Quotation</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="sales_order">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="sales_order" placeholder="" data-doctype="Notification Control"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Sales Order</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="delivery_note">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="delivery_note" placeholder="" data-doctype="Notification Control"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Delivery Note</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="sales_invoice">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="sales_invoice" placeholder="" data-doctype="Notification Control"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Sales Invoice</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								        <div class="form-column col-sm-6" style="margin-top:5px;">
+								            <form>
+								                <label class="control-label">Purchase</label>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="purchase_order">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="purchase_order" placeholder="" data-doctype="Notification Control"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Purchase Order</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="purchase_receipt">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="purchase_receipt" placeholder="" data-doctype="Notification Control"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Purchase Receipt</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="expense_claim">
+								                    <div class="cbox">
+								                        <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="expense_claim" placeholder="" data-doctype="Notification Control"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;Expense Claim</span> </label>
+								                        <p class="help-box small text-muted"></p>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+								<div class="row form-section visible-section shaded-section">
+								    <div class="col-sm-12">
+								        <h3 class="form-section-heading">Customize the Notification</h3></div>
+								    <div class="col-sm-12 small text-muted">Customize the introductory text that goes as a part of that email. Each transaction has a separate introductory text.</div>
+								    <div class="section-body">
+								        <div class="form-column col-sm-12">
+								            <form>
+								                <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="select_transaction">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px; padding-top: 5px;">Select Transaction</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="select_transaction" placeholder="" data-doctype="Notification Control">
+								                                    <option></option>
+								                                    <option value="Quotation">Quotation</option>
+								                                    <option value="Sales Order">Sales Order</option>
+								                                    <option value="Delivery Note">Delivery Note</option>
+								                                    <option value="Sales Invoice">Sales Invoice</option>
+								                                    <option value="Purchase Order">Purchase Order</option>
+								                                    <option value="Purchase Receipt">Purchase Receipt</option>
+								                                    <option value="Expense Claim">Expense Claim</option>
+								                                    <option value="Expense Claim Approved">Expense Claim Approved</option>
+								                                    <option value="Expense Claim Rejected">Expense Claim Rejected</option>
+								                                </select>
+								                            </div>
+								                            <div class="control-value like-disabled-input" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control" data-fieldtype="Text Editor" data-fieldname="custom_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;">Custom Message</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <div>
+								                                    <div>
+																		<!-- Summernote Editor -->
+																		<div class="summernote" style="display: none;">
+																			<h3>Hello Customers! </h3> dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+																			<br>
+																			<br>
+
+																		</div>
+								                                    </div>
+								                                </div>
+								                            </div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="set_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input">
+								                                <button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="set_message" placeholder="" data-doctype="Notification Control" value="">Update</button>
+								                            </div>
+								                            <div class="hide" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="quotation_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="sales_order_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="delivery_note_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="sales_invoice_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="purchase_order_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="purchase_receipt_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="expense_claim_approved_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								                <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="expense_claim_rejected_message">
+								                    <div class="form-group" style="margin: 0px">
+								                        <label class="control-label" style="padding-right: 0px;"></label>
+								                        <div class="control-input-wrapper">
+								                            <div class="control-input"></div>
+								                            <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+								                            <p class="help-box small text-muted hidden-xs"></p>
+								                        </div>
+								                    </div>
+								                </div>
+								            </form>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comments Footer -->
+			<div style="padding-top: 20px; padding-bottom:20px;">
+				<div class="form-footer">
+					<div class="after-save" style="border: 1px solid #ddd;">
+						<div class="form-comments">
+							<div class="timeline">
+								<div class="timeline-head">
+								    <h5 class="text-muted">Add a comment</h5>
+								    <div>
+								        <textarea style="height: 80px" class="form-control"></textarea>
+								    </div>
+								    <div class="media"> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="media-body">
+								            <div class="row">
+								                <div class="col-xs-4">
+								                    <h5>You</h5> </div>
+								                <div class="col-xs-8 text-right" style="margin-top: 2px;">
+								                    <button class="btn btn-primary btn-go btn-xs pull-right">Comment</button>
+								                    <div class="ckbox text-muted small pull-right" style="margin-top: 2px; margin-right: 15px;">
+								                        <label class="email-checkbox-label">
+								                            <input type="checkbox" class="is-email">&nbsp; Email </label>
+								                    </div>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								</div>
+								<div class="timeline-items">
+								    <div class="media timeline-item" data-name=""> <span class="pull-left avatar avatar-medium"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+								        <div class="pull-left media-body" style="max-width: calc(100% - 41px); padding-right: 0px;">
+								            <div>
+								                <div class="pull-right"> <span class="small text-muted">  </span> </div>
+								                <h5> <i class="octicon octicon-plus icon-fixed-width"></i> <span title="Administrator" style="position: relative; top: 1px;">Administrator Created </span><span class="text-muted" style="font-weight: normal; position: relative; top: 1px;"> – <span class="griderp-timestamp " data-timestamp="2013-03-19 12:02:15" title="03-19-2013 12:02:15">3 years ago</span></span> </h5> </div>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pull-right scroll-to-top" style="padding-top:30px;"> <a onclick="scroll(0,0)"><i class="fa fa-chevron-up text-muted"></i></a> </div>
+				</div>
+			</div>
+			<div class="" style="padding-bottom: 7px;">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

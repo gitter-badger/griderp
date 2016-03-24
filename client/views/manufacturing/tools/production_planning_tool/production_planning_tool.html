@@ -1,0 +1,312 @@
+<template name="ManufacturingToolsProductionPlanningTool">
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+			<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+				<tr>
+					<td>		
+						<div style="vertical-align: middle;">
+							<h2>
+								<div class="pull-left">Production Planning Tool</div>
+								<span class="indicator-orange indicator-text">Not Saved</span>
+							</h2>
+						</div>
+					</td>
+					<td>
+						<div class="page-heading-logo">
+							<span class="logo-symbol"><b><i class="fa fa-sitemap"></i></b></span>
+							<span class="logo-text"><b> GridERP</b></span>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 30px;">
+					<td>
+						<div class="breadcrumbs">
+							{{> breadcrumb}}
+						</div>
+					</td>
+					<td>
+						<div class="list-page-heading-btns pull-right">
+							<a class="btn btn-white btn-bitbucket btn-sm">
+								<i class="fa fa-print"></i>
+							</a>
+							<!--<button data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle">Menu &nbsp;<span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right dropdown-menu-right">
+									<li><a href="#">Print</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Links</a></li>
+									<li><a href="#">Duplicate</a></li>
+									<li><a href="#">Reload</a></li>
+									<li><a href="#">Delete</a></li>
+									<li><a href="#">New Shipping Rule</a></li>
+								</ul>-->
+						</div>
+						<!--<div class="pull-right" style="margin-right: 15px; margin-top: 5px;">
+							{{shipping_rule_details.name}}
+						</div>-->
+					</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> ProductionPlanningToolForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="ProductionPlanningToolForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row hide"></div>
+		<div>
+		    <div>
+		        <div class="form-layout">
+		            <div class="form-dashboard" style="display: none;">
+		                <div class="row" style="padding: 15px 30px;"></div>
+		            </div>
+		            <div class="form-page">
+		                <div class="row form-section visible-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Select Sales Orders</h3></div>
+		                    <div class="col-sm-12 small text-muted">Select Sales Orders from which you want to create Production Orders.</div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-6">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="fg_item">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Filter based on item</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="fg_item" placeholder="" data-doctype="Production Planning Tool" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-14" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="customer">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Filter based on customer</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="customer" placeholder="" data-doctype="Production Planning Tool" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-15" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="company">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Company</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="company" placeholder="" data-doctype="Production Planning Tool" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-13" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"><a class="grey" href="#Form/Company/Wind%20Power%20LLC" data-doctype="Company">Wind Power LLC</a></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                        <div class="form-column col-sm-6">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="from_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">From Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="from_date" placeholder="" data-doctype="Production Planning Tool" id="dp1455383414018"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Date" data-fieldname="to_date">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">To Date</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><input type="text" class="input-with-feedback form-control hasDatepicker" data-fieldtype="Date" data-fieldname="to_date" placeholder="" data-doctype="Production Planning Tool" id="dp1455383414019"></div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row form-section visible-section shaded-section">
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="get_sales_orders">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="get_sales_orders" placeholder="" data-doctype="Production Planning Tool" value="">Get Sales Orders</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Pull sales orders (pending to deliver) based on the above criteria.</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control" data-fieldtype="Table" data-fieldname="sales_orders">
+		                                    <div data-fieldname="sales_orders">
+		                                        <div class="form-grid">
+		                                            <div class="grid-heading-row">
+		                                                <div class="grid-row">
+		                                                    <div class="data-row row sortable-handle">
+		                                                        <div class="row-index">&nbsp;</div>
+		                                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="sales_order">Sales Order</div>
+		                                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="sales_order_date">SO Date</div>
+		                                                        <div class="col col-xs-3 grid-overflow-ellipsis grid-static-col" data-fieldname="customer">Customer</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="grand_total">Grand Total</div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                            <div class="grid-body">
+		                                                <div class="rows"></div>
+		                                                <div class="grid-empty text-center">No Data</div>
+		                                                <div class="small form-clickable-section grid-footer">
+		                                                    <div class="row">
+		                                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline;"> Add multiple rows</a> </div>
+		                                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row form-section visible-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Select Items</h3></div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="get_items_from_so">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="get_items_from_so" placeholder="" data-doctype="Production Planning Tool" value="">Get Items From Sales Orders</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="form-group griderp-control input-max-width" data-fieldtype="Check" data-fieldname="use_multi_level_bom">
+		                                    <div class="cbox"> <label class="checkbox-label">     <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="use_multi_level_bom" placeholder="" data-doctype="Production Planning Tool"></span>     <span class="disp-area" style="display:none; margin-left: -20px;"></span>     <span class="label-area small"> &nbsp;Use Multi-Level BOM</span>    </label>
+		                                        <p class="help-box small text-muted">If checked, BOM for sub-assembly items will be considered for getting raw materials. Otherwise, all <br />sub-assembly items will be treated as a raw material.</p>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control" data-fieldtype="Table" data-fieldname="items">
+		                                    <div data-fieldname="items">
+		                                        <div class="form-grid">
+		                                            <div class="grid-heading-row">
+		                                                <div class="grid-row">
+		                                                    <div class="data-row row sortable-handle">
+		                                                        <div class="row-index">&nbsp;</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="item_code">Item Code</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="bom_no">BOM No</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="planned_qty">Planned Qty</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis grid-static-col" data-fieldname="sales_order">Sales Order</div>
+		                                                        <div class="col col-xs-2 grid-overflow-ellipsis text-right grid-static-col" data-fieldname="so_pending_qty">SO Pending Qty</div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                            <div class="grid-body">
+		                                                <div class="rows"></div>
+		                                                <div class="grid-empty text-center">No Data</div>
+		                                                <div class="small form-clickable-section grid-footer">
+		                                                    <div class="row">
+		                                                        <div class="col-sm-6"> <a href="#" class="btn btn-xs btn-default grid-add-row" style="margin-top: 4px;"> Add new row</a> <a href="#" class="grid-add-multiple-rows btn btn-xs btn-default hide" style="margin-left: 10px; display: inline-block; margin-top: 3px;"> Add multiple rows</a> </div>
+		                                                        <div class="col-sm-6 text-right"> <a href="#" class="grid-download btn btn-xs btn-default hide" style="margin-left: 10px;"> Download</a> <a href="#" class="grid-upload btn btn-xs btn-default hide" style="margin-left: 10px;"> Upload</a> </div>
+		                                                    </div>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row form-section visible-section shaded-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Production Orders</h3></div>
+		                    <div class="col-sm-12 small text-muted">Enter items and planned qty for which you want to raise production orders or download raw materials for analysis.</div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="raise_production_order">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="raise_production_order" placeholder="" data-doctype="Production Planning Tool" value="">Create Production Orders</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Separate production order will be created for each finished good item.</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="row form-section visible-section">
+		                    <div class="col-sm-12">
+		                        <h3 class="form-section-heading">Material Requirement</h3></div>
+		                    <div class="section-body">
+		                        <div class="form-column col-sm-12">
+		                            <form>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Link" data-fieldname="purchase_request_for_warehouse">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label" style="padding-right: 0px;">Material Request For Warehouse</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input">
+		                                                <div class="link-field ui-front" style="position: relative;"> <input type="text" class="input-with-feedback form-control ui-autocomplete-input" data-fieldtype="Link" data-fieldname="purchase_request_for_warehouse" placeholder="" data-doctype="Production Planning Tool" autocomplete="off"> <span class="link-btn">    <a class="btn-open no-decoration" title="Open Link">     <i class="icon-link"></i></a>   </span>
+		                                                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-16" tabindex="0" style="display: none;"></ul>
+		                                                </div>
+		                                            </div>
+		                                            <div class="control-value like-disabled-input" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs"></p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="raise_purchase_request">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="raise_purchase_request" placeholder="" data-doctype="Production Planning Tool" value="">Create Material Requests</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Items to be requested which are "Out of Stock" considering all warehouses based on projected qty <br />and minimum order qty.</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="download_materials_required">
+		                                    <div class="form-group" style="margin: 0px"> <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+		                                        <div class="control-input-wrapper">
+		                                            <div class="control-input"><button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="download_materials_required" placeholder="" data-doctype="Production Planning Tool" value="">Download Materials Required</button></div>
+		                                            <div class="hide" style="display: none;"></div>
+		                                            <p class="help-box small text-muted hidden-xs">Download a report containing all raw materials with their latest inventory status.</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</template>
+

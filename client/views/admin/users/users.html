@@ -1,0 +1,28 @@
+<template name="AdminUsers">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> AdminUsersModuleMenu}}
+	</div>
+</template>
+
+<template name="AdminUsersModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'admin.users.system_user'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'admin.users.system_user'}}">
+				<div class="module-description module-timestamp">20 days ago</div>
+				<span class="item-title-modules">
+					System Users
+				</span>
+				<span class="module-badge">2</span>
+				<div class="module-description">Built-in Meteor User Manager.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

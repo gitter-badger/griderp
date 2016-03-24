@@ -1,0 +1,52 @@
+<template name="SetupPermissions">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupPermissionsModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupPermissionsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.permissions.document_share_report'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.permissions.document_share_report'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Document Share Report
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Report of all document shares.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.permissions.permitted_documents_for_user'}} module-list">
+			<a href="{{pathFor 'setup.permissions.permitted_documents_for_user'}}">
+				<span class="item-title-modules">
+					Permitted Documents for User
+				</span>
+				<div class="module-description">Check which Documents are readable by a User.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.permissions.role_permissions_manager'}} module-list">
+			<a href="{{pathFor 'setup.permissions.role_permissions_manager'}}">
+				<span class="item-title-modules">
+					Role Permissions Manager
+				</span>
+				<div class="module-description">Set Permissions on Document Types and Roles.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.permissions.user_permissions_manager'}} module-list">
+			<a href="{{pathFor 'setup.permissions.user_permissions_manager'}}">
+				<span class="item-title-modules">
+					User Permissions Manager
+				</span>
+				<div class="module-description">Set Permissions per User.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

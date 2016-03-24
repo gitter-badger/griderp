@@ -1,0 +1,3 @@
+[
+	{ "name": "Account-test", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": 19, "collapsible": 0, "print_width": null, "no_copy": 0, "depends_on": null, "in_list_view": 0, "reqd": 0, "collapsible_depends_on": null, "in_filter": 0, "read_only": 0, "print_hide": 1, "ignore_user_permissions": 0, "label": "Test", "width": null, "hidden": 0, "permlevel": 0, "insert_after": "company", "description": "Testing", "search_index": 0, "allow_on_submit": 1, "precision": "", "dt": "Account", "unique": 1, "default": null, "fieldname": "test", "fieldtype": "Data", "options": null, "report_hide": 0 }
+]

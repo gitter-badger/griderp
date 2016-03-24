@@ -1,0 +1,52 @@
+<template name="SetupSettings">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupSettingsModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupSettingsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.settings.global_settings'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.settings.global_settings'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Global Settings
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Set Default Values like Company, Currency, Current Fiscal Year, etc.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.settings.naming_series'}} module-list">
+			<a href="{{pathFor 'setup.settings.naming_series'}}">
+				<span class="item-title-modules">
+					Naming Series
+				</span>
+				<div class="module-description">Set numbering series for transactions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.settings.show_hide_modules'}} module-list">
+			<a href="{{pathFor 'setup.settings.show_hide_modules'}}">
+				<span class="item-title-modules">
+					Show / Hide Modules
+				</span>
+				<div class="module-description">Show or hide modules globally.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.settings.system_settings'}} module-list">
+			<a href="{{pathFor 'setup.settings.system_settings'}}">
+				<span class="item-title-modules">
+					System Settings
+				</span>
+				<div class="module-description">Language, Date and Time settings.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

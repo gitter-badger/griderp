@@ -1,0 +1,4 @@
+[
+	{ "name": "2014", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx:": null, "holiday_list_name": "2014", "fiscal_year": "2014", "is_default": 1, "weekly_off": "Saturday" },
+	{ "name": "2015", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx:": null, "holiday_list_name": "2015", "fiscal_year": "2015", "is_default": 0, "weekly_off": "Saturday" }
+]

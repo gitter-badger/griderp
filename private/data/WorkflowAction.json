@@ -1,0 +1,5 @@
+[
+	{ "name": "Approve", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workflow_action_name": "Approve" },
+	{ "name": "Reject", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workflow_action_name": "Reject" },
+	{ "name": "Review", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "workflow_action_name": "Review" }
+]

@@ -1,0 +1,3 @@
+[
+	{ "name": "ISS-00001", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "naming_series": "ISS-", "opening_date": "2016-01-23", "customer_name": null, "raised_by": "dave@gridworkz.com", "first_responded_on": "2016-01-23 19:13:00.000000", "lead": null, "attachment": null, "opening_time": "19:13:18.000000", "subject": "New Issue", "status": "Open", "customer": "SigmaStar", "description": "Testing Issue", "company": "Gridworkz", "content_type": null, "resolution_details": null, "resolution_date": null, "contact": "Joe Internet-Web Community" }
+]

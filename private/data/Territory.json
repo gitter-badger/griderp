@@ -1,0 +1,5 @@
+[
+	{ "name": "All Territories", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "rgt": 6, "lft": 1, "is_group": "Yes", "territory_name": "All Territories", "old_parent": "", "distribution_id": null, "parent_territory": "", "territory_manager": null },
+	{ "name": "Rest Of The World", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "rgt": 5, "lft": 4, "is_group": "No", "territory_name": "Rest Of The World", "old_parent": "All Territories", "distribution_id": null, "parent_territory": "All Territories", "territory_manager": null },
+	{ "name": "United States", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "rgt": 3, "lft": 2, "is_group": "No", "territory_name": "United States", "old_parent": "All Territories", "distribution_id": null, "parent_territory": "All Territories", "territory_manager": null }
+]

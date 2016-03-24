@@ -1,0 +1,221 @@
+<template name="SetupSettingsNamingSeries">
+
+	{{> PageHeading title="Naming Series"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> NamingSeriesForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="NamingSeriesForm">
+	<div class="layout-main-section">
+		<div class="form-inner-toolbar hide"></div>
+		<div class="page-form row hide"></div>
+		<div>
+			<div>
+				<div class="form-layout">
+				    <div class="form-dashboard" style="display: none;">
+				        <div class="row" style="padding: 15px 30px;"></div>
+				    </div>
+				    <div class="form-page">
+				        <div class="row form-section visible-section">
+				            <div class="col-sm-12">
+				                <h3 class="form-section-heading">Setup Series</h3></div>
+				            <div class="col-sm-12 small text-muted">Set prefix for numbering series on your transactions</div>
+				            <div class="section-body">
+				                <div class="form-column col-sm-12">
+				                    <form>
+				                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="select_doc_for_series">
+				                            <div class="form-group" style="margin: 0px">
+				                                <label class="control-label" style="padding-right: 0px;">Select Transaction</label>
+				                                <div class="control-input-wrapper">
+				                                    <div class="control-input">
+				                                        <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="select_doc_for_series" placeholder="" data-doctype="Naming Series">
+				                                            <!--<option></option>-->
+				                                            <option value="Attendance">Attendance</option>
+				                                            <option value="C-Form">C-Form</option>
+				                                            <option value="Campaign">Campaign</option>
+				                                            <option value="Communication">Communication</option>
+				                                            <option value="Customer">Customer</option>
+				                                            <option value="Delivery Note">Delivery Note</option>
+				                                            <option value="Employee">Employee</option>
+				                                            <option value="Expense Claim">Expense Claim</option>
+				                                            <option value="Installation Note">Installation Note</option>
+				                                            <option value="Issue">Issue</option>
+				                                            <option value="Item">Item</option>
+				                                            <option value="Journal Entry">Journal Entry</option>
+				                                            <option value="Lead">Lead</option>
+				                                            <option value="Material Request">Material Request</option>
+				                                            <option value="Opportunity">Opportunity</option>
+				                                            <option value="POS Profile">POS Profile</option>
+				                                            <option value="Packing Slip">Packing Slip</option>
+				                                            <option value="Production Order">Production Order</option>
+				                                            <option value="Purchase Invoice">Purchase Invoice</option>
+				                                            <option value="Purchase Order">Purchase Order</option>
+				                                            <option value="Purchase Receipt">Purchase Receipt</option>
+				                                            <option value="Quality Inspection">Quality Inspection</option>
+				                                            <option value="Quotation">Quotation</option>
+				                                            <option value="Sales Invoice">Sales Invoice</option>
+				                                            <option value="Sales Order">Sales Order</option>
+				                                            <option value="Stock Entry">Stock Entry</option>
+				                                            <option value="Supplier">Supplier</option>
+				                                            <option value="Supplier Quotation">Supplier Quotation</option>
+				                                            <option value="Time Log">Time Log</option>
+				                                            <option value="Time Log Batch">Time Log Batch</option>
+				                                            <option value="Warranty Claim">Warranty Claim</option>
+				                                        </select>
+				                                    </div>
+				                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+				                                    <p class="help-box small text-muted hidden-xs"></p>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="griderp-control hide-control" data-fieldtype="HTML" data-fieldname="help_html">
+				                            <div class="well">
+				                                Edit list of Series in the box below. Rules:
+				                                <ul>
+				                                    <li>Each Series Prefix on a new line.</li>
+				                                    <li>Allowed special characters are "/" and "-"</li>
+				                                    <li>Optionally, set the number of digits in the series using dot (.) followed by hashes (#). For example, ".####" means that the series will have four digits. Default is five digits.</li>
+				                                </ul>
+				                                Examples:
+				                                <br> INV-
+				                                <br> INV-10-
+				                                <br> INVK-
+				                                <br> INV-.####
+				                                <br>
+				                            </div>
+				                        </div>
+				                        <div class="griderp-control hide-control" data-fieldtype="Text" data-fieldname="set_options">
+				                            <div class="form-group" style="margin: 0px">
+				                                <label class="control-label" style="padding-right: 0px;">Series List for this Transaction</label>
+				                                <div class="control-input-wrapper">
+				                                    <div class="control-input">
+				                                        <textarea type="text" class="input-with-feedback form-control" data-fieldtype="Text" data-fieldname="set_options" placeholder="" data-doctype="Naming Series"></textarea>
+				                                    </div>
+				                                    <div class="control-value like-disabled-input for-description" style="display: none;"></div>
+				                                    <p class="help-box small text-muted hidden-xs"></p>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="form-group griderp-control input-max-width hide-control" data-fieldtype="Check" data-fieldname="user_must_always_select">
+				                            <div class="cbox">
+				                                <label class="checkbox-label"> <span class="input-area"><input type="checkbox" class="input-with-feedback" data-fieldtype="Check" data-fieldname="user_must_always_select" placeholder="" data-doctype="Naming Series"></span> <span class="disp-area" style="display:none; margin-left: -20px;"></span> <span class="label-area small"> &nbsp;User must always select</span> </label>
+				                                <p class="help-box small text-muted">Check this if you want to force the user to select a series before saving. There will be no default if you check this.</p>
+				                            </div>
+				                        </div>
+				                        <div class="griderp-control input-max-width hide-control" data-fieldtype="Button" data-fieldname="update">
+				                            <div class="form-group" style="margin: 0px">
+				                                <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+				                                <div class="control-input-wrapper">
+				                                    <div class="control-input">
+				                                        <button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="update" placeholder="" data-doctype="Naming Series" value="">Update</button>
+				                                    </div>
+				                                    <div class="hide" style="display: none;"></div>
+				                                    <p class="help-box small text-muted hidden-xs"></p>
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </form>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="row form-section visible-section shaded-section">
+				            <div class="col-sm-12">
+				                <h3 class="form-section-heading">Update Series</h3></div>
+				            <div class="col-sm-12 small text-muted">Change the starting / current sequence number of an existing series.</div>
+				            <div class="section-body">
+				                <div class="form-column col-sm-12">
+				                    <form>
+				                        <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="prefix">
+				                            <div class="form-group" style="margin: 0px">
+				                                <label class="control-label" style="padding-right: 0px;">Prefix</label>
+				                                <div class="control-input-wrapper">
+				                                    <div class="control-input">
+				                                        <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="prefix" placeholder="" data-doctype="Naming Series">
+				                                            <option value="ATT-">ATT-</option>
+				                                            <option value="C-FORM-">C-FORM-</option>
+				                                            <option value="CI-">CI-</option>
+				                                            <option value="COMM-">COMM-</option>
+				                                            <option value="CUST-">CUST-</option>
+				                                            <option value="Campaign-.####">Campaign-.####</option>
+				                                            <option value="DN-">DN-</option>
+				                                            <option value="DN-RET-">DN-RET-</option>
+				                                            <option value="EMP/">EMP/</option>
+				                                            <option value="EXP">EXP</option>
+				                                            <option value="IN-">IN-</option>
+				                                            <option value="ISS-">ISS-</option>
+				                                            <option value="ITEM-">ITEM-</option>
+				                                            <option value="JV-">JV-</option>
+				                                            <option value="LEAD-">LEAD-</option>
+				                                            <option value="MREQ-">MREQ-</option>
+				                                            <option value="OPTY-">OPTY-</option>
+				                                            <option value="PINV-">PINV-</option>
+				                                            <option value="PINV-RET-">PINV-RET-</option>
+				                                            <option value="PO-">PO-</option>
+				                                            <option value="PREC-">PREC-</option>
+				                                            <option value="PREC-RET-">PREC-RET-</option>
+				                                            <option value="PRO-">PRO-</option>
+				                                            <option value="PS-">PS-</option>
+				                                            <option value="QI-">QI-</option>
+				                                            <option value="QTN-">QTN-</option>
+				                                            <option value="SINV-">SINV-</option>
+				                                            <option value="SINV-RET-">SINV-RET-</option>
+				                                            <option value="SO-">SO-</option>
+				                                            <option value="SQTN-">SQTN-</option>
+				                                            <option value="STE-">STE-</option>
+				                                            <option value="SUPP-">SUPP-</option>
+				                                            <option value="TL-">TL-</option>
+				                                            <option value="TLB-">TLB-</option>
+				                                            <option value="[Select]">[Select]</option>
+				                                        </select>
+				                                    </div>
+				                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+				                                    <p class="help-box small text-muted hidden-xs"></p>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="griderp-control input-max-width" data-fieldtype="Int" data-fieldname="current_value">
+				                            <div class="form-group" style="margin: 0px">
+				                                <label class="control-label" style="padding-right: 0px;">Current Value</label>
+				                                <div class="control-input-wrapper">
+				                                    <div class="control-input">
+				                                        <input type="text" class="input-with-feedback form-control text-right" data-fieldtype="Int" data-fieldname="current_value" placeholder="" data-doctype="Naming Series">
+				                                    </div>
+				                                    <div class="control-value like-disabled-input" style="display: none;"></div>
+				                                    <p class="help-box small text-muted hidden-xs">This is the number of the last created transaction with this prefix</p>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="griderp-control input-max-width" data-fieldtype="Button" data-fieldname="update_series_start">
+				                            <div class="form-group" style="margin: 0px">
+				                                <label class="control-label hide" style="padding-right: 0px;">&nbsp;</label>
+				                                <div class="control-input-wrapper">
+				                                    <div class="control-input">
+				                                        <button class="btn btn-default btn-xs" data-fieldtype="Button" data-fieldname="update_series_start" placeholder="" data-doctype="Naming Series" value="">Update Series Number</button>
+				                                    </div>
+				                                    <div class="hide" style="display: none;"></div>
+				                                    <p class="help-box small text-muted hidden-xs"></p>
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </form>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+

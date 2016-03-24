@@ -1,0 +1,39 @@
+<template name="Pos">
+
+	{{> PageHeading title="Start Point-of-Sale (POS)"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> PosForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="PosForm">
+	<div class="layout-main-section">
+		<div class="text-center" style="padding: 40px;"> <img src="/griderp_demo/images/11-512.png" style="width: 100px; height: 100px; margin-bottom: 30px; opacity: 0.2" class="text-muted">
+		    <p style="font-size: 14px;">Select type of transaction</p>
+		        <div class="form-group griderp-control input-max-width" data-fieldtype="Select" data-fieldname="pos_type" style="width: 300px; position: relative; left:417px;">
+					<select type="text" class="input-with-feedback form-control" maxlength="300" data-fieldtype="Select" data-fieldname="pos_type" placeholder="">
+						<option value="Sales Invoice">Billing (Sales Invoice)</option>
+						<option value="Sales Order">Sales Order</option>
+						<option value="Delivery Note">Delivery Note</option>
+						<option value="Quotation">Quotation</option>
+						<option value="Purchase Order">Purchase Order</option>
+						<option value="Purchase Receipt">Purchase Receipt</option>
+						<option value="Purchase Invoice">Purchase Invoice</option>
+					</select>
+				</div>
+		    <p style="margin-bottom: 30px; margin-top: 30px;"> <button id="start" class="btn btn-primary btn-lg" style="padding-top: 7px;">Start</button> </p>
+		    <p class="pos-setting-message"> <a class="btn btn-default btn-sm" href="{{pathFor 'pos.new'}}"> Make new POS Profile</a> </p>
+		</div>
+	</div>
+</template>
+

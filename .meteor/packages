@@ -1,0 +1,69 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+less
+iron:router
+mizzao:jquery-ui
+twbs:bootstrap@3.3.5
+fortawesome:fontawesome
+zimme:iron-router-active
+jquery
+
+meteor-base             # Packages every Meteor app needs to have
+mobile-experience       # Packages for a great mobile UX
+mongo                   # The database Meteor supports right now
+blaze-html-templates    # Compile .html files into Meteor Blaze views
+session                 # Client-side reactive dictionary for your app
+tracker                 # Meteor's client-side reactive programming library
+
+standard-minifiers      # JS/CSS minifiers run for production mode
+es5-shim                # ECMAScript 5 compatibility for older browsers.
+ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+aldeed:simple-schema
+
+insecure                # Allow all DB writes from clients (for prototyping)
+standard-app-packages
+accounts-base
+http
+email
+spiderable
+matb33:collection-hooks
+perak:user-roles
+copleykj:livestamp
+reactive-dict
+accounts-password
+mizzao:bootboxjs
+mrt:moment
+logging
+reload
+random
+ejson
+spacebars
+check
+monbro:iron-router-breadcrumb
+nemo64:bootstrap
+sacha:spin
+aldeed:collection2
+tap:i18n
+aldeed:autoform
+aldeed:autoform-select2
+natestrauser:select2
+aida:pagination
+manuel:reactivearray
+underscore
+lepozepo:accounting
+#summernote:summernote
+olragon:handsontable
+#mrt:fullcalendar
+#mrt:flot
+cfs:standard-packages
+cfs:filesystem
+cfs:gridfs
+dhtmlx:gantt
+dhtmlx:gantt-data
+underscorestring:underscore.string
+zephraph:namespace

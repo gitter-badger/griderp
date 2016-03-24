@@ -1,0 +1,124 @@
+<template name="SetupDataRenameTool">
+
+	{{> PageHeading title="Rename Tool" type="renameTool"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content top-bottom">
+						{{> RenameToolForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="RenameToolForm">
+	<form role="form">
+		<div class="layout-main-section">
+			<div class="form-inner-toolbar hide"></div>
+			<div class="page-form row hide"></div>
+			<div>
+				<div>
+					<div class="form-layout">
+						<div class="form-dashboard" style="display: none;">
+						    <div class="row" style="padding: 15px 30px;"></div>
+						</div>
+						<div class="form-page">
+						    <div class="row form-section visible-section">
+						        <div class="section-body">
+						            <div class="form-column col-sm-12">
+						                <form>
+						                    <div class="griderp-control input-max-width" data-fieldtype="Select" data-fieldname="select_doctype">
+						                        <div class="form-group" style="margin: 0px">
+						                            <label class="control-label" style="padding-right: 0px;">Select DocType</label>
+						                            <div class="control-input-wrapper">
+						                                <div class="control-input">
+						                                    <select type="text" class="input-with-feedback form-control" maxlength="140" data-fieldtype="Select" data-fieldname="select_doctype" placeholder="" data-doctype="Rename Tool">
+						                                        <option value="Account">Account</option>
+						                                        <option value="Activity Cost">Activity Cost</option>
+						                                        <option value="Activity Type">Activity Type</option>
+						                                        <option value="Address">Address</option>
+						                                        <option value="Address Template">Address Template</option>
+						                                        <option value="Appraisal Template">Appraisal Template</option>
+						                                        <option value="Branch">Branch</option>
+						                                        <option value="Brand">Brand</option>
+						                                        <option value="Campaign">Campaign</option>
+						                                        <option value="Company">Company</option>
+						                                        <option value="Contact">Contact</option>
+						                                        <option value="Cost Center">Cost Center</option>
+						                                        <option value="Country">Country</option>
+						                                        <option value="Customer">Customer</option>
+						                                        <option value="Customer Group">Customer Group</option>
+						                                        <option value="Deduction Type">Deduction Type</option>
+						                                        <option value="Department">Department</option>
+						                                        <option value="Designation">Designation</option>
+						                                        <option value="Earning Type">Earning Type</option>
+						                                        <option value="Employee">Employee</option>
+						                                        <option value="Employment Type">Employment Type</option>
+						                                        <option value="Holiday List">Holiday List</option>
+						                                        <option value="Industry Type">Industry Type</option>
+						                                        <option value="Item">Item</option>
+						                                        <option value="Item Attribute">Item Attribute</option>
+						                                        <option value="Item Group">Item Group</option>
+						                                        <option value="Leave Type">Leave Type</option>
+						                                        <option value="Letter Head">Letter Head</option>
+						                                        <option value="Mode of Payment">Mode of Payment</option>
+						                                        <option value="Note">Note</option>
+						                                        <option value="Operation">Operation</option>
+						                                        <option value="Price List">Price List</option>
+						                                        <option value="Print Format">Print Format</option>
+						                                        <option value="Print Heading">Print Heading</option>
+						                                        <option value="Project">Project</option>
+						                                        <option value="Purchase Taxes and Charges Template">Purchase Taxes and Charges Template</option>
+						                                        <option value="Sales Partner">Sales Partner</option>
+						                                        <option value="Sales Person">Sales Person</option>
+						                                        <option value="Sales Taxes and Charges Template">Sales Taxes and Charges Template</option>
+						                                        <option value="Serial No">Serial No</option>
+						                                        <option value="Standard Reply">Standard Reply</option>
+						                                        <option value="Supplier">Supplier</option>
+						                                        <option value="Supplier Type">Supplier Type</option>
+						                                        <option value="Terms and Conditions">Terms and Conditions</option>
+						                                        <option value="Territory">Territory</option>
+						                                        <option value="Warehouse">Warehouse</option>
+						                                        <option value="Workflow">Workflow</option>
+						                                        <option value="Workstation">Workstation</option>
+						                                    </select>
+						                                </div>
+						                                <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                <p class="help-box small text-muted hidden-xs">Type of document to rename.</p>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="griderp-control input-max-width" data-fieldtype="Attach" data-fieldname="file_to_rename">
+						                        <div class="form-group" style="margin: 0px">
+						                            <label class="control-label" style="padding-right: 0px;">File to Rename</label>
+						                            <div class="control-input-wrapper">
+						                                <div class="control-input">
+						                                    <div style="margin-top: 5px; display: none;">
+						                                        <div class="text-ellipsis" style="display: inline-block; width: 90%;"> <i class="icon-paper-clip"></i>
+						                                            <a class="attached-file" target="_blank"></a>
+						                                        </div> <a class="close">×</a></div>
+						                                    <button class="btn btn-default btn-sm btn-attach" data-fieldtype="Attach" data-fieldname="file_to_rename" placeholder="" data-doctype="Rename Tool">Attach</button>
+						                                </div>
+						                                <div class="control-value like-disabled-input" style="display: none;"></div>
+						                                <p class="help-box small text-muted hidden-xs">Attach .csv file with two columns, one for the old name and one for the new name</p>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="griderp-control" data-fieldtype="HTML" data-fieldname="rename_log"></div>
+						                </form>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</template>
+

@@ -1,0 +1,32 @@
+<template name="TutorialsCrm">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TutorialsCrmModuleMenu}}
+	</div>
+</template>
+
+<template name="TutorialsCrmModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tutorials.crm.lead_to_quotation'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tutorials.crm.lead_to_quotation'}}">
+				<span class="item-title-modules">
+					Lead to Quotation
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.crm.newsletters'}} module-list">
+			<a href="{{pathFor 'tutorials.crm.newsletters'}}">
+				<span class="item-title-modules">
+					Newsletters
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

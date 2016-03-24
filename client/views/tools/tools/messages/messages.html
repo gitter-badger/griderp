@@ -1,0 +1,447 @@
+<template name="ToolsToolsMessages">
+
+	{{> PageHeading title="Messages"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> MessagesForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="MessagesForm">
+	<div class="page-wrapper">
+		<div class="page-content">
+		    <div class="workflow-button-area btn-group pull-right hide"></div>
+		    <div class="clearfix"></div>
+		    <div class="row layout-main">
+		        <div class="col-md-2 layout-side-section col-sm-3">
+		            <ul class="nav nav-pills nav-stacked">
+		                <li data-user="demo@griderp.com" class="h6 module-sidebar-item active">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-green"> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="You "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Everyone</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="RafaelaMaartens@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Rafaëla Maartens "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Rafaëla Maartens</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="BergoraVigfusdottir@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Bergþóra Vigfúsdóttir "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Bergþóra Vigfúsdóttir</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="DikmanShervashidze@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Dikman Shervashidze "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Dikman Shervashidze</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="FreddieScott@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Freddie Scott "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Freddie Scott</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="GabrielleLoftus@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Gabrielle Loftus "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Gabrielle Loftus</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="HatsueKashiwagi@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Hatsue Kashiwagi "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Hatsue Kashiwagi</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="LeonAbdulov@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Leon Abdulov "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Leon Abdulov</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="MichalSobczak@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Michał Sobczak "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Michał Sobczak</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="NuguseYohannes@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Nuguse Yohannes "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Nuguse Yohannes</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="NuranVerkleij@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Nuran Verkleij "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Nuran Verkleij</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="CharmaineGaudreau@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Charmaine Gaudreau "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Charmaine Gaudreau</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="SabinaNovotna@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Sabina Novotná "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Sabina Novotná</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="test_demo@griderp.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Test User "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Test User</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="TildeLindqvist@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Tilde Lindqvist "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Tilde Lindqvist</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="VakhitaRyzaev@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Vakhita Ryzaev "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Vakhita Ryzaev</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="WanMai@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Wan Mai "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Wan Mai</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="WardNajmalDinKalb@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Ward Kalb "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Ward Kalb</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="Zukutakitoteka@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Zukutakitoteka "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Zukutakitoteka</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="aromn@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Дмитрий Пирогов "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Дмитрий Пирогов</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="panca@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="Раиса Белякова "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>Раиса Белякова</span> </span>
+		                    </a>
+		                </li>
+		                <li data-user="CaYinLong@example.com" class="h6 module-sidebar-item">
+		                    <a class="messages-sidebar-link text-ellipsis"> <span class="indicator-grey "> <span class="avatar avatar-small hidden-sm hidden-md hidden-lg" title="胤隆 蔡 "> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> <span>胤隆 蔡</span> </span>
+		                    </a>
+		                </li>
+		            </ul>
+		        </div>
+		        <div class="col-md-10 layout-main-section-wrapper col-sm-9">
+		            <div class="layout-main-section">
+		                <div class="message-box">
+		                    <div class="media timeline-head"> <span class="pull-left avatar avatar-medium hidden-xs"> <img class="media-object" src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span>
+		                        <div class="media-body"> <textarea style="height: 120px" class="form-control messages-textarea"></textarea> </div>
+		                        <div style="padding-top: 15px;"> <button class="pull-right btn btn-primary btn-sm btn-post" data-contact="demo@griderp.com"> Post </button> <span class="pull-right" style="margin-top: 6px; margin-right: 10px;"> <i class="octicon octicon-rss"></i> <span class="text-muted small">Public</span> </span>
+		                            <div class="pull-right cbox text-muted small" style="margin-right: 15px; margin-top: 7px;"> <label class="email-checkbox-label"> <input type="checkbox" class="is-email" style="margin-top: 1px"> &nbsp;Email </label> </div>
+		                            <div class="clearfix"></div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="message-list">
+		                    <div class="griderp-list">
+		                        <div class="list-filters" style="display: none;">
+		                            <div class="show_filters">
+		                                <div class="set-filters"> <button class="btn btn-default btn-xs new-filter text-muted" style="margin-right: 10px;"> Add Filter</button> </div>
+		                                <div class="filter_area"></div>
+		                            </div>
+		                        </div>
+		                        <div style="margin-bottom: 9px; display: none;" class="list-toolbar-wrapper hide">
+		                            <div class="list-toolbar btn-group" style="display:inline-block; margin-right: 10px;"> </div>
+		                        </div>
+		                        <div style="clear:both"></div>
+		                        <div class="no-result text-center" style="display: none;"> Nothing to show </div>
+		                        <div class="result">
+		                            <div class="list-headers"></div>
+		                            <div class="list-loading text-center" style="display: none;">
+		                                <div class="msg-box" style="width: 63%; margin: 30px auto;">
+		                                    <p class="text-center">Loading...</p>
+		                                </div>
+		                            </div>
+		                            <div class="result-list">
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public"><i class="octicon octicon-rss text-muted" style="margin-top: 3px;"></i></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Knight Rider, a shadowy flight into the dangerous world of a man who does not exist. Michael Knight, a young loner on a crusade to champion the cause of the innocent, the helpless in a world of criminals who operate above the law. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-11-09 10:49:10.035621" title="11-09-2015 10:49:10">3 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="0b241e1782" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Children of the sun, see your time has just begun, searching for your ways, through adventures every day. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-10-30 10:48:51.143952" title="10-30-2015 10:48:51">3 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="8ab89569b6" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> One for all and all for one, Muskehounds are always ready. One for all and all for one, helping everybody. One for all and all for one, it's a pretty story. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-10-27 10:48:39.895292" title="10-27-2015 10:48:39">3 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="b771ef0dd9" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear's my name. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-10-23 10:48:31.181787" title="10-23-2015 10:48:31">3 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="d67a0df87f" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> 80 days around the world, we'll find a pot of gold just sitting where the rainbow's ending. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-10-21 10:48:26.328449" title="10-21-2015 10:48:26">4 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="ba088e87c7" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> 80 days around the world, we'll find a pot of gold just sitting where the rainbow's ending. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-10-19 10:48:16.827572" title="10-19-2015 10:48:16">4 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="21114dbe13" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Knight Rider, a shadowy flight into the dangerous world of a man who does not exist. Michael Knight, a young loner on a crusade to champion the cause of the innocent, the helpless in a world of criminals who operate above the law. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-10-02 10:47:41.877482" title="10-02-2015 10:47:41">4 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="a2c54e4e9c" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Children of the sun, see your time has just begun, searching for your ways, through adventures every day. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-09-30 10:47:35.199514" title="09-30-2015 10:47:35">4 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="ef11d4cb11" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Time - we'll fight against the time, and we'll fly on the white wings of the wind. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-09-24 10:47:21.937634" title="09-24-2015 10:47:21">4 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="ea03357c18" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Children of the sun, see your time has just begun, searching for your ways, through adventures every day. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-09-10 10:46:45.705271" title="09-10-2015 10:46:45">5 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="b5b89e922c" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Every day and night, with the condor in flight, with all your friends in tow, you search for the Cities of Gold. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-09-04 10:46:28.214940" title="09-04-2015 10:46:28">5 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="870ccd50ea" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Birds taught me to sing, when they took me to their king, first I had to fly, in the sky so high so high, so high so high so high, so - if you want to sing this way, think of what you'd like to say, add a tune and you will see, just how easy it can be. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-09-03 10:46:24.266957" title="09-03-2015 10:46:24">5 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="58fc3e49ba" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear's my name. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-08-20 10:45:51.477416" title="08-20-2015 10:45:51">6 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="d59782ab78" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear's my name. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-08-07 10:45:26.187162" title="08-07-2015 10:45:26">6 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="275e5270ba" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear's my name. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-07-31 10:45:17.254715" title="07-31-2015 10:45:17">6 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="2fea7f7cf8" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Time - we'll fight against the time, and we'll fly on the white wings of the wind. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-07-30 10:45:10.984547" title="07-30-2015 10:45:10">6 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="075200e693" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public"><i class="octicon octicon-rss text-muted" style="margin-top: 3px;"></i></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="Administrator "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> One for all and all for one, Muskehounds are always ready. One for all and all for one, helping everybody. One for all and all for one, it's a pretty story. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">Administrator, </span> <span class="griderp-timestamp " data-timestamp="2015-07-29 10:45:08.936277" title="07-29-2015 10:45:08">6 months ago</span> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Knight Rider, a shadowy flight into the dangerous world of a man who does not exist. Michael Knight, a young loner on a crusade to champion the cause of the innocent, the helpless in a world of criminals who operate above the law. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-07-23 10:45:01.672727" title="07-23-2015 10:45:01">6 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="f72b4eaa73" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Knight Rider, a shadowy flight into the dangerous world of a man who does not exist. Michael Knight, a young loner on a crusade to champion the cause of the innocent, the helpless in a world of criminals who operate above the law. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-07-16 10:44:46.952003" title="07-16-2015 10:44:46">7 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="288f5848fb" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="list-row">
+		                                    <div class="row message-row small">
+		                                        <div class="col-sm-9">
+		                                            <div class="media"> <span class="pull-left" title="Public" style="width: 20px; height: 16px; display: inline-block;"></span>
+		                                                <div class="pull-left hidden-xs"> <span class="avatar avatar-small" title="" data-original-title="You "> <img class="media-object " src="https://secure.gravatar.com/avatar/0d73538240b708901a3dcb37de7c8f3c?d=mm"> </span> </div>
+		                                                <div class="media-body "> Every day and night, with the condor in flight, with all your friends in tow, you search for the Cities of Gold. </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-3 text-right message-row-right">
+		                                            <div class="text-muted"> <span class="hidden-sm hidden-md hidden-lg">You, </span> <span class="griderp-timestamp " data-timestamp="2015-07-09 10:44:30.036759" title="07-09-2015 10:44:30">7 months ago</span> </div>
+		                                            <div> <a class="delete text-extra-muted" data-name="a227b1eaa8" onclick="griderp.desk.pages.messages.delete(this)">Delete</a> </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="list-paging-area" style="">
+		                            <div class="row">
+		                                <div class="col-xs-6"> <button class="btn btn-default btn-more btn-sm">More...</button> </div>
+		                                <div class="col-xs-6">
+		                                    <div class="btn-group pull-right btn-group-paging"> <button type="button" class="btn btn-sm btn-primary" data-value="20">20</button> <button type="button" class="btn btn-default btn-sm" data-value="100">100</button> <button type="button" class="btn btn-default btn-sm" data-value="500">500</button> </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="layout-footer hide"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</template>
+

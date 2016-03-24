@@ -1,0 +1,44 @@
+<template name="SetupSellingTerritory">
+
+	{{> PageHeading title="Territory Tree" type="groupTree"}}
+
+	<div class="wrapper wrapper-content" style="padding-top:25px;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content" style="padding-bottom: 20px; padding-top:20px;">
+						{{> TerritoryTreeForm}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="TerritoryTreeForm">
+	<div class="page-wrapper">
+		<div class="page-content">
+		    <div class="workflow-button-area btn-group pull-right hide"></div>
+		    <div class="clearfix"></div>
+		    <div class="row layout-main">
+		        <div class="col-md-12 layout-main-section-wrapper">
+		            <div class="layout-main-section" style="min-height: 300px; padding-bottom: 25px;">
+		                <div class="tree"><span class="tree-link selected active"><i class="icon-fixed-width icon-folder-open text-muted"></i> <a class="tree-label grey h6">All Territories</a></span><span class="tree-node-toolbar btn-group"><button class="btn btn-default btn-xs btn-expand hidden-xs">Collapse</button><button class="btn btn-default btn-xs hidden-xs">Add Child</button></span>
+		                    <ul class="tree-children" style="">
+		                        <li class="tree-node"><span class="tree-link"><i class="icon-fixed-width octicon octicon-primitive-dot text-extra-muted"></i> <a class="tree-label grey h6">Canada</a></span>
+		                            <ul class="tree-children" style="display: none;"></ul>
+		                        </li>
+		                        <li class="tree-node"><span class="tree-link"><i class="icon-fixed-width octicon octicon-primitive-dot text-extra-muted"></i> <a class="tree-label grey h6">Rest Of The World</a></span>
+		                            <ul class="tree-children" style="display: none;"></ul>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		            <div class="layout-footer hide"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</template>
+

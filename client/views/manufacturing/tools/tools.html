@@ -1,0 +1,44 @@
+<template name="ManufacturingTools">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ManufacturingToolsModuleMenu}}
+	</div>
+</template>
+
+<template name="ManufacturingToolsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'manufacturing.tools.bom_browser'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'manufacturing.tools.bom_browser'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					BOM Browser
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Tree of Bill of Materials.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.tools.bom_replace_tool'}} module-list">
+			<a href="{{pathFor 'manufacturing.tools.bom_replace_tool'}}">
+				<span class="item-title-modules">
+					BOM Replace Tool
+				</span>
+				<div class="module-description">Replace Item / BOM in all BOMs.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'manufacturing.tools.production_planning_tool'}} module-list">
+			<a href="{{pathFor 'manufacturing.tools.production_planning_tool'}}">
+				<span class="item-title-modules">
+					Production Planning Tool
+				</span>
+				<div class="module-description">Generate Material Requests (MRP) and Production Orders.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

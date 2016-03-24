@@ -1,0 +1,39 @@
+<template name="AccountsHelp">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> AccountsHelpModuleMenu}}
+	</div>
+</template>
+
+<template name="AccountsHelpModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'accounts.help.chart_of_accounts'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'accounts.help.chart_of_accounts'}}">
+				<span class="item-title-modules">
+					Chart of Accounts
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.help.opening_accounting_balance'}} module-list">
+			<a href="{{pathFor 'accounts.help.opening_accounting_balance'}}">
+				<span class="item-title-modules">
+					Opening Accounting Balance
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'accounts.help.setting_up_taxes'}} module-list">
+			<a href="{{pathFor 'accounts.help.setting_up_taxes'}}">
+				<span class="item-title-modules">
+					Setting Up Taxes
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

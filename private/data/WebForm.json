@@ -1,0 +1,4 @@
+[
+	{ "name": "addresses", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "allow_edit": 1, "doc_type": "Address", "allow_comments": 0, "allow_multiple": 1, "title": "Addresses", "breadcrumbs": null, "login_required": 1, "allow_delete": 0, "success_url": "/addresses", "success_message": null, "published": 1, "page_name": "addresses", "web_page_link_text": null, "introduction_text": null },
+	{ "name": "issues", "docstatus": 0, "parent": null, "parentfield": null, "parenttype": null, "idx": null, "allow_edit": 1, "doc_type": "Issue", "allow_comments": 1, "allow_multiple": 1, "title": "Issues", "breadcrumbs": "[{\"title\":\"Issues\", \"name\":\"issues\"}]", "login_required": 1,  "allow_delete": 1, "success_url": "/issues", "success_message": "", "published": 1, "page_name": "issues", "web_page_link_text": null, "introduction_text": null }
+]

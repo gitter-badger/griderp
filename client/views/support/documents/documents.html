@@ -1,0 +1,76 @@
+<template name="SupportDocuments">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SupportDocumentsModuleMenu}}
+	</div>
+</template>
+
+<template name="SupportDocumentsModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'core_settings.setup.communication'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'core_settings.setup.communication'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Communication
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Communication log.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'support.documents.issue'}} module-list">
+			<a href="{{pathFor 'support.documents.issue'}}">
+				<span class="item-title-modules">
+					Issue
+				</span>
+				<div class="module-description">Support queries from customers.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'support.documents.maintenance_schedule'}} module-list">
+			<a href="{{pathFor 'support.documents.maintenance_schedule'}}">
+				<span class="item-title-modules">
+					Maintenance Schedule
+				</span>
+				<div class="module-description">Plan for maintenance visits.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'support.documents.maintenance_visit'}} module-list">
+			<a href="{{pathFor 'support.documents.maintenance_visit'}}">
+				<span class="item-title-modules">
+					Maintenance Visit
+				</span>
+				<div class="module-description">Visit report for maintenance call.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'crm.documents.newsletter'}} module-list">
+			<a href="{{pathFor 'crm.documents.newsletter'}}">
+				<span class="item-title-modules">
+					Newsletter
+				</span>
+				<div class="module-description">Newsletters to contacts, leads.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'stock.documents.serial_no'}} module-list">
+			<a href="{{pathFor 'stock.documents.serial_no'}}">
+				<span class="item-title-modules">
+					Serial Number
+				</span>
+				<div class="module-description">Single unit of an Item.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'support.documents.warranty_claim'}} module-list">
+			<a href="{{pathFor 'support.documents.warranty_claim'}}">
+				<span class="item-title-modules">
+					Warranty Claim
+				</span>
+				<div class="module-description">Warranty Claim against Serial No.</div>
+			</a>
+		</li>
+	</ul>
+</template>
+
+

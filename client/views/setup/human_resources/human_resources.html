@@ -1,0 +1,144 @@
+<template name="SetupHumanResources">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> SetupHumanResourcesModuleMenu}}
+	</div>
+</template>
+
+<template name="SetupHumanResourcesModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'setup.human_resources.appraisal_template'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'setup.human_resources.appraisal_template'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Appraisal Template
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Template for performance appraisals.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.branch'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.branch'}}">
+				<span class="item-title-modules">
+					Branch
+				</span>
+				<div class="module-description">Organization branch master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.deduction_type'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.deduction_type'}}">
+				<span class="item-title-modules">
+					Deduction Type
+				</span>
+				<div class="module-description">Tax and other salary deductions.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.department'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.department'}}">
+				<span class="item-title-modules">
+					Department
+				</span>
+				<div class="module-description">Organization unit (department) master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.designation'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.designation'}}">
+				<span class="item-title-modules">
+					Designation
+				</span>
+				<div class="module-description">Employee designation (e.g. CEO, Director etc.).</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.earning_type'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.earning_type'}}">
+				<span class="item-title-modules">
+					Earning Type
+				</span>
+				<div class="module-description">Salary components.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.email.email_account'}} module-list">
+			<a href="{{pathFor 'setup.email.email_account'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Email Account
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Setup incoming server for jobs email id. (e.g. jobs@example.com)</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.employment_type'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.employment_type'}}">
+				<span class="item-title-modules">
+					Employment Type
+				</span>
+				<div class="module-description">Types of employment (permanent, contract, intern etc.).</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.expense_claim_type'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.expense_claim_type'}}">
+				<span class="item-title-modules">
+					Expense Claim Type
+				</span>
+				<div class="module-description">Types of Expense Claims.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.holiday_list'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.holiday_list'}}">
+				<span class="item-title-modules">
+					Holiday List
+				</span>
+				<div class="module-description">Holiday master.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.hr_settings'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.hr_settings'}}">
+				<span class="item-title-modules">
+					HR Settings
+				</span>
+				<div class="module-description">Settings for HR Module.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.leave_allocation'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.leave_allocation'}}">
+				<span class="item-title-modules">
+					Leave Allocation
+				</span>
+				<div class="module-description">Allocate leaves for a period.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.leave_block_list'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.leave_block_list'}}">
+				<span class="item-title-modules">
+					Leave Block List
+				</span>
+				<div class="module-description">Block leave applications by department.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.leave_type'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.leave_type'}}">
+				<div class="module-description module-timestamp">25 days ago</div>
+				<span class="item-title-modules">
+					Leave Type
+				</span>
+				<span class="module-badge">3</span>
+				<div class="module-description">Type of leaves like casual, sick etc.</div>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'setup.human_resources.salary_structure'}} module-list">
+			<a href="{{pathFor 'setup.human_resources.salary_structure'}}">
+				<span class="item-title-modules">
+					Salary Structure
+				</span>
+				<div class="module-description">Salary template master.</div>
+			</a>
+		</li>		
+	</ul>
+</template>
+
+

@@ -1,0 +1,39 @@
+<template name="TutorialsSelling">
+	<div>
+		<div class="row" id="title_row">
+			<div>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TutorialsSellingModuleMenu}}
+	</div>
+</template>
+
+<template name="TutorialsSellingModuleMenu">
+	<ul class="nav nav-stacked-modules ibox-content">
+		<li class="{{menuItemClass 'tutorials.selling.customer_and_supplier'}} module-list-top" style="margin-top:5px;">
+			<a href="{{pathFor 'tutorials.selling.customer_and_supplier'}}">
+				<span class="item-title-modules">
+					Customer and Supplier
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.selling.point_of_sale'}} module-list">
+			<a href="{{pathFor 'tutorials.selling.point_of_sale'}}">
+				<span class="item-title-modules">
+					Point-of-Sale
+				</span>
+			</a>
+		</li>
+		<li class="{{menuItemClass 'tutorials.selling.sales_order_to_payment'}} module-list">
+			<a href="{{pathFor 'tutorials.selling.sales_order_to_payment'}}">
+				<span class="item-title-modules">
+					Sales Order to Payment
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+
